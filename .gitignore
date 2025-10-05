@@ -18,3 +18,11 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Claude Code configuration
+.claude/
+
+# Workshop state and drafts
+.workshop-state.json
+docs/**/*_draft.md
+docs/**/*_temp.md
