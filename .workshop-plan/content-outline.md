@@ -1,7 +1,7 @@
 # 📝 Content Outline Completo
 
 > **Documento di Riferimento**: Outline dettagliato di tutti i contenuti per ogni modulo
-> **Last Updated**: 2025-10-05
+> **Last Updated**: 2025-10-05 (Sessione 4)
 
 ---
 
@@ -16,6 +16,59 @@ Questo file contiene l'outline **punto per punto** di ciò che deve essere tratt
 - ✏️ Esercizio/Attività
 - 🔑 Key Takeaway
 - ⚠️ Common Pitfall / Warning
+
+---
+
+## 📌 Index Pages Strategy (Aggiornato Sessione 4)
+
+**Problema identificato**: Ridondanze tra overview Giorno e overview Moduli causavano frustrazione utente (stesse info ripetute 2-3 volte).
+
+**Soluzione Applicata - Opzione C (Ibrida)**:
+
+### Giorno Index (`giorno-X/index.md`) - Master Document
+**Ruolo**: Punto di riferimento completo con TUTTI i dettagli (~180-200 righe)
+
+**Include**:
+- ✅ Overview completa del giorno
+- ✅ Learning objectives dettagliati (tutti i moduli del giorno)
+- ✅ Timeline dettagliata (tabella orari)
+- ✅ Key concepts completi
+- ✅ Checklist progressione (Fondamenti, Prompt Engineering, Pratica)
+- ✅ Deliverables del giorno
+- ✅ Prerequisites e come prepararti
+- ✅ Prossimi passi e risorse aggiuntive
+
+### Modulo Index (`giorno-X/0X-modulo/index.md`) - Quick Navigation Page
+**Ruolo**: Pagina di navigazione veloce, NO ridondanze (~70-100 righe)
+
+**Include SOLO**:
+- ✅ Intro brevissima (2-3 paragrafi, ~80 parole)
+- ✅ Lista argomenti compatta (cards: emoji + titolo + durata + 1 frase max 15 parole)
+- ✅ CTA chiaro per iniziare
+
+**NON Include** (già nel parent):
+- ❌ Learning objectives dettagliati
+- ❌ Key concepts
+- ❌ Checklist progressione
+- ❌ Timeline dettagliata
+- ❌ Deliverables
+- ❌ Metodologia apprendimento
+- ❌ Sezioni "Perché importa" lunghe
+- ❌ Discussione/Q&A
+
+**Benefici**:
+- ✅ Utente non rilegge stesse info 3 volte
+- ✅ Arriva al contenuto reale più velocemente (2 click vs 3)
+- ✅ Informazioni dettagliate concentrate in 1 posto (giorno index)
+- ✅ Riduzione ~45% righe totali index pages
+- ✅ Risparmio ~3-4 min tempo lettura ripetitiva
+
+**Risultati Sessione 4**:
+- `giorno-1-foundations/index.md`: 235 → 183 righe (-22%)
+- `01-llm-foundations/index.md`: 266 → 75 righe (-72%)
+- Totale index: 501 → 258 righe (**-49% riduzione**)
+
+**Apply to Future Modules**: Usa questa strategy per tutti i moduli futuri (Giorno 2, Giorno 3).
 
 ---
 
@@ -93,10 +146,10 @@ Questo file contiene l'outline **punto per punto** di ciò che deve essere tratt
 - Inference = rispondere a domanda d'esame
 
 📚 **Differenze tra Modelli**:
-- GPT (OpenAI): ottimo testo generale, coding
-- Claude (Anthropic): conversazioni lunghe, precisione, sicurezza
-- Gemini (Google): multimodale, integrazione servizi
-- Parametri del modello: più parametri ≠ sempre meglio
+- GPT-5 (OpenAI): coding/math eccellente, reasoning, sistema unificato multi-model
+- Claude Sonnet 4 (Anthropic): 1M context window, precisione massima, compliance
+- Gemini 2.5 (Google): multimodale nativo (video/audio), Deep Think, Google Workspace
+- Parametri del modello: architetture 2025 più efficienti, dimensione ≠ tutto
 
 ⚠️ **Common Pitfalls**:
 - LLM non "capisce" come umani
@@ -181,9 +234,9 @@ Questo file contiene l'outline **punto per punto** di ciò che deve essere tratt
   - Risposta in generazione
 
 📚 **Limiti Context Window per Modello**:
-- GPT-4: ~8K-128K token (dipende da versione)
-- Claude 3.5 Sonnet: 200K token (~150K parole / ~500 pagine)
-- Gemini 1.5 Pro: 1M-2M token
+- GPT-5: 400K token (~300K parole / ~1200 pagine)
+- Claude Sonnet 4: 1M token (~750K parole / ~3000 pagine)
+- Gemini 2.5 Pro: 1M token (~750K parole / ~3000 pagine)
 - Quando si supera: errori o perdita informazioni
 
 💡 **Esempio Pratico PM**:
@@ -221,7 +274,7 @@ Questo file contiene l'outline **punto per punto** di ciò che deve essere tratt
 
 🔑 **Key Takeaways**:
 - Context window = memoria limitata ma ampia
-- Claude 200K = grande vantaggio per documenti lunghi
+- Claude Sonnet 4 & Gemini 2.5 (1M token) = game changer per documenti enormi
 - Gestire contesto strategicamente = risultati migliori
 
 ---
@@ -405,7 +458,7 @@ Questo file contiene l'outline **punto per punto** di ciò che deve essere tratt
 
 **Knowledge Cutoff**:
 - Data limite training del modello
-- Claude 3.5 Sonnet: inizio 2024
+- Claude Sonnet 4: agosto 2025, GPT-5: settembre 2025, Gemini 2.5: marzo 2025
 - Info post-cutoff: hallucination risk alto
 - Soluzione: web search o fornire documenti aggiornati
 

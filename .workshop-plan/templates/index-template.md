@@ -1,3 +1,40 @@
+# Template: Index/Overview Pages
+
+> **Last Updated**: 2025-10-05 (Sessione 4)
+> **Strategy**: Differenziare Giorno Index vs Modulo Index per eliminare ridondanze
+
+---
+
+## 📌 Index Pages Strategy
+
+**Problema**: Ridondanze tra overview Giorno e overview Moduli causano frustrazione (stesse info ripetute 2-3 volte).
+
+**Soluzione**:
+- **Giorno Index** (`giorno-X/index.md`): Master document completo (~180-200 righe) con TUTTI i dettagli
+- **Modulo Index** (`giorno-X/0X-modulo/index.md`): Quick navigation page (~70-100 righe), NO ridondanze
+
+**Vedi** `.workshop-plan/content-outline.md` per dettagli completi strategy.
+
+---
+
+## 🎯 Quale Template Usare?
+
+### Template A: Giorno Index
+**Usa per**: `docs/giorno-X/index.md` (es: `giorno-1-foundations/index.md`)
+- Include: Learning objectives completi, timeline, checklist, deliverables, prerequisites, key concepts
+- Lunghezza target: ~180-200 righe
+- Vedi template completo sotto
+
+### Template B: Modulo Index (SNELLITO)
+**Usa per**: `docs/giorno-X/0X-modulo/index.md` (es: `01-llm-foundations/index.md`)
+- Include SOLO: Intro brevissima + lista argomenti compatta + CTA
+- Lunghezza target: ~70-100 righe
+- Vedi template snellito sotto
+
+---
+
+# TEMPLATE A: Giorno Index (Master Document)
+
 ---
 title: [TITOLO SEZIONE/GIORNO]
 description: [Descrizione overview della sezione]
@@ -391,6 +428,152 @@ Dopo aver completato questa sezione, aiutaci a migliorare:
 
 ---
 
-**[Fine Overview]**
+**[Fine Template A: Giorno Index]**
 
-🎯 **Next**: Inizia con [Modulo 1 →](./[path-to-module-1])
+---
+---
+---
+
+# TEMPLATE B: Modulo Index (Quick Navigation Page - SNELLITO)
+
+> ⚠️ **IMPORTANTE**: Questo template è MOLTO più snello del Template A
+> - NO learning objectives dettagliati (già nel Giorno Index parent)
+> - NO checklist (già nel parent)
+> - NO key concepts (già nel parent)
+> - NO deliverables (già nel parent)
+> - NO timeline dettagliata (già nel parent)
+
+---
+
+```markdown
+---
+title: Modulo [N] - [NOME MODULO]
+description: [Descrizione breve 1 frase]
+sidebar_position: [N]
+---
+
+# Modulo [N]: [NOME MODULO]
+
+> 🎯 **Obiettivo**: [1 frase obiettivo macro]
+>
+> ⏱️ **Durata**: [X] minuti | **Livello**: [Base/Intermedio/Avanzato]
+
+---
+
+## 📖 Introduzione
+
+[Paragrafo 1: Cosa copre questo modulo - max 3-4 righe]
+
+[Paragrafo 2: Perché è importante - max 3-4 righe]
+
+:::tip 💡 [Tip Rilevante]
+[1 tip breve e utile - max 2 righe]
+:::
+
+---
+
+## 📚 Argomenti del Modulo
+
+### 1. [EMOJI] [Titolo Argomento 1](link-relativo)
+⏱️ [X] min | [Descrizione super compatta - max 15 parole]
+
+---
+
+### 2. [EMOJI] [Titolo Argomento 2](link-relativo)
+⏱️ [X] min | [Descrizione super compatta - max 15 parole]
+
+---
+
+### 3. [EMOJI] [Titolo Argomento 3](link-relativo)
+⏱️ [X] min | [Descrizione super compatta - max 15 parole]
+
+---
+
+### 4. [EMOJI] [Titolo Argomento 4](link-relativo)
+⏱️ [X] min | [Descrizione super compatta - max 15 parole]
+
+---
+
+[... aggiungi altri argomenti se necessario ...]
+
+---
+
+## 🚀 Inizia il Modulo
+
+Pronto per [azione/obiettivo modulo]?
+
+<div style={{textAlign: 'center', margin: '2rem 0'}}>
+  <a href="[link-primo-argomento]" style={{
+    background: 'linear-gradient(90deg, #667eea 0%, #764ba2 100%)',
+    color: 'white',
+    padding: '1rem 2rem',
+    borderRadius: '8px',
+    textDecoration: 'none',
+    fontWeight: 'bold',
+    fontSize: '1.1rem',
+    display: 'inline-block'
+  }}>
+    🚀 1. [Nome Primo Argomento]
+  </a>
+</div>
+```
+
+---
+
+**[Fine Template B: Modulo Index]**
+
+---
+
+## 📊 Confronto Template A vs B
+
+| Elemento | Template A (Giorno) | Template B (Modulo) |
+|----------|---------------------|---------------------|
+| **Lunghezza** | ~180-200 righe | ~70-100 righe |
+| **Intro** | Completa (2-3 paragrafi) | Brevissima (2 paragrafi max) |
+| **Learning Objectives** | ✅ Dettagliati | ❌ NO (già nel parent) |
+| **Timeline** | ✅ Tabella completa | ❌ NO (già nel parent) |
+| **Lista Argomenti** | Lista descrittiva | Cards compatte (emoji + durata + 1 frase) |
+| **Key Concepts** | ✅ Sezione dedicata | ❌ NO (già nel parent) |
+| **Checklist** | ✅ Progressione completa | ❌ NO (già nel parent) |
+| **Deliverables** | ✅ Lista completa | ❌ NO (già nel parent) |
+| **Prerequisites** | ✅ Dettagliati | ❌ NO (già nel parent) |
+| **Metodologia** | ✅ Spiegata | ❌ NO |
+| **CTA Finale** | ✅ Presente | ✅ Presente |
+
+---
+
+## 💡 Tips per Usare i Template
+
+### Per Template A (Giorno Index):
+- Investi tempo nel rendere learning objectives chiari e ispiranti
+- Timeline deve essere realistica (include pause!)
+- Checklist progressione aiuta studenti a tracciare avanzamento
+- Key concepts devono essere veramente "chiave" (max 6-8)
+
+### Per Template B (Modulo Index):
+- **Regola oro**: Se è già nel Giorno Index parent, NON ripeterlo
+- Descrizioni argomenti: massimo 15 parole (forza sintesi)
+- Intro deve essere <100 parole totali
+- Focus su velocità navigazione, non su dettagli
+
+---
+
+## 📝 Checklist Pre-Publish
+
+### Template A (Giorno Index):
+- [ ] Learning objectives coprono TUTTI i moduli del giorno
+- [ ] Timeline somma = durata totale dichiarata
+- [ ] Ogni modulo ha link funzionante
+- [ ] Checklist allineata con learning objectives
+- [ ] Deliverables sono concreti e misurabili
+
+### Template B (Modulo Index):
+- [ ] Intro < 100 parole
+- [ ] Ogni argomento ha: emoji + titolo + durata + descrizione ≤15 parole
+- [ ] NO sezioni ridondanti con parent (no learning obj, checklist, etc)
+- [ ] CTA link funzionante
+- [ ] File totale < 100 righe
+
+---
+
+**[Fine Templates]**

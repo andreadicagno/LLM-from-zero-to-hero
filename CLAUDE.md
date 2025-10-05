@@ -1,0 +1,2 @@
+- Always read and update the TODO.md to mantain context between sessions
+- Always read and update the .workshop-plan directory to mantain context between sessions
