@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Workshop LLM: From Casual User to Power User',
-  tagline: 'Corso intensivo per profili non-tecnici: padroneggia Claude e gli LLM nel lavoro quotidiano',
+  title: 'LLM from Zero to Hero',
+  tagline: 'Learn about Large Language Models',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -32,8 +32,8 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'it',
-    locales: ['it'],
+    defaultLocale: 'en',
+    locales: ['en'],
   },
 
   presets: [
@@ -46,18 +46,9 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/andreadicagno/LLM-from-zero-to-hero/tree/main/',
-          breadcrumbs: true,
-          showLastUpdateTime: true,
-          sidebarCollapsible: true,
-          sidebarCollapsed: true,
         },
         blog: {
-          blogTitle: 'Annunci e Aggiornamenti',
-          blogDescription: 'News e aggiornamenti del workshop',
           showReadingTime: true,
-          postsPerPage: 'ALL',
-          blogSidebarTitle: 'Tutti gli annunci',
-          blogSidebarCount: 'ALL',
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
@@ -82,48 +73,22 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
-      defaultMode: 'light',
-      disableSwitch: false,
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Workshop LLM',
+      title: 'LLM from Zero to Hero',
       logo: {
-        alt: 'Workshop LLM Logo',
+        alt: 'LLM Logo',
         src: 'img/logo.svg',
       },
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'mainSidebar',
+          sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: '📚 Corso',
+          label: 'Tutorial',
         },
-        {
-          type: 'dropdown',
-          label: '📅 Giorni',
-          position: 'left',
-          items: [
-            {
-              label: 'Giorno 1: Foundations',
-              to: '/docs/giorno-1-foundations',
-            },
-            {
-              label: 'Giorno 2: Claude Features',
-              to: '/docs/giorno-2-claude-features',
-            },
-            {
-              label: 'Giorno 3: Claude Code',
-              to: '/docs/giorno-3-claude-code',
-            },
-          ],
-        },
-        {
-          to: '/docs/risorse',
-          label: '🔧 Risorse',
-          position: 'left',
-        },
-        {to: '/blog', label: '📣 Annunci', position: 'left'},
+        {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/andreadicagno/LLM-from-zero-to-hero',
           label: 'GitHub',
@@ -135,58 +100,29 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Corso',
+          title: 'Docs',
           items: [
             {
-              label: 'Home',
-              to: '/docs',
-            },
-            {
-              label: 'Informazioni Generali',
-              to: '/docs/informazioni-generali',
-            },
-            {
-              label: 'Risorse',
-              to: '/docs/risorse',
+              label: 'Tutorial',
+              to: '/docs/intro',
             },
           ],
         },
         {
-          title: 'Giorni del Workshop',
+          title: 'More',
           items: [
             {
-              label: 'Giorno 1: Foundations',
-              to: '/docs/giorno-1-foundations',
+              label: 'Blog',
+              to: '/blog',
             },
             {
-              label: 'Giorno 2: Claude Features',
-              to: '/docs/giorno-2-claude-features',
-            },
-            {
-              label: 'Giorno 3: Claude Code',
-              to: '/docs/giorno-3-claude-code',
-            },
-          ],
-        },
-        {
-          title: 'Collegamenti',
-          items: [
-            {
-              label: 'GitHub Repository',
+              label: 'GitHub',
               href: 'https://github.com/andreadicagno/LLM-from-zero-to-hero',
-            },
-            {
-              label: 'Claude.ai',
-              href: 'https://claude.ai',
-            },
-            {
-              label: 'Anthropic Docs',
-              href: 'https://docs.anthropic.com/',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Workshop LLM. Materiali didattici per uso educativo. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} LLM from Zero to Hero. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

@@ -1,8 +1,8 @@
 # 📋 TODO - Workshop LLM: from Casual User to Power User
 
 > **Last Updated**: 2025-10-05
-> **Status**: Planning Phase Complete ✅
-> **Progress**: 15% Complete
+> **Status**: Configuration & Setup Complete ✅
+> **Progress**: 35% Complete
 
 ---
 
@@ -32,11 +32,13 @@ Trasformare il sito Docusaurus demo in un corso completo per workshop in 3 giorn
   - [x] exercise-template.md (template esercizi pratici)
   - [x] index-template.md (template pagine overview)
 
-### Fase 2: Pulizia & Ristrutturazione
-- [ ] Rimozione contenuti demo
-- [ ] Creazione nuova struttura directory `docs/`
-- [ ] Aggiornamento configurazione Docusaurus
-- [ ] Aggiornamento sidebars
+### Fase 2: Pulizia & Ristrutturazione ✅
+- [x] Rimozione contenuti demo
+- [x] Creazione nuova struttura directory `docs/`
+- [x] Aggiornamento configurazione Docusaurus
+- [x] Aggiornamento sidebars
+- [x] Creazione file placeholder (56 file)
+- [x] Test build (SUCCESS)
 
 ### Fase 3: Sviluppo Contenuti Giorno 1
 - [ ] Modulo 1: LLM Foundations
@@ -390,23 +392,38 @@ Per ogni partecipante:
 
 **Stato**: Fase Planning completata. Pronto per Fase 2 (Pulizia & Ristrutturazione)
 
-### Sessione 2 - TBD
+### Sessione 2 - 2025-10-05 ✅ COMPLETATA
 **Focus**: Pulizia demo e setup configurazione
 
-**Task Pianificati**:
-- [ ] Backup file originali (docusaurus.config.ts, sidebars.ts)
-- [ ] Rimozione contenuti demo (docs/tutorial-basics/, docs/tutorial-extras/)
-- [ ] Applicazione modifiche da config-changes.md:
-  - [ ] Aggiornare docusaurus.config.ts (metadata, navbar, footer)
-  - [ ] Sostituire sidebars.ts con struttura manuale completa
-- [ ] Creazione struttura directory vuota per docs/
-- [ ] Test build e fix broken links
-- [ ] (Opzionale) Installazione plugin (search, mermaid)
+**Task Completati**:
+- [x] Backup file originali (docusaurus.config.ts.backup, sidebars.ts.backup)
+- [x] Rimozione contenuti demo (docs/tutorial-basics/, docs/tutorial-extras/, docs/intro.md)
+- [x] Applicazione modifiche da config-changes.md:
+  - [x] Aggiornato docusaurus.config.ts (title, tagline, locale IT, navbar, footer, breadcrumbs)
+  - [x] Sostituito sidebars.ts con struttura manuale completa (mainSidebar)
+  - [x] Fix sidebar IDs (rimossi prefissi numerici per match Docusaurus auto-slugs)
+- [x] Creazione struttura directory completa per docs/ (15 directories)
+- [x] Creazione 56 file placeholder markdown con frontmatter
+- [x] Aggiornamento .gitignore (workshop-notes/)
+- [x] Fix broken link homepage (docs/intro → docs)
+- [x] Pulizia sezione blog:
+  - [x] Rimossi 4 post demo
+  - [x] Aggiornato authors.yml (Andrea di Cagno)
+  - [x] Aggiornato tags.yml (annunci, aggiornamenti, workshop, risorse)
+  - [x] Creato post benvenuto workshop
+- [x] Test build: SUCCESS ✅
+- [x] Test server locale: RUNNING ✅
 
-**Deliverables Attesi**:
-- Sito pulito da contenuti demo
-- Configurazione aggiornata
-- Struttura directory pronta per contenuti
+**Deliverables Sessione 2**:
+- ✅ Sito pulito da contenuti demo (docs + blog)
+- ✅ Configurazione Docusaurus aggiornata (IT, navbar con dropdown, footer completo)
+- ✅ Sidebar manuale con struttura completa 3 giorni workshop
+- ✅ 56 file placeholder pronti per contenuti
+- ✅ Blog "Annunci e Aggiornamenti" configurato (1 post benvenuto)
+- ✅ Build funzionante e testato
+- ✅ Server locale operativo
+
+**Stato**: Fase 2 completata (35% progetto). Pronto per Fase 3 (Sviluppo Contenuti)
 
 ### Sessione 3 - TBD
 **Focus**: Inizio sviluppo contenuti Giorno 1

@@ -26,3 +26,6 @@ yarn-error.log*
 .workshop-state.json
 docs/**/*_draft.md
 docs/**/*_temp.md
+
+# Note personali facilitatore
+.workshop-notes/

@@ -1,19 +1,19 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+annunci:
+  label: Annunci
+  permalink: /annunci
+  description: Annunci ufficiali del workshop
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+aggiornamenti:
+  label: Aggiornamenti
+  permalink: /aggiornamenti
+  description: Aggiornamenti materiali e contenuti
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+workshop:
+  label: Workshop
+  permalink: /workshop
+  description: Informazioni sul workshop
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+risorse:
+  label: Risorse
+  permalink: /risorse
+  description: Nuove risorse e materiali didattici
