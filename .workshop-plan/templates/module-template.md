@@ -221,5 +221,3 @@ Ora che hai completato questo modulo:
 ---
 
 **[Fine Modulo]**
-
-_Hai domande? Usa la sezione commenti qui sotto o contatta il facilitatore._
