@@ -5,13 +5,13 @@ const sidebars: SidebarsConfig = {
     {
       type: 'doc',
       id: 'index',
-      label: '🏠 Home',
+      label: 'Home',
     },
 
     // Informazioni Generali
     {
       type: 'category',
-      label: '📋 Informazioni Generali',
+      label: 'Informazioni Generali',
       collapsed: false,
       items: [
         'informazioni-generali/index',
@@ -25,7 +25,7 @@ const sidebars: SidebarsConfig = {
     // Giorno 1
     {
       type: 'category',
-      label: '📅 Giorno 1: Foundations',
+      label: 'Giorno 1: Foundations',
       collapsed: true,
       items: [
         'giorno-1-foundations/index',
@@ -71,7 +71,7 @@ const sidebars: SidebarsConfig = {
     // Giorno 2
     {
       type: 'category',
-      label: '📅 Giorno 2: Claude Features',
+      label: 'Giorno 2: Claude Features',
       collapsed: true,
       items: [
         'giorno-2-claude-features/index',
@@ -105,7 +105,7 @@ const sidebars: SidebarsConfig = {
     // Giorno 3
     {
       type: 'category',
-      label: '📅 Giorno 3: Claude Code',
+      label: 'Giorno 3: Claude Code',
       collapsed: true,
       items: [
         'giorno-3-claude-code/index',
@@ -156,7 +156,7 @@ const sidebars: SidebarsConfig = {
     // Risorse
     {
       type: 'category',
-      label: '📚 Risorse',
+      label: 'Risorse',
       collapsed: true,
       items: [
         'risorse/index',

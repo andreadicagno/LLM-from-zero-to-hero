@@ -99,11 +99,11 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'mainSidebar',
           position: 'left',
-          label: '📚 Corso',
+          label: 'Corso',
         },
         {
           type: 'dropdown',
-          label: '📅 Giorni',
+          label: 'Giorni',
           position: 'left',
           items: [
             {
@@ -122,10 +122,10 @@ const config: Config = {
         },
         {
           to: '/docs/risorse',
-          label: '🔧 Risorse',
+          label: 'Risorse',
           position: 'left',
         },
-        {to: '/blog', label: '📣 Annunci', position: 'left'},
+        {to: '/blog', label: 'Annunci', position: 'left'},
         {
           href: 'https://github.com/andreadicagno/LLM-from-zero-to-hero',
           label: 'GitHub',
@@ -134,7 +134,7 @@ const config: Config = {
       ],
     },
     footer: {
-      style: 'dark',
+      style: 'light',
       links: [
         {
           title: 'Corso',
