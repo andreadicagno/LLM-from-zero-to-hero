@@ -505,25 +505,82 @@ Per ogni partecipante:
 
 **Stato**: Refactoring completato. Index pages ottimizzati. Pronto per Modulo 2 (Prompt Engineering)
 
-### Sessione 5 - TBD
-**Focus**: Sviluppo Modulo 2 - Prompt Engineering Teoria
+### Sessione 5 - 2025-10-06 ✅ COMPLETATA
+**Focus**: Miglioramenti Modulo 1 da Feedback Giulia
 
-**Task Pianificati**:
-- [ ] Creazione docs/giorno-1-foundations/02-prompt-engineering-teoria/index.md (applicare nuova strategy)
-- [ ] 01-anatomia-prompt.md - Anatomia di un Prompt Efficace
-- [ ] 02-framework-race.md - Framework RACE (Role, Action, Context, Expectations)
-- [ ] 03-chain-of-thought.md - Chain-of-Thought Prompting
-- [ ] 04-few-shot-learning.md - Few-Shot Learning
-- [ ] 05-role-based.md - Role-Based Prompting
-- [ ] 06-meta-prompting.md - Meta-Prompting
-- [ ] 07-debugging.md - Debugging Prompt
-- [ ] Test build
+**Task Completati**:
+- [x] File 02-anatomia-llm.md: Tabella comparativa modelli side-by-side
+- [x] File 02-anatomia-llm.md: Rimozione esempi pratici ridondanti
+- [x] File 03-ragionamento.md: Spiegazione inline temperatura
+- [x] File 03-ragionamento.md: Espansione sezione Attention (+140 righe)
+- [x] File 03-ragionamento.md: Approfondimento Ragionamento Multi-Step (+180 righe)
+- [x] File 03-ragionamento.md: Espansione Confusione Riferimenti Complessi (+180 righe)
+- [x] File 06-concetti-chiave.md: Nuova sezione "Perché Avvengono Allucinazioni" (+220 righe)
+- [x] File 06-concetti-chiave.md: Espansione "Come Riconoscere Hallucinations" (+300 righe)
+- [x] File 06-concetti-chiave.md: 10 esempi pratici per PM/PMO/Designer/Funzionali
+- [x] Test build: SUCCESS ✅
 
-**Deliverables Attesi**:
-- Modulo 2 completo (8 file)
-- Framework e tecniche prompt engineering
-- Esempi pratici contestualizzati
-- Build funzionante
+**Deliverables Sessione 5**:
+- ✅ Tabella comparativa modelli GPT/Claude/Gemini chiara e concisa
+- ✅ Rimozione -107 righe ridondanti da anatomia-llm.md
+- ✅ Espansione +500 righe in ragionamento.md (320→820 righe)
+- ✅ Espansione +520 righe in concetti-chiave.md (605→1,125 righe)
+- ✅ 10 esempi pratici dettagliati su hallucinations per ogni ruolo
+- ✅ Checklist anti-hallucination actionable
+- ✅ Spiegazione tecnica accessibile del "Perché" hallucinations
+- ✅ Build Docusaurus SUCCESS (solo warning anchor)
+
+**Metriche**:
+- 3 file modificati
+- Net +913 righe di contenuto educativo (+59% Modulo 1)
+- 10 esempi pratici aggiunti
+- 4 nuove visualizzazioni ASCII/diagrammi
+- 100% feedback Giulia indirizzato
+
+**Stato**: Modulo 1 significativamente migliorato. Pronto per Modulo 2 (Prompt Engineering)
+
+---
+
+### Sessione 6 - 2025-10-06 ✅ COMPLETATA
+**Focus**: Sviluppo Completo Modulo 2 - Prompt Engineering Teoria
+
+**Task Completati**:
+- [x] Creazione index.md - Overview modulo (145 righe, quick navigation style)
+- [x] 01-anatomia-prompt.md - Anatomia Prompt Efficace (372 righe)
+- [x] 02-framework-race.md - Framework RACE (595 righe)
+- [x] 03-chain-of-thought.md - Chain-of-Thought Prompting (389 righe)
+- [x] 04-few-shot-learning.md - Few-Shot Learning (308 righe)
+- [x] 05-role-based.md - Role-Based & Multi-Perspective Prompting (235 righe)
+- [x] 06-meta-prompting.md - Meta-Prompting (274 righe)
+- [x] 07-debugging.md - Debugging e Ottimizzazione (351 righe)
+- [x] Fix MDX syntax errors (HTML entities)
+- [x] Fix broken links interni (rimozione prefissi numerici slug)
+- [x] Test build: SUCCESS ✅
+
+**Deliverables Sessione 6**:
+- ✅ Modulo 2 Prompt Engineering completo (8 file, ~2,669 righe)
+- ✅ Framework RACE con 4 template riutilizzabili per ruoli
+- ✅ 7 tecniche prompt engineering avanzate:
+  - Anatomia prompt efficace (6 componenti)
+  - Framework RACE sistematico
+  - Chain-of-Thought per problemi complessi
+  - Few-Shot Learning per consistenza
+  - Role-Based & Multi-Perspective
+  - Meta-Prompting per delegare creazione
+  - Debugging sistematico
+- ✅ 20+ esempi pratici per PM, PMO, Service Design, Funzionali
+- ✅ Esercizi hands-on in ogni sezione
+- ✅ Build Docusaurus SUCCESS (solo warning broken anchors a glossario non creato)
+- ✅ Tutti link interni funzionanti
+
+**Metriche**:
+- 8 file creati/aggiornati
+- ~2,669 righe contenuto educativo di alta qualità
+- 100% coverage topics pianificati in content-outline.md
+- 20+ template e pattern riutilizzabili
+- 0 errori build
+
+**Stato**: Modulo 2 Prompt Engineering completato (55% progetto totale). Pronto per Modulo 3 (Esercizi Pratici)
 
 ---
 
@@ -603,10 +660,12 @@ cp .workshop-plan/templates/module-template.md docs/[path]/nuovo-modulo.md
 
 **🎯 Obiettivo Finale**: Sito Docusaurus completo, educativo, pronto per deployment e uso nel workshop del 08/10/2025.
 
-**📊 Progressi**: Fase 3 Modulo 1 completata (45%). Prossimo: Modulo 2 Prompt Engineering.
+**📊 Progressi**: Fase 3 Modulo 1 e 2 completati (55%). Prossimo: Modulo 3 Esercizi Pratici Giorno 1.
 
-**🆕 Ultimo Aggiornamento (Sessione 3 - 2025-10-05)**:
-- ✅ Completato Modulo 1: LLM Foundations (9 file, ~3,600 righe)
-- ✅ Build Docusaurus SUCCESS (zero errori)
-- ✅ Contenuti di alta qualità con esempi pratici per tutti i ruoli target
-- 🎯 Pronto per iniziare Modulo 2: Prompt Engineering Teoria (7 file)
+**🆕 Ultimo Aggiornamento (Sessione 6 - 2025-10-06)**:
+- ✅ Completato Modulo 1: LLM Foundations (9 file, ~4,500 righe con miglioramenti)
+- ✅ Completato Modulo 2: Prompt Engineering Teoria (8 file, ~2,669 righe)
+- ✅ Build Docusaurus SUCCESS
+- ✅ 20+ template e pattern riutilizzabili per PM/PMO/Service Design/Funzionali
+- ✅ Totale Giorno 1 Teoria: 17 file, ~7,200 righe contenuto educativo
+- 🎯 Pronto per Modulo 3: Esercizi Pratici (3 file) per completare Giorno 1

@@ -71,6 +71,14 @@ Output generato token-by-token:
 | "Luna" | 0.01% | Grammaticalmente possibile ma assurdo |
 | "sdraio" | 2% | Meno comune |
 
+:::info 🌡️ Cos'è Temperature?
+**Temperature** è un parametro (0.0-1.0) che controlla la **casualità** dell'output:
+- **Bassa (0.1-0.3)**: Output deterministico, preciso, ripetibile
+- **Alta (0.8-1.0)**: Output creativo, vario, sorprendente
+
+Approfondiremo nel dettaglio in [Concetti Essenziali: Temperature](concetti-chiave#-temperature-creatività-vs-precisione)
+:::
+
 **Con Temperature Bassa (0.1)**: Sceglie quasi sempre "tappeto" (deterministic)
 
 **Con Temperature Alta (0.9)**: Potrebbe scegliere "tetto" o varianti creative
@@ -157,6 +165,159 @@ Attention è il motivo per cui LLM può:
 
 ---
 
+### Visualizzazione Attention: Come "Vede" il Testo
+
+**Esempio Semplice**:
+
+```
+Input: "Il progetto Alpha è in ritardo. Dobbiamo escalarlo."
+
+Attention Weights (semplificato):
+┌─────────────────────────────────────────────────┐
+│ Token      │ Focus Principale                   │
+├─────────────────────────────────────────────────┤
+│ "Il"       │ → progetto                         │
+│ "progetto" │ → Alpha, ritardo (contesto)        │
+│ "Alpha"    │ → progetto (nome specifico)        │
+│ "è"        │ → progetto, ritardo (predicato)    │
+│ "in"       │ → ritardo (preposizione stato)     │
+│ "ritardo"  │ → progetto, Alpha (info critica!)  │
+│ "Dobbiamo" │ → ritardo (azione conseguente)     │
+│ "escalarlo"│ → progetto Alpha, ritardo (tutto!) │
+└─────────────────────────────────────────────────┘
+
+Quando genera "escalarlo" → Attention collega a "progetto Alpha in ritardo"
+```
+
+Questo meccanismo permette all'LLM di "capire" che escalare si riferisce al **progetto in ritardo**, non a qualcos'altro.
+
+---
+
+### Multi-Head Attention: Diversi "Punti di Vista"
+
+LLM usa **multiple attention heads** (teste) simultaneamente:
+
+```
+Frase: "Maria ha presentato il budget al board ieri"
+
+Head 1 (Chi-Cosa):     Maria ← → budget, presentato
+Head 2 (A Chi):        presentato ← → board
+Head 3 (Quando):       presentato ← → ieri
+Head 4 (Relazioni):    Maria ← → board (relazione)
+
+Combinando: LLM "comprende" scenario completo
+```
+
+Ogni head focalizza su aspetti diversi (soggetto-verbo, relazioni temporali, etc.).
+
+**Analogia**: Come tu leggi un documento con diverse "lenti":
+- Lens 1: Chi fa cosa?
+- Lens 2: Quando?
+- Lens 3: Perché?
+
+LLM fa lo stesso, simultaneamente, con decine di "lenti" (heads).
+
+---
+
+### Esempi Pratici: Attention al Lavoro
+
+**Esempio PM - Status Report**:
+
+```
+Input (lungo):
+"Progetto Alpha (PM: Maria) - Q1 2025
+ - Budget: €500K allocato, €320K speso
+ - Timeline: In linea ma 2 developer su 5 in sick leave
+ - Risks: Dependency su API esterna non ancora stabile
+
+Progetto Beta (PM: Luca) - Q1 2025
+ - Budget: €200K allocato, €180K speso
+ - Timeline: +2 settimane ritardo
+ - Blockers: Client review ancora pending da 3 settimane
+
+Domanda: Qual è il budget residuo di Alpha?"
+
+LLM con Attention:
+1. Identifica "Alpha" come focus
+2. Attention su "€500K allocato, €320K speso" (ignora Beta!)
+3. Calcola: 500-320 = 180K
+4. Output: "Budget residuo Alpha: €180K"
+```
+
+**Senza Attention**: LLM si confonderebbe tra Alpha e Beta.
+
+**Con Attention**: Focalizza precisamente su info rilevante.
+
+---
+
+**Esempio Service Designer - User Feedback**:
+
+```
+Input:
+"User A: 'App è lenta ma funzioni sono utili'
+ User B: 'Design bellissimo, peccato per lentezza'
+ User C: 'Ottima UX, solo performance da migliorare'
+
+Domanda: Qual è il tema comune negativo?"
+
+Attention Mechanism:
+- Focalizza su: "lenta", "lentezza", "performance da migliorare"
+- Collega tutti e 3 i feedback (pattern matching)
+- Output: "Performance/Velocità è il tema negativo ricorrente"
+```
+
+Attention permette di trovare **pattern cross-feedback**, anche se espressi con parole diverse.
+
+---
+
+### Limiti di Attention
+
+Anche Attention ha limiti importanti:
+
+**1. Degradazione su Context Lunghissimo**:
+
+```
+Context: 200,000 token (libro intero)
+
+Attention su token 1 → token 200,000 = più debole
+vs
+Attention su token 199,990 → token 200,000 = forte
+
+→ Info all'inizio del context possono essere "dimenticate"
+```
+
+**Soluzione**: Riassumi o ri-inietta info critiche nel prompt.
+
+---
+
+**2. "Lost in the Middle" Problem**:
+
+```
+Documento con 100 punti:
+- Punti 1-10: Attention ALTA
+- Punti 50-60: Attention BASSA (nel mezzo, "persi")
+- Punti 90-100: Attention ALTA (recency bias)
+
+→ Info nel mezzo di documenti lunghi rischiano di essere ignorate
+```
+
+**Soluzione**: Struttura documenti con info critica all'inizio o fine.
+
+---
+
+**3. Distrazione da Noise**:
+
+```
+Prompt con molto rumore:
+"Progetto importante [bla bla bla 500 parole irrilevanti] deadline critica domani"
+
+Attention può "distrarsi" su rumore invece di focus su "deadline domani"
+```
+
+**Soluzione**: Prompt concisi, info critica in evidenza (bold, ripetizione).
+
+---
+
 ## ⚠️ Limiti del "Ragionamento" LLM
 
 ### 1. Errori Logici Banali
@@ -197,34 +358,383 @@ LLM sa che "forchetta" e "bere" appaiono in contesti correlati (tavola, cibo), m
 
 ### 3. Confusione su Riferimenti Complessi
 
-**Esempio**:
+**Problema**: LLM può perdere traccia di **riferimenti anaforici** (pronomi, questo/quello) in testi complessi con molti soggetti.
+
+**Perché Succede**: Attention mechanism non è perfetto. Con molti riferimenti sovrapposti, può collegare pronomi alla parola sbagliata.
+
+---
+
+#### Esempi Pratici - Riferimenti Ambigui
+
+**Esempio 1 - Meeting Notes Confuse**
 
 ```
-Prompt: "Maria e Luca lavorano insieme. Lei è PM, lui è developer.
-         Lui ha suggerito un'architettura. Lei l'ha approvata."
+❌ Prompt Ambiguo:
+"Durante il meeting, Maria ha presentato il nuovo design al team.
+ Luca ha fatto domande critiche su performance.
+ Lei ha risposto che era già ottimizzato.
+ Poi lui ha detto che serviva testing.
+ Lei ha concordato e assegnato task a Giorgio.
 
-Domanda: "Chi ha suggerito l'architettura?"
+ Domanda: Chi ha assegnato task a Giorgio?"
 
-LLM potrebbe confondersi su "lui" vs "lei" in frasi complesse.
+LLM potrebbe:
+- Confondere "lei" → potrebbe riferirsi a Maria O altra persona femminile menzionata
+- In contesti complessi: errore ~30% delle volte
+
+→ Output incerto: "Lei ha assegnato..." (ma chi è lei?)
 ```
 
-**Mitigazione**: Usa nomi espliciti invece di pronomi in prompt critici.
+✅ **Prompt Chiaro**:
+```
+"Durante il meeting:
+- Maria presenta nuovo design
+- Luca chiede su performance
+- Maria risponde: già ottimizzato
+- Luca dice: serve testing
+- Maria concorda e assegna task a Giorgio
+
+Domanda: Chi ha assegnato task a Giorgio?"
+
+→ Output corretto: "Maria ha assegnato task a Giorgio"
+```
+
+**Lezione**: Sostituisci pronomi con nomi espliciti in documenti importanti.
+
+---
+
+**Esempio 2 - Requirements Complessi**
+
+```
+❌ Prompt Ambiguo:
+"Sistema A deve sincronizzarsi con Sistema B ogni ora.
+ Esso deve validare dati prima di inviarli.
+ Quello deve confermare ricezione entro 30 secondi.
+ Se questo fallisce, esso deve retry 3 volte.
+
+ Domanda: Quale sistema fa retry?"
+
+Riferimenti:
+- "Esso" 1° → Sistema A? B?
+- "Quello" → A o B?
+- "Questo" → Quale azione?
+- "Esso" 2° → A o B?
+
+LLM: Confusione totale! 🤯
+```
+
+✅ **Prompt Chiaro**:
+```
+"Requisiti sincronizzazione:
+1. Sistema A sincronizza con Sistema B ogni ora
+2. Sistema A valida dati prima invio
+3. Sistema B conferma ricezione entro 30 sec
+4. Se Sistema B non conferma: Sistema A retry 3 volte
+
+Domanda: Quale sistema fa retry?"
+
+→ Output corretto: "Sistema A fa retry"
+```
+
+---
+
+**Esempio 3 - Stakeholder Complessi (PMO)**
+
+```
+❌ Prompt Ambiguo:
+"Il CTO ha richiesto al PM di coinvolgere l'architetto senior.
+ Lui deve validare le scelte tecniche prima che lui approvi il budget.
+ Se lui trova problemi, lui deve escalare al board.
+
+ Chi escala al board in caso di problemi?"
+
+"Lui" appare 4 volte → LLM deve indovinare chi è chi!
+```
+
+✅ **Prompt Chiaro**:
+```
+"Processo approvazione:
+1. CTO richiede a PM di coinvolgere Architetto Senior
+2. Architetto Senior valida scelte tecniche
+3. CTO approva budget dopo validazione
+4. Se Architetto Senior trova problemi → escala al board
+
+Chi escala al board?"
+
+→ Output corretto: "Architetto Senior escala al board"
+```
+
+---
+
+#### Quando Riferimenti Sono Problematici
+
+🚨 **Alta Probabilità Errore**:
+- **Pronomi multipli** (lui/lei/esso ripetuti)
+- **Molti soggetti** (3+ persone/sistemi in stesso paragrafo)
+- **Riferimenti annidati** ("questo" che si riferisce a "quello" che si riferisce a...)
+- **Distanza dal referente** (pronome 50+ parole dopo il nome)
+
+✅ **LLM Gestisce Bene**:
+- **Riferimenti vicini** (pronome subito dopo nome)
+- **Unico soggetto** per paragrafo
+- **Nomi espliciti** invece di pronomi
+
+---
+
+#### Best Practices per Prompt Chiari
+
+**1. Regola dei Nomi Espliciti**
+
+```
+❌ Evita: "Lui ha detto a lei che esso non funziona"
+✅ Usa:   "Marco ha detto a Sara che il sistema non funziona"
+```
+
+---
+
+**2. Struttura a Liste Numerate**
+
+```
+❌ Paragrafo denso:
+"Il PM coordina con developer che implementa feature per utente finale che
+ poi testa e dà feedback al PM che lo passa al developer..."
+
+✅ Lista chiara:
+1. PM coordina progetto
+2. Developer implementa feature
+3. Utente finale testa
+4. Utente dà feedback a PM
+5. PM passa feedback a Developer
+```
+
+---
+
+**3. Identificatori Unici**
+
+Per sistemi/entità simili:
+
+```
+❌ "Sistema A, Sistema B, Sistema C..."
+✅ "Auth Service, Payment Gateway, Notification Service"
+
+Nomi descrittivi > Lettere generiche
+```
+
+---
+
+**4. Riformula Domande Complesse**
+
+```
+❌ "Nell'esempio di prima, chi tra quelli menzionati deve fare cosa?"
+
+✅ "Nel processo descritto:
+    - Chi valida i dati?
+    - Chi approva il budget?
+    - Chi escala problemi?"
+
+Domande multiple semplici > 1 domanda complessa
+```
+
+---
+
+#### Quick Fix: Riassumi e Chiarisci
+
+Se hai documento con molti pronomi:
+
+```
+Prompt a LLM:
+"Riscrivi questo testo sostituendo TUTTI i pronomi (lui, lei, esso, questo, quello)
+ con i nomi espliciti delle persone/cose a cui si riferiscono.
+
+[Testo con pronomi]"
+
+→ LLM genera versione chiara
+→ Usa quella versione per analisi successive
+```
 
 ---
 
 ### 4. Ragionamento Multi-Step Debole
 
-**Esempio**:
+**Problema Fondamentale**: LLM fatica quando serve **ragionamento sequenziale** con più passaggi logici dipendenti.
+
+**Perché Succede**: Ogni token è generato basandosi sul precedente, ma LLM non "pianifica" i passi prima di rispondere.
+
+---
+
+#### Esempi Pratici Multi-Step
+
+**Esempio 1 - PM: Calcolo Budget Multi-Fase**
 
 ```
-Problema: "Un treno va a 60 km/h. Viaggia per 2.5 ore.
-           Quanto ha percorso? Se poi fa altre 3 ore a 80 km/h,
-           qual è la distanza totale?"
+❌ Prompt Debole:
+"Progetto: budget €500K, speso 40% in Q1, 35% in Q2.
+ Se Q3 è 20% e serve 10% buffer finale, quanto posso spendere in Q4?"
 
-LLM: Può sbagliare passaggi intermedi o calcoli.
+LLM potrebbe:
+- Sbagliare calcolo cumulativo (40+35+20 = ?)
+- Dimenticare il buffer 10%
+- Confondere percentuali su totale vs residuo
+→ Output: "Puoi spendere €75K" (SBAGLIATO)
 ```
 
-**Mitigazione**: Chain-of-Thought prompting (Modulo 2!)
+**Reasoning Corretto Step-by-Step**:
+1. Speso Q1: 40% di 500K = €200K
+2. Speso Q2: 35% di 500K = €175K
+3. Speso Q3: 20% di 500K = €100K
+4. Cumulativo Q1-Q3: 200+175+100 = €475K
+5. Residuo: 500-475 = €25K
+6. Buffer 10%: 10% di 500K = €50K (serve rimanere sotto questo)
+7. **Q4 disponibile**: 25K, ma attenzione al buffer!
+
+→ Output corretto: "€25K disponibili, ma già sotto buffer 10% (€50K). Budget esaurito."
+
+---
+
+**Esempio 2 - Service Designer: Prioritizzazione Features**
+
+```
+❌ Prompt Debole:
+"Feature A: effort 8, value 6
+ Feature B: effort 3, value 5
+ Feature C: effort 5, value 8
+ Capacity team: 10 story points
+
+ Quali features prioritizzi per massimizzare valore?"
+
+LLM potrebbe:
+- Non calcolare ratio value/effort correttamente
+- Non verificare combinazioni che fitano in capacity 10
+→ Output: "Fai A e C" (13 SP, eccede capacity! SBAGLIATO)
+```
+
+**Reasoning Corretto Step-by-Step**:
+1. Calcolo value/effort ratio:
+   - A: 6/8 = 0.75
+   - B: 5/3 = 1.67 ⭐
+   - C: 8/5 = 1.60
+2. Ordine per ratio: B (1.67) > C (1.60) > A (0.75)
+3. Fit in capacity 10 SP:
+   - B (3 SP) + C (5 SP) = 8 SP ✅ Fit!
+   - B (3 SP) + C (5 SP) + A (8 SP) = 16 SP ❌ Eccede
+4. **Scelta ottimale**: B + C (8 SP, valore totale 13)
+
+---
+
+**Esempio 3 - Funzionale: Dependency Resolution**
+
+```
+❌ Prompt Debole:
+"Task A dipende da B
+ Task B dipende da C
+ Task D dipende da A
+ In che ordine eseguo?"
+
+LLM potrebbe dire: "A, B, C, D" (SBAGLIATO, viola dipendenze)
+```
+
+**Reasoning Corretto Step-by-Step**:
+1. Identifico tasks senza dipendenze: **C** (nessuno dipende da)
+2. C fatto → posso fare **B** (dipende solo da C)
+3. B fatto → posso fare **A** (dipende da B)
+4. A fatto → posso fare **D** (dipende da A)
+5. **Ordine corretto**: C → B → A → D
+
+---
+
+#### Strategie di Mitigazione
+
+✅ **1. Chain-of-Thought (CoT) Prompting**
+
+Forza LLM a mostrare passaggi:
+
+```
+✅ Prompt Migliorato:
+"[Problema multi-step]
+
+Rispondi seguendo questi step:
+1. Identifica dati noti
+2. Calcola passaggi intermedi (mostra calcoli)
+3. Verifica logica di ogni step
+4. Combina risultati per risposta finale
+
+Mostra TUTTI i passaggi."
+```
+
+Questo riduce errori del 60-80% su task multi-step!
+
+---
+
+✅ **2. Break Down Esplicito**
+
+Spezza problema in sub-task:
+
+```
+Invece di:
+"Calcola ROI considerando costi, revenue, tasse e inflation"
+
+Fai:
+1. "Calcola revenue totale: [dati]"
+2. "Calcola costi totali: [dati]"
+3. "Calcola profit: revenue - costi"
+4. "Applica tasse 22% su profit"
+5. "Aggiusta per inflation 3%"
+6. "Calcola ROI finale: profit netto / investimento"
+```
+
+Ogni step è semplice → LLM eccelle.
+
+---
+
+✅ **3. Verifica Intermedia**
+
+Chiedi a LLM di auto-verificare:
+
+```
+"[Calcolo multi-step]
+
+Dopo ogni passaggio, verifica:
+- Il calcolo è corretto?
+- Ho usato i dati giusti?
+- Il risultato ha senso logicamente?
+
+Se trovi errore, ricomincia da quel passaggio."
+```
+
+---
+
+✅ **4. Usa Tool/Calculator per Math**
+
+Per calcoli complessi:
+
+```
+Invece di far calcolare a LLM:
+"Calcola NPV di cash flow: -100K, +30K/anno per 5 anni, discount 8%"
+
+Usa:
+- Excel/Sheets per calcolo
+- Python code interpreter (ChatGPT Advanced Data Analysis)
+- Calculator plugin
+
+LLM orchestra, tool esegue math preciso.
+```
+
+---
+
+#### Quando Preoccuparsi
+
+🚨 **Alta Probabilità Errore Multi-Step**:
+- Calcoli finanziari complessi (>3 passaggi)
+- Logica condizionale annidata ("se A allora B, ma se C...")
+- Dependency chains lunghe
+- Ottimizzazione combinatoria
+
+✅ **LLM Gestisce Bene**:
+- Singoli calcoli semplici
+- Logica lineare (A→B→C, max 3 step)
+- Pattern recognition su dati strutturati
+
+**Regola Pratica**: Se **tu** devi pensarci 30+ secondi, LLM rischia di sbagliare senza aiuto (CoT, breakdown).
 
 ---
 

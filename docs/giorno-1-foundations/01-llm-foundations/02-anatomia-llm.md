@@ -160,84 +160,39 @@ Stai facendo **inference**, non training.
 
 ## 🤖 Confronto tra Modelli
 
-### GPT-5 (OpenAI)
+### Tabella Comparativa
 
-**Famiglia**: GPT-5, GPT-5 mini, GPT-5 nano
+| Caratteristica | GPT-5 (OpenAI) | Claude Sonnet 4 (Anthropic) | Gemini 2.5 (Google) |
+|---|---|---|---|
+| **Context Window** | 400K token<br/>(~1,200 pagine) | 1M token<br/>(~3,000 pagine) | 1M token<br/>(~3,000 pagine) |
+| **Punti di Forza** | • Math/Coding eccezionale (94.6% AIME)<br/>• Ecosystem maturo (API, plugin)<br/>• Varianti economiche (mini, nano) | • Context più grande sul mercato<br/>• Precisione e affidabilità top<br/>• Prompt caching per long context | • Multimodalità nativa (video, audio)<br/>• Google Workspace integrato<br/>• Web search nativo sempre attivo |
+| **Punti di Debolezza** | • Context limitato vs altri<br/>• Pricing più alto | • Pricing alto oltre 200K context<br/>• A volte troppo cauto | • Meno maturo vs GPT/Claude<br/>• Adoption enterprise limitata |
+| **Ideale Per** | Coding, math, reasoning quantitativo, API consolidate | Documenti enormi, precisione assoluta, compliance/legal | Google Workspace, multimodalità, web search real-time |
+| **Pricing (indicativo)** | $$$ (flagship)<br/>$ (mini/nano economici) | $$ (sotto 200K)<br/>$$$ (oltre 200K) | $$ (Pro)<br/>$ (Flash/Flash-Lite) |
 
-**Architettura**: Sistema unificato con router intelligente che sceglie automaticamente tra modelli fast e deep reasoning
-
-**Punti di Forza**:
-- ✅ Performance eccezionale su math (94.6% AIME), coding (74.9% SWE-bench)
-- ✅ Context window 400K token (~300K parole, ~1200 pagine)
-- ✅ 45% meno hallucinations con web search attivo
-- ✅ Integrazioni robuste (API, plugin, ecosystem maturo)
-- ✅ Varianti economiche (mini, nano) per task più semplici
-
-**Punti di Debolezza**:
-- ❌ Context più limitato vs Claude/Gemini (400K vs 1M)
-- ❌ Pricing più alto per modello principale
-- ❌ A volte ancora "verbose"
-
-**Usa GPT-5 quando**:
-- Coding complesso e debugging
-- Matematica e reasoning quantitativo
-- Hai bisogno integrazioni API consolidate
-- Task con budget ottimizzato (usa mini/nano)
+:::tip 💡 Quick Decision Guide
+- **Documenti enormi (100+ pagine)?** → Claude Sonnet 4 o Gemini 2.5 Pro
+- **Coding/Math complesso?** → GPT-5
+- **Lavori in Google Workspace?** → Gemini 2.5
+- **Budget limitato ma qualità?** → GPT-5 mini/nano o Gemini Flash
+:::
 
 ---
 
-### Claude Sonnet 4 (Anthropic)
+### Varianti dei Modelli
 
-**Famiglia**: Claude Sonnet 4 (modello principale 2025)
+**GPT-5 Famiglia**:
+- **GPT-5**: Flagship, deep reasoning
+- **GPT-5 mini**: Balance qualità/velocità/costo
+- **GPT-5 nano**: Task semplici, alta volume, budget ridotto
 
-**Context Window**: 1M token (1 milione!) = ~750K parole, ~3000 pagine
+**Claude Famiglia**:
+- **Claude Sonnet 4**: Modello principale unificato 2025
 
-**Punti di Forza**:
-- ✅ Context window più grande sul mercato (1M token)
-- ✅ Precisione e affidabilità eccezionale
-- ✅ Ideale per analisi documenti massivi (codebase interi, contratti, research)
-- ✅ Sicurezza e alignment top-tier
-- ✅ Vision capabilities avanzate
-- ✅ Prompt caching per ridurre costi su context lunghi
-
-**Punti di Debolezza**:
-- ❌ Pricing più alto oltre 200K context ($6/1M vs $3/1M)
-- ❌ Community più piccola vs OpenAI
-- ❌ A volte troppo "cauto" su task borderline
-
-**Usa Claude Sonnet 4 quando**:
-- Analisi documenti enormi (100+ pagine, codebase completi)
-- Conversazioni multi-session complesse
-- Precisione assoluta richiesta (legal, compliance, medical)
-- Budget disponibile per long context (con prompt caching)
-
----
-
-### Gemini 2.5 (Google)
-
-**Famiglia**: Gemini 2.5 Pro, Flash, Flash-Lite
-
-**Context Window**: 1M token + Deep Think reasoning mode
-
-**Punti di Forza**:
-- ✅ Multimodalità nativa avanzata (testo, audio, immagini, video, code)
-- ✅ Context window 1M token (pari a Claude)
-- ✅ Deep Think mode per reasoning complesso
-- ✅ Integrazione totale Google Workspace (Gmail, Drive, Calendar, Meet)
-- ✅ Web search nativo sempre attivo
-- ✅ Varianti ottimizzate (Flash per velocità, Flash-Lite per costi)
-- ✅ 20-30% più efficiente su token usage
-
-**Punti di Debolezza**:
-- ❌ Ancora in evoluzione vs GPT/Claude (meno maturo)
-- ❌ Community più piccola, meno risorse
-- ❌ Adoption enterprise più limitata
-
-**Usa Gemini 2.5 quando**:
-- Ecosystem Google Workspace centrale nel workflow
-- Multimodalità critica (video, audio nativi)
-- Serve web search real-time integrato
-- Budget optimization con Flash/Flash-Lite
+**Gemini Famiglia**:
+- **Gemini 2.5 Pro**: Deep Think, reasoning complesso
+- **Gemini 2.5 Flash**: Velocità ottimizzata
+- **Gemini 2.5 Flash-Lite**: Costi minimizzati
 
 ---
 
@@ -266,25 +221,6 @@ Precisione assoluta critica? (legal, medical, compliance)
 ├─ SÌ → Claude Sonnet 4
 └─ NO → GPT-5 o Gemini 2.5 (generale)
 ```
-
----
-
-### Esempi per Ruolo
-
-**PM/PMO**:
-- **Analisi portfolio documenti massicci**: Claude Sonnet 4 (1M context)
-- **Quick status updates**: GPT-5 nano (veloce, economico $0.05/1M)
-- **Risk analysis complessa con math**: GPT-5 (reasoning superiore)
-
-**Service Designer**:
-- **User research synthesis (100+ interviste)**: Claude Sonnet 4 o Gemini 2.5
-- **Brainstorming features creative**: GPT-5 o Gemini 2.5 Flash
-- **Analisi competitor screens multimodali**: Gemini 2.5 (video/immagini native)
-
-**Funzionale**:
-- **Requirements → User Stories (grandi volumi)**: Claude Sonnet 4
-- **Test case generation con logic**: GPT-5 (94% math accuracy)
-- **Documentation analysis cross-sistema**: Claude Sonnet 4 (context enorme)
 
 ---
 
@@ -360,35 +296,6 @@ Per 99% use case: **Prompt Engineering è sufficiente**.
 - Gemini 2.5 Pro: marzo 2025 (ma web search compensa)
 
 Post-cutoff: usa web search o fornisci documenti aggiornati.
-
----
-
-## 💡 Esempio Pratico: Document Analysis
-
-**Scenario PM**: Devi analizzare 50 status report (200 pagine totali)
-
-### Scelta Modello
-
-**Calcolo Token**:
-- 200 pagine × 300 parole/pagina = 60,000 parole
-- ~80,000 token
-
-**Opzioni**:
-
-✅ **GPT-5** (400K context):
-- 80K token < 400K → OK
-- Funziona bene, costo ~$0.90 per analysis
-
-✅ **Claude Sonnet 4** (1M context):
-- 80K token < 1M → AMPIO MARGINE
-- Context enorme, ideale per aggiungere context addizionale
-- Costo: $0.24 (sotto 200K threshold)
-- **Scelta ottimale per long context**
-
-✅ **Gemini 2.5 Pro** (1M context):
-- 80K token < 1M → OK
-- Se hai già workspace Google, integrazione nativa
-- Costo competitivo
 
 ---
 
