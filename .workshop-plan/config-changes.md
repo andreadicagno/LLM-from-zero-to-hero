@@ -43,8 +43,8 @@ const config: Config = {
 **CHANGE TO**:
 ```typescript
 const config: Config = {
-  title: 'Workshop LLM: From Casual User to Power User',
-  tagline: 'Corso intensivo per profili non-tecnici: padroneggia Claude e gli LLM nel lavoro quotidiano',
+  title: 'LLM from 0 to Hero 🦸🏻‍♂️',
+  tagline: 'Corso intensivo per profili non-tecnici: diventa un eroe degli LLM in 3 giorni',
   favicon: 'img/favicon.ico', // TODO: Sostituire con favicon custom se disponibile
 ```
 
@@ -355,8 +355,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Workshop LLM: From Casual User to Power User',
-  tagline: 'Corso intensivo per profili non-tecnici: padroneggia Claude e gli LLM nel lavoro quotidiano',
+  title: 'LLM from 0 to Hero 🦸🏻‍♂️',
+  tagline: 'Corso intensivo per profili non-tecnici: diventa un eroe degli LLM in 3 giorni',
   favicon: 'img/favicon.ico',
 
   future: {
@@ -1126,3 +1126,183 @@ Le traduzioni custom non sono supportate nella configurazione attuale del plugin
 - Supporto italiano
 - Offline-ready
 - Gratuito e open source
+
+---
+
+## 9️⃣ Google Analytics 4 - IMPLEMENTATO ✅
+
+### Plugin: `@docusaurus/plugin-google-gtag` (incluso in preset-classic)
+
+**Data Implementazione**: 2025-10-06
+
+#### Configurazione Attiva
+
+Google Analytics 4 è stato configurato in `docusaurus.config.ts` tramite il preset classic:
+
+```typescript
+presets: [
+  [
+    'classic',
+    {
+      // ... altre configurazioni (docs, blog, theme)
+      gtag: {
+        // Google Analytics 4 Measurement ID
+        // Per ottenerlo: https://analytics.google.com > Admin > Data Streams > [tuo stream]
+        // Il Measurement ID ha formato: G-XXXXXXXXXX
+        trackingID: 'G-XXXXXXXXXX', // Sostituisci con il tuo Measurement ID
+        anonymizeIP: true, // Anonimizza IP per conformità GDPR
+      },
+    } satisfies Preset.Options,
+  ],
+],
+```
+
+#### Funzionalità
+
+✅ **Tracking Automatico**:
+- Tutte le pageviews
+- Navigation events
+- Scroll depth
+- Outbound clicks
+
+✅ **Privacy**:
+- IP anonimizzati (`anonymizeIP: true`) per conformità GDPR
+- No cookie di terze parti
+- Dati aggregati
+
+✅ **Ambiente**:
+- Attivo SOLO in produzione (GitHub Pages)
+- Disabilitato in `yarn start` (no dati sporchi in sviluppo)
+
+#### Setup Post-Implementazione
+
+**Passi per completare il setup** (da fare manualmente):
+
+1. **Creare account Google Analytics 4**:
+   - Vai su https://analytics.google.com
+   - Crea un account e una proprietà GA4
+   - Nome proprietà suggerito: "LLM from 0 to Hero Workshop"
+
+2. **Aggiungere Data Stream**:
+   - In GA4: Admin > Data Streams > Add Stream > Web
+   - Website URL: `https://andreadicagno.github.io`
+   - Stream name: "LLM Workshop Site"
+   - Enable Enhanced Measurement (recommended)
+
+3. **Ottenere Measurement ID**:
+   - In GA4: Admin > Data Streams > [tuo stream]
+   - Copia il **Measurement ID** (formato `G-XXXXXXXXXX`)
+   - Esempio: `G-1A2B3C4D5E`
+
+4. **Aggiornare Config**:
+   - Apri `docusaurus.config.ts`
+   - Sostituisci `'G-XXXXXXXXXX'` con il tuo Measurement ID reale
+   - Commit e push le modifiche
+
+5. **Deploy e Verifica**:
+   - Deploy su GitHub Pages
+   - Visita il sito in produzione
+   - In GA4: Reports > Realtime
+   - Dovresti vedere la tua visita entro 30 secondi
+
+#### Metriche Disponibili Workshop
+
+🎯 **Report Utili per Valutare Workshop**:
+
+**Engagement**:
+- **Pagine più visitate**: Quali moduli sono più consultati
+- **Tempo sulla pagina**: Quanto tempo passano sui vari contenuti
+- **Scroll depth**: Quanto leggono in profondità gli articoli
+
+**Navigazione**:
+- **Percorsi utente**: Sequenza di navigazione tra moduli
+- **Landing pages**: Da dove iniziano (Home, Giorno 1, Risorse?)
+- **Exit pages**: Dove abbandonano
+
+**Partecipanti**:
+- **Utenti attivi**: Quanti partecipanti stanno navigando
+- **Sessioni per utente**: Frequenza di ritorno ai materiali
+- **Dispositivi**: Desktop vs Mobile (per adattare materiali)
+
+**Post-Workshop**:
+- **Ritorno ai materiali**: Chi rivede i contenuti dopo il corso
+- **Risorse più consultate**: FAQ, Glossario, Templates
+
+#### Eventi Custom (Opzionale - Futuro)
+
+È possibile tracciare eventi personalizzati aggiungendo codice gtag custom:
+
+```typescript
+// Esempio: Track download template
+gtag('event', 'template_download', {
+  'event_category': 'resources',
+  'event_label': 'prompt_template_pm'
+});
+```
+
+**Eventi utili per workshop**:
+- Download template prompt
+- Click link esterni (Claude.ai, Anthropic docs)
+- Completamento esercizi (se form interattivi)
+- Apertura artifact examples
+
+#### Vantaggi Implementazione
+
+✅ **Zero dipendenze aggiuntive**: Plugin già incluso in `preset-classic`
+✅ **GDPR-compliant**: IP anonimizzati
+✅ **No impatto performance**: Script async, caricamento non-blocking
+✅ **Gratuito**: Fino a 10M eventi/mese (più che sufficiente per 8 partecipanti)
+✅ **Insights post-workshop**: Capire quali materiali sono più utili per iterazioni future
+
+#### Confronto Alternative
+
+| Feature | Google Analytics 4 | Plausible | Matomo |
+|---------|-------------------|-----------|--------|
+| **Costo** | Gratuito | €9/mese | Gratuito (self-hosted) |
+| **Privacy** | Buona (IP anonimizzati) | Eccellente | Eccellente |
+| **Setup** | 5 minuti | 10 minuti | 1-2 ore (server setup) |
+| **Features** | Molto ricco | Essenziale | Ricco |
+| **GDPR** | Compliant con config | Built-in | Built-in |
+| **Dashboard** | Complessa | Semplice | Media |
+
+**Scelta**: GA4 per analytics completi gratis con setup rapido.
+
+#### Test e Verifica
+
+✅ **Build Success**: `yarn build` completato senza errori
+✅ **Config Syntax**: Nessun errore TypeScript
+✅ **Plugin Loaded**: gtag incluso nel bundle production
+
+⏳ **Da testare dopo deploy**:
+- [ ] Script gtag caricato nel `<head>`
+- [ ] Measurement ID corretto sostituito
+- [ ] Eventi pageview tracciati in GA4 Realtime
+- [ ] IP anonimizzati (verificabile in GA4 settings)
+
+#### Note Tecniche
+
+⚠️ **Importante**:
+- Il plugin è **disattivato in development** (`yarn start`)
+- Per testare tracking in locale: `yarn build && yarn serve` (simula produzione)
+- GA4 ha delay ~24-48h per report storici (Realtime è immediato)
+- Measurement ID è pubblico e visibile nel source code (normale)
+
+#### Documentazione
+
+📚 **Risorse**:
+- [Docusaurus gtag plugin docs](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-google-gtag)
+- [GA4 Setup Guide](https://support.google.com/analytics/answer/9304153)
+- [GA4 Measurement ID](https://support.google.com/analytics/answer/12270356)
+
+#### Prossimi Step (Opzionali)
+
+💡 **Miglioramenti futuri**:
+1. **Custom Events**: Tracciare download template, click link esterni
+2. **Goals**: Definire obiettivi (es. "completato Giorno 1")
+3. **Audience**: Segmentare utenti per ruolo (PM vs PMO vs Functional)
+4. **Reports Custom**: Dashboard specifiche per metriche workshop
+5. **Data Studio**: Visualizzazioni avanzate per presentare risultati
+
+---
+
+**🎯 Setup completato lato codice. Richiede solo sostituzione Measurement ID reale dopo creazione account GA4.**

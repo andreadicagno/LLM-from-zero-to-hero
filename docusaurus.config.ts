@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Workshop LLM: From Casual User to Power User',
-  tagline: 'Corso intensivo per profili non-tecnici: padroneggia Claude e gli LLM nel lavoro quotidiano',
+  title: 'LLM from 0 to Hero 🦸🏻‍♂️',
+  tagline: 'Corso intensivo per profili non-tecnici: diventa un eroe degli LLM in 3 giorni',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -66,6 +66,13 @@ const config: Config = {
         theme: {
           customCss: './src/styles/custom.css',
         },
+        gtag: {
+          // Google Analytics 4 Measurement ID
+          // Per ottenerlo: https://analytics.google.com > Admin > Data Streams > [tuo stream]
+          // Il Measurement ID ha formato: G-XXXXXXXXXX
+          trackingID: 'G-K3M1PL4J57', // Workshop LLM Measurement ID
+          anonymizeIP: true, // Anonimizza IP per conformità GDPR
+        },
       } satisfies Preset.Options,
     ],
   ],
@@ -96,9 +103,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Workshop LLM',
+      title: 'LLM from 0 to Hero',
       logo: {
-        alt: 'Workshop LLM Logo',
+        alt: 'LLM from 0 to Hero Logo',
         src: 'img/new_logo.png',
         width: 34,
         height: 34,
@@ -182,7 +189,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Workshop LLM. Materiali didattici per uso educativo. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} LLM from 0 to Hero. Materiali didattici per uso educativo. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
