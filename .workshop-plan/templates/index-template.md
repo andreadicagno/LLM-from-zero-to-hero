@@ -496,26 +496,7 @@ sidebar_position: [N]
 
 [... aggiungi altri argomenti se necessario ...]
 
----
 
-## 🚀 Inizia il Modulo
-
-Pronto per [azione/obiettivo modulo]?
-
-<div style={{textAlign: 'center', margin: '2rem 0'}}>
-  <a href="[link-primo-argomento]" style={{
-    background: 'linear-gradient(90deg, #667eea 0%, #764ba2 100%)',
-    color: 'white',
-    padding: '1rem 2rem',
-    borderRadius: '8px',
-    textDecoration: 'none',
-    fontWeight: 'bold',
-    fontSize: '1.1rem',
-    display: 'inline-block'
-  }}>
-    🚀 1. [Nome Primo Argomento]
-  </a>
-</div>
 ```
 
 ---

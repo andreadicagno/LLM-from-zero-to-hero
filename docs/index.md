@@ -115,28 +115,13 @@ Non limitarti a leggere. Apri Claude in parallelo e **prova ogni tecnica** mentr
 ## 🏁 Inizia Subito
 
 Sei pronto? Clicca qui sotto per iniziare il tuo percorso:
-
-<div style={{textAlign: 'center', margin: '2rem 0'}}>
-  <a href="/docs/giorno-1-foundations" style={{
-    background: 'linear-gradient(90deg, #667eea 0%, #764ba2 100%)',
-    color: 'white',
-    padding: '1rem 2rem',
-    borderRadius: '8px',
-    textDecoration: 'none',
-    fontWeight: 'bold',
-    fontSize: '1.2rem',
-    display: 'inline-block'
-  }}>
-    🚀 Inizia il Giorno 1
-  </a>
-</div>
+🚀 **[Inizia il Giorno 1](/docs/giorno-1-foundations)**
 
 ---
 
 ## 📞 Supporto
 
 **Hai domande?**
-- 💬 Usa i commenti in fondo a ogni pagina
 - 📧 Contatta il facilitatore
 - 🔗 Consulta la sezione [FAQ](/docs/risorse/faq)
 

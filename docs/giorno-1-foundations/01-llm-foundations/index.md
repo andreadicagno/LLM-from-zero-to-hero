@@ -52,23 +52,3 @@ Questo modulo spiega i concetti tecnici con **analogie e linguaggio accessibile*
 ### 6. 🔑 [Concetti Essenziali](concetti-chiave)
 ⏱️ 15 min | Padroneggia temperature, hallucinations, fine-tuning e altre best practices fondamentali.
 
----
-
-## 🚀 Inizia il Modulo
-
-Pronto per immergerti nei fondamenti degli LLM?
-
-<div style={{textAlign: 'center', margin: '2rem 0'}}>
-  <a href="/docs/giorno-1-foundations/01-llm-foundations/01-token" style={{
-    background: 'linear-gradient(90deg, #667eea 0%, #764ba2 100%)',
-    color: 'white',
-    padding: '1rem 2rem',
-    borderRadius: '8px',
-    textDecoration: 'none',
-    fontWeight: 'bold',
-    fontSize: '1.1rem',
-    display: 'inline-block'
-  }}>
-    🚀 1. Token: l'Alfabeto degli LLM
-  </a>
-</div>

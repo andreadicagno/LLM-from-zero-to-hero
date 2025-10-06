@@ -1,8 +1,8 @@
 # 📋 TODO - Workshop LLM: from Casual User to Power User
 
-> **Last Updated**: 2025-10-05
-> **Status**: Giorno 1 Modulo 1 Complete ✅
-> **Progress**: 45% Complete
+> **Last Updated**: 2025-10-06
+> **Status**: Giorno 1 Complete ✅ (100%)
+> **Progress**: 60% Complete
 
 ---
 
@@ -40,20 +40,33 @@ Trasformare il sito Docusaurus demo in un corso completo per workshop in 3 giorn
 - [x] Creazione file placeholder (56 file)
 - [x] Test build (SUCCESS)
 
-### Fase 3: Sviluppo Contenuti Giorno 1
+### Fase 3: Sviluppo Contenuti Giorno 1 ✅ COMPLETATA
 - [x] Modulo 1: LLM Foundations ✅
   - [x] docs/index.md (homepage corso)
   - [x] docs/giorno-1-foundations/index.md (overview Giorno 1)
   - [x] docs/giorno-1-foundations/01-llm-foundations/index.md
   - [x] 01-token.md (420 righe)
   - [x] 02-anatomia-llm.md (430 righe)
-  - [x] 03-ragionamento.md (478 righe)
+  - [x] 03-ragionamento.md (820 righe)
   - [x] 04-contesto.md (437 righe)
   - [x] 05-multimodalita.md (578 righe)
-  - [x] 06-concetti-chiave.md (604 righe)
+  - [x] 06-concetti-chiave.md (1,125 righe)
   - [x] Build test SUCCESS ✅
-- [ ] Modulo 2: Prompt Engineering Teoria
-- [ ] Modulo 3: Esercizi Pratici
+- [x] Modulo 2: Prompt Engineering Teoria ✅
+  - [x] index.md (145 righe)
+  - [x] 01-anatomia-prompt.md (372 righe)
+  - [x] 02-framework-race.md (595 righe)
+  - [x] 03-chain-of-thought.md (389 righe)
+  - [x] 04-few-shot-learning.md (308 righe)
+  - [x] 05-role-based.md (235 righe)
+  - [x] 06-meta-prompting.md (274 righe)
+  - [x] 07-debugging.md (351 righe)
+  - [x] Build test SUCCESS ✅
+- [x] Modulo 3: Esercizi Pratici ✅
+  - [x] index.md (123 righe)
+  - [x] esercizio-1-ottimizzazione.md (727 righe)
+  - [x] esercizio-2-template.md (659 righe)
+  - [x] Build test SUCCESS ✅
 
 ### Fase 4: Sviluppo Contenuti Giorno 2
 - [ ] Modulo 1: Projects & Output Styles
@@ -582,6 +595,46 @@ Per ogni partecipante:
 
 **Stato**: Modulo 2 Prompt Engineering completato (55% progetto totale). Pronto per Modulo 3 (Esercizi Pratici)
 
+### Sessione 7 - 2025-10-06 ✅ COMPLETATA
+**Focus**: Sviluppo Completo Modulo 3 - Esercizi Pratici
+
+**Task Completati**:
+- [x] Creazione index.md overview modulo (123 righe, quick navigation style)
+- [x] Creazione esercizio-1-ottimizzazione.md (727 righe)
+  - 3 prompt deboli da ottimizzare (PM, Funzionale, Service Design)
+  - Template documentazione Before/After
+  - Varianti per 4 ruoli
+  - Soluzioni guidate dettagliate con explanations
+  - Peer review workflow
+  - Bonus challenge multi-stakeholder
+- [x] Creazione esercizio-2-template.md (659 righe)
+  - Step-by-step template creation workflow
+  - Esempio completo "Weekly Status Report Generator"
+  - Template ideas per 4 ruoli (PM, PMO, Service Design, Funzionale)
+  - Deliverable: Personal Prompt Template Library
+  - Template management best practices
+  - 30-Day Template Sprint challenge
+- [x] Fix MDX errors (HTML entities per `<5`)
+- [x] Fix broken links (rimozione prefissi numerici da path)
+- [x] Test build finale: SUCCESS ✅ (solo warning anchors)
+
+**Deliverables Sessione 7**:
+- ✅ Modulo 3 Esercizi Pratici completo (3 file, ~1,509 righe)
+- ✅ 2 esercizi hands-on immediatamente utilizzabili
+- ✅ Varianti per tutti i 4 ruoli target workshop
+- ✅ Template creation workflow completo e riutilizzabile
+- ✅ Build Docusaurus SUCCESS (zero errori)
+- ✅ **GIORNO 1 COMPLETATO AL 100%**
+
+**Metriche**:
+- 3 file creati
+- ~1,509 righe contenuto educativo di alta qualità
+- 2 esercizi pratici completi (30 min ciascuno)
+- 100% coverage Modulo 3 da content-outline.md
+- 20 file totali Giorno 1, ~8,700 righe totali
+
+**Stato**: Giorno 1 completato (60% progetto totale). Pronto per Giorno 2 (Claude Advanced Features)
+
 ---
 
 ## 💡 Idee per il Futuro
@@ -660,12 +713,13 @@ cp .workshop-plan/templates/module-template.md docs/[path]/nuovo-modulo.md
 
 **🎯 Obiettivo Finale**: Sito Docusaurus completo, educativo, pronto per deployment e uso nel workshop del 08/10/2025.
 
-**📊 Progressi**: Fase 3 Modulo 1 e 2 completati (55%). Prossimo: Modulo 3 Esercizi Pratici Giorno 1.
+**📊 Progressi**: Fase 3 completata (60%). **GIORNO 1 COMPLETATO AL 100%**. Prossimo: Giorno 2 - Claude Advanced Features.
 
-**🆕 Ultimo Aggiornamento (Sessione 6 - 2025-10-06)**:
-- ✅ Completato Modulo 1: LLM Foundations (9 file, ~4,500 righe con miglioramenti)
-- ✅ Completato Modulo 2: Prompt Engineering Teoria (8 file, ~2,669 righe)
-- ✅ Build Docusaurus SUCCESS
-- ✅ 20+ template e pattern riutilizzabili per PM/PMO/Service Design/Funzionali
-- ✅ Totale Giorno 1 Teoria: 17 file, ~7,200 righe contenuto educativo
-- 🎯 Pronto per Modulo 3: Esercizi Pratici (3 file) per completare Giorno 1
+**🆕 Ultimo Aggiornamento (Sessione 7 - 2025-10-06)**:
+- ✅ Completato Modulo 3: Esercizi Pratici (3 file, ~1,509 righe)
+- ✅ Esercizio 1: Ottimizzazione Prompt Inefficaci (727 righe)
+- ✅ Esercizio 2: Creare Template Personalizzati (659 righe)
+- ✅ Build Docusaurus SUCCESS (solo warning anchors per glossario futuro)
+- ✅ Fix broken links MDX (tutti i link corretti)
+- ✅ **GIORNO 1 COMPLETATO AL 100%** (20 file, ~8,700 righe totali)
+- 🎯 Pronto per Giorno 2: Claude Advanced Features

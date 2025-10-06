@@ -160,21 +160,4 @@ Il Giorno 1 è denso di informazioni, ma **non devi memorizzare tutto**. L'obiet
 La vera padronanza viene con la **pratica continua** nei giorni e settimane successive!
 :::
 
----
 
-**Pronto per iniziare?** 🚀
-
-<div style={{textAlign: 'center', margin: '2rem 0'}}>
-  <a href="/docs/giorno-1-foundations/01-llm-foundations" style={{
-    background: 'linear-gradient(90deg, #667eea 0%, #764ba2 100%)',
-    color: 'white',
-    padding: '1rem 2rem',
-    borderRadius: '8px',
-    textDecoration: 'none',
-    fontWeight: 'bold',
-    fontSize: '1.1rem',
-    display: 'inline-block'
-  }}>
-    📚 Inizia Modulo 1: LLM Foundations
-  </a>
-</div>
