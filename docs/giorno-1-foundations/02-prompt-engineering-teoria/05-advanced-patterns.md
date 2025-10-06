@@ -7,7 +7,7 @@ tags: [prompt-engineering, advanced-patterns, chaining, multi-turn, optimization
 
 # 🎯 Pattern Avanzati di Prompting
 
-> ⏱️ **Durata**: 18 minuti
+> ⏱️ **Durata**: 13 minuti
 > 🎯 **Livello**: Avanzato
 > 📚 **Prerequisiti**: Framework RACE, Tecniche Avanzate, Meta-Prompting, Debugging
 
@@ -543,103 +543,6 @@ Title: [max 60 char]
 Summary: [max 200 char]
 Tags: [exactly 3 tags, comma-separated]
 Priority: [must be: High|Medium|Low]
-```
-
----
-
-## 🛠️ Pattern Enforcement Efficaci
-
-### **Pattern 1: Schema + Example**
-
-Più efficace: **mostra schema + esempio completo**
-
-```markdown
-Generate user profile JSON following this schema:
-
-SCHEMA:
-{
-  "id": "string UUID",
-  "name": "string",
-  "email": "string",
-  "role": "admin|user|guest",
-  "permissions": ["string array"],
-  "created_at": "ISO 8601 datetime"
-}
-
-EXAMPLE (copy this structure exactly):
-{
-  "id": "550e8400-e29b-41d4-a716-446655440000",
-  "name": "Mario Rossi",
-  "email": "mario.rossi@example.com",
-  "role": "user",
-  "permissions": ["read", "write"],
-  "created_at": "2025-01-15T10:30:00Z"
-}
-
-Now generate for:
-Name: [nuovo user]
-Email: [email]
-Role: [role]
-```
-
-→ Combinazione schema + esempio = massima compliance
-
----
-
-### **Pattern 2: Validation Checklist**
-
-Chiedi auto-validazione:
-
-```markdown
-Generate API error response JSON.
-
-Requirements:
-- Field "error_code": string, format "ERR_XXXX"
-- Field "message": string, max 200 char
-- Field "timestamp": ISO 8601
-- Field "details": object or null
-
-After generating, verify:
-☐ All required fields present
-☐ error_code format correct
-☐ message under 200 char
-☐ timestamp valid ISO 8601
-☐ Valid JSON syntax
-
-Generate and validate:
-```
-
----
-
-### **Pattern 3: Multiple Examples for Variety**
-
-Per format complesso, mostra 2-3 varianti:
-
-```markdown
-Generate status report following one of these formats:
-
-FORMAT A (Buone notizie):
-Status: ✅ On Track
-Progress: [X]% complete
-Next: [milestone] by [date]
-Confidence: High
-
-FORMAT B (Issue moderati):
-Status: ⚠️ At Risk
-Progress: [X]% complete
-Blocker: [issue description]
-Mitigation: [action plan]
-Confidence: Medium
-
-FORMAT C (Problemi critici):
-Status: 🔴 Critical
-Progress: [X]% complete
-Critical Issue: [description]
-Decision Needed: [da chi, entro quando]
-Confidence: Low
-
-Choose appropriate format and generate for:
-[project context]
 ```
 
 ---

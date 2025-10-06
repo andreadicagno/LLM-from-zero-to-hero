@@ -567,29 +567,9 @@ O potrebbe dire: "Ouaga" o "Ouagadugu" ❌ (fuzzy memory error)
 
 ---
 
-**Esempio 3: False Benchmark Data**
-
-```
-❌ Output LLM:
-"Velocity media team agile in consulting: 45 story points/sprint
- (Benchmark Accenture 2024)"
-
-🚨 Red Flags:
-- Numero troppo specifico (45 SP)
-- Benchmark "Accenture 2024" non linkato
-- Velocity varia MOLTO per contesto (non c'è "media universale")
-
-✅ Reality Check:
-- Velocity dipende da: team size, definition of done, complessità
-- Accenture non pubblica benchmark velocity generici (confidenziale)
-→ Hallucination quasi certa
-```
-
----
-
 #### 📊 Esempi Pratici per PMO
 
-**Esempio 4: Fake Portfolio Metrics**
+**Esempio 3: Fake Portfolio Metrics**
 
 ```
 ❌ Output LLM:
@@ -609,7 +589,7 @@ O potrebbe dire: "Ouaga" o "Ouagadugu" ❌ (fuzzy memory error)
 
 ---
 
-**Esempio 5: Invented Governance Process**
+**Esempio 4: Invented Governance Process**
 
 ```
 ❌ Output LLM:
@@ -631,7 +611,7 @@ O potrebbe dire: "Ouaga" o "Ouagadugu" ❌ (fuzzy memory error)
 
 #### 🎨 Esempi Pratici per Service Designer
 
-**Esempio 6: Fake UX Research Stats**
+**Esempio 5: Fake UX Research Stats**
 
 ```
 ❌ Output LLM:
@@ -653,29 +633,7 @@ O potrebbe dire: "Ouaga" o "Ouagadugu" ❌ (fuzzy memory error)
 
 ---
 
-**Esempio 7: Invented User Quotes**
-
-```
-❌ Output LLM:
-"Intervista utente da tuo research 2024:
- 'L'app è intuitiva ma vorrei più customization options'
- - Marco R., 34 anni, Milano"
-
-🚨 Red Flags (SE tu non hai fatto quel research!):
-- LLM "cita" dati che non esistono
-- Nome generico (Marco R.)
-- Quote plausibile ma inventata
-
-✅ Reality Check:
-- Tu NON hai fornito trascrizioni interviste nel prompt?
-→ LLM ha INVENTATO quote basandosi su pattern UX comuni!
-
-⚠️ Rischio: Usare quote fake in presentation = GRAVE!
-```
-
----
-
-**Esempio 8: False Design Patterns**
+**Esempio 6: False Design Patterns**
 
 ```
 ❌ Output LLM:
@@ -697,46 +655,32 @@ O potrebbe dire: "Ouaga" o "Ouagadugu" ❌ (fuzzy memory error)
 
 #### ⚙️ Esempi Pratici per Funzionale
 
-**Esempio 9: Tech Specs Hallucination**
+**Esempio 7: Tech Specs & Integration Hallucinations**
 
 ```
-❌ Output LLM:
-"API deve supportare HTTP/3.5 protocol con TLS 1.4 encryption,
- throughput minimo 50K requests/sec (Standard REST-API-2024)"
+❌ Output LLM (Tech Specs):
+"API deve supportare HTTP/3.5 protocol con TLS 1.4 encryption"
 
 🚨 Red Flags:
-- "HTTP/3.5" non esiste (attuale: HTTP/3, no 3.5!)
+- "HTTP/3.5" non esiste (attuale: HTTP/3)
 - "TLS 1.4" non esiste (attuale: TLS 1.3)
-- "Standard REST-API-2024" inventato
+→ LLM inventa versioni future plausibili ma inesistenti
 
-✅ Reality Check:
-- HTTP versions: 1.1, 2, 3 (no 3.5)
-- TLS versions: 1.2, 1.3 (no 1.4)
-→ LLM ha "inventato" versioni future plausibili ma inesistenti!
-
-⚠️ Rischio: Spec fake → sviluppo impossibile
-```
-
----
-
-**Esempio 10: False Integration Requirements**
-
-```
-❌ Output LLM:
+❌ Output LLM (Integration):
 "Per integrare con SAP, usa SAP Integration Framework v8.2
- con connector S4/HANA-SYNC (license Enterprise tier richiesta)"
+ con connector S4/HANA-SYNC (license Enterprise tier)"
 
 🚨 Red Flags:
-- "v8.2" versione specifica mai verificata
+- Versione "v8.2" mai verificata
 - "S4/HANA-SYNC" naming non standard SAP
 - Dettagli licensing senza fonte
 
-✅ Verifica:
-1. Controlla SAP docs ufficiali: version attuale?
-2. "S4/HANA-SYNC" esiste come prodotto?
-3. Licensing requirement corretto?
+✅ Reality Check:
+- Verifica SEMPRE version numbers attuali (HTTP, TLS, framework)
+- Controlla docs ufficiali vendor (SAP, Oracle, etc.)
+- Nomi prodotti esatti (non varianti inventate)
 
-→ LLM conosce SAP è complesso, inventa dettagli plausibili ma fake
+⚠️ Rischio: Spec fake → sviluppo impossibile o incompatibilità
 ```
 
 ---
@@ -1036,7 +980,7 @@ LLM base non può:
 - Start sempre con prompt engineering
 
 **Knowledge Cutoff**:
-- GPT-5: settembre 2025, Claude Sonnet 4: agosto 2025, Gemini 2.5: marzo 2025
+- GPT-5: settembre 2025, Claude Sonnet 4: agosto 2025, Gemini 2.5 Pro: marzo 2025
 - Info post-cutoff o recentissime: usa web search o fornisci documenti
 - Sempre verifica date su info time-sensitive
 

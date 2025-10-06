@@ -72,16 +72,13 @@ Output generato token-by-token:
 | "sdraio" | 2% | Meno comune |
 
 :::info 🌡️ Cos'è Temperature?
-**Temperature** è un parametro (0.0-1.0) che controlla la **casualità** dell'output:
-- **Bassa (0.1-0.3)**: Output deterministico, preciso, ripetibile
-- **Alta (0.8-1.0)**: Output creativo, vario, sorprendente
+**Temperature** è un parametro (0.0-1.0) che controlla la **casualità** dell'output LLM nella scelta del next token.
 
-Approfondiremo nel dettaglio in [Concetti Essenziali: Temperature](concetti-chiave)
+Temperature bassa (0.1-0.3) → output deterministico e preciso
+Temperature alta (0.8-1.0) → output creativo e vario
+
+➡️ Approfondimento completo in [Concetti Essenziali: Temperature](concetti-chiave)
 :::
-
-**Con Temperature Bassa (0.1)**: Sceglie quasi sempre "tappeto" (deterministic)
-
-**Con Temperature Alta (0.9)**: Potrebbe scegliere "tetto" o varianti creative
 
 ---
 

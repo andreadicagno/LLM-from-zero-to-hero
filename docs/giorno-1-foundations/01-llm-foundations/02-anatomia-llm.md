@@ -162,7 +162,7 @@ Stai facendo **inference**, non training.
 
 ### Tabella Comparativa
 
-| Caratteristica | GPT-5 (OpenAI) | Claude Sonnet 4 (Anthropic) | Gemini 2.5 (Google) |
+| Caratteristica | GPT-5 (OpenAI) | Claude Sonnet 4 (Anthropic) | Gemini 2.5 Pro (Google) |
 |---|---|---|---|
 | **Context Window** | 400K token<br/>(~1,200 pagine) | 1M token<br/>(~3,000 pagine) | 1M token<br/>(~3,000 pagine) |
 | **Punti di Forza** | • Math/Coding eccezionale (94.6% AIME)<br/>• Ecosystem maturo (API, plugin)<br/>• Varianti economiche (mini, nano) | • Context più grande sul mercato<br/>• Precisione e affidabilità top<br/>• Prompt caching per long context | • Multimodalità nativa (video, audio)<br/>• Google Workspace integrato<br/>• Web search nativo sempre attivo |
@@ -173,7 +173,7 @@ Stai facendo **inference**, non training.
 :::tip 💡 Quick Decision Guide
 - **Documenti enormi (100+ pagine)?** → Claude Sonnet 4 o Gemini 2.5 Pro
 - **Coding/Math complesso?** → GPT-5
-- **Lavori in Google Workspace?** → Gemini 2.5
+- **Lavori in Google Workspace?** → Gemini 2.5 Pro
 - **Budget limitato ma qualità?** → GPT-5 mini/nano o Gemini Flash
 :::
 
@@ -210,7 +210,7 @@ Fai principalmente coding/math complesso?
 └─ NO → ↓
 
 Usi Google Workspace come hub centrale?
-├─ SÌ → Gemini 2.5 (integrazione nativa Gmail, Drive, Meet)
+├─ SÌ → Gemini 2.5 Pro (integrazione nativa Gmail, Drive, Meet)
 └─ NO → ↓
 
 Budget limitato ma serve qualità?
@@ -219,7 +219,7 @@ Budget limitato ma serve qualità?
 
 Precisione assoluta critica? (legal, medical, compliance)
 ├─ SÌ → Claude Sonnet 4
-└─ NO → GPT-5 o Gemini 2.5 (generale)
+└─ NO → GPT-5 o Gemini 2.5 Pro (generale)
 ```
 
 ---
@@ -287,7 +287,7 @@ Per 99% use case: **Prompt Engineering è sufficiente**.
 **Realtà**: Dipende dal modello e configurazione:
 - GPT-5 (ChatGPT): SÌ, con web browsing attivato
 - Claude Sonnet 4: SÌ, se abiliti web search (beta)
-- Gemini 2.5: SÌ, web search nativo sempre attivo
+- Gemini 2.5 Pro: SÌ, web search nativo sempre attivo
 - API GPT-5/Claude (base): NO (solo training data)
 
 **Knowledge Cutoff**: Modelli hanno data limite training:
@@ -315,7 +315,7 @@ Post-cutoff: usa web search o fornisci documenti aggiornati.
 **Scegliere Modello**:
 - **Claude Sonnet 4**: documenti enormi (1M context), precisione massima, compliance
 - **GPT-5**: coding/math avanzati, reasoning, integrazioni API mature
-- **Gemini 2.5**: Google Workspace, multimodalità nativa, web search integrato
+- **Gemini 2.5 Pro**: Google Workspace, multimodalità nativa, web search integrato
 - **Budget**: GPT-5 mini/nano, Gemini Flash/Flash-Lite
 
 **Parametri**:

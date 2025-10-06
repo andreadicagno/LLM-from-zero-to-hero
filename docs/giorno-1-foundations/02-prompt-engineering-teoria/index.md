@@ -24,7 +24,7 @@ tags: [giorno-1, prompt-engineering, teoria, framework]
 - 💼 **Professionalità**: Output pronti per stakeholder senza re-work
 
 :::tip Impatto Real-World
-Un PM che padroneggia prompt engineering può ridurre il tempo per generare status report da 30 minuti a 3 minuti, con output di qualità superiore.
+Professionisti che padroneggiano prompt engineering riducono il tempo per generare recap mail e documenti strutturati da 30 minuti a 3 minuti, con output di qualità superiore e pronti per condivisione.
 :::
 
 ---

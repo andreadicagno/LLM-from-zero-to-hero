@@ -24,11 +24,9 @@ Al termine di questa sezione sarai in grado di:
 
 ---
 
-## 💡 Introduzione: Perché Serve un Framework?
+## 💡 Perché Serve un Framework Sistematico?
 
-**Prompt Engineering** è l'arte e la scienza di scrivere istruzioni efficaci per gli LLM. È la differenza tra ottenere output generici e inutilizzabili, e risultati precisi che fanno risparmiare ore di lavoro.
-
-**Senza framework sistematico**:
+**Senza framework strutturato**:
 - ❌ Output generico non utilizzabile
 - ❌ 5-6 iterazioni per ogni task
 - ❌ Risultati inconsistenti
@@ -355,32 +353,45 @@ Include: Specific data points (dates, effort estimates)
 
 Template pronti all'uso per task ricorrenti. Copia, personalizza con i tuoi dati, riutilizza.
 
-### **Template 1: Status Report Settimanale (PM)**
+### **Template 1: Recap Mail Strutturato (PM/Funzionale)**
 
 ```markdown
-[R] Sei un Senior Project Manager in [industry]
+[R] Sei un Project Coordinator esperto in comunicazione stakeholder
 
-[A] Scrivi status report settimanale del progetto per steering committee
+[A] Trasforma thread email in recap strutturato e actionable
 
 [C]
-Progetto: [Nome]
-Settimana: [N]
-Progress: [%]
-Milestone recenti: [Cosa completato]
-Issues emerse: [Problemi]
-Team size: [N persone]
-Budget status: [On track / Alert]
+Thread email: [Copia-incolla conversazione]
+Periodo: [Date range es: 15-20 Gen]
+Partecipanti: [Stakeholder coinvolti]
+Topic principale: [Oggetto discussione]
+Context: [Background se necessario]
 
 [E]
-Formato: Email
-Struttura:
-- 📊 Progress: [Milestone + % vs target]
-- ✅ Achievements questa settimana
-- ⚠️ Risks & Issues (top 2)
-- ➡️ Next Week Priorities
-Lunghezza: Max 300 parole
-Tone: Data-driven, transparent
-Audience: Steering committee (mix tecnico/business)
+Formato: Documento strutturato
+Sezioni obbligatorie:
+
+**1. DECISIONI PRESE**
+- [Decisione 1] - presa da [chi] il [data]
+- [Decisione 2] - presa da [chi] il [data]
+
+**2. ACTION ITEMS**
+- Owner: [Nome]
+- Azione: [Cosa fare]
+- Deadline: [Data]
+- Status: [New / In progress]
+
+**3. OPEN QUESTIONS**
+- [Domanda 1] - da chiarire con [chi]
+- [Domanda 2] - da chiarire con [chi]
+
+**4. NEXT STEPS**
+- [Prossima azione prioritaria]
+- [Timeline proposto]
+
+Lunghezza: Max 400 parole
+Tone: Chiaro, neutro, action-oriented
+Output: Copy-paste ready per condivisione team
 ```
 
 ---
@@ -451,41 +462,57 @@ Audience: Product team + stakeholder business
 
 ---
 
-### **Template 4: Business Requirements → User Stories (Funzionale)**
+### **Template 4: Stakeholder Request → Feasibility Assessment (Funzionale)**
 
 ```markdown
-[R] Sei un Business Analyst certificato, esperto Agile methodology
+[R] Sei un Business Analyst senior con esperienza in change management e project scoping
 
-[A] Trasforma business requirement in user stories formato standard con acceptance criteria
+[A] Analizza richiesta stakeholder e genera feasibility assessment strutturato
 
 [C]
-Feature: [Nome feature]
-Business need: [Requirement descrittivo da stakeholder]
-Stakeholder: [Chi ha richiesto, ruolo]
-Priority: [Must-have / Should-have / Nice-to-have]
-Technical constraints: [Limitazioni note]
-Compliance/Regulatory: [Se applicabile]
+Request: [Descrizione richiesta stakeholder]
+Requestor: [Nome, ruolo, department]
+Business driver: [Motivazione business]
+Timeline requested: [Urgenza/deadline]
+Current systems impacted: [Sistemi/processi coinvolti]
+Budget indication: [Range budget se disponibile]
+Strategic alignment: [Collegamento a obiettivi aziendali]
 
 [E]
-Formato: User Stories Agile
-Struttura per story:
+Formato: Feasibility Assessment Report
+Struttura obbligatoria:
 
-As a [user type]
-I want to [action/capability]
-So that [business benefit]
+**1. REQUEST SUMMARY**
+- Richiesta in 2-3 frasi
+- Stakeholder key e loro driver
 
-Acceptance Criteria:
-- [Criterio 1 - testabile]
-- [Criterio 2 - testabile]
-- [Criterio 3 - testabile]
+**2. FEASIBILITY ANALYSIS**
+- Technical feasibility: [H/M/L] + rationale
+- Operational feasibility: [H/M/L] + rationale
+- Financial feasibility: [H/M/L] + rationale
+- Timeline feasibility: [H/M/L] + rationale
 
-Story Points Estimate: [Fibonacci]
-Priority: [H/M/L]
-Dependencies: [Se presenti]
+**3. IMPACT ASSESSMENT**
+- Systems impacted: [lista]
+- Teams/departments involved: [lista]
+- Dependencies: [critiche]
+- Risks: [top 3]
 
-Numero stories: Massimo 5-6 (break down feature se troppo grande)
-Tone: Chiaro, specifico, testabile
-Include: Edge cases nei criteria dove rilevante
+**4. EFFORT ESTIMATION**
+- Effort range: [min-max person-days]
+- Duration estimate: [settimane/mesi]
+- Resource needs: [skill/number]
+
+**5. RECOMMENDATION**
+- Go/No-Go/Conditional approval
+- Rationale (3-4 bullet points)
+- Conditions if applicable
+- Alternative approaches se rilevante
+
+Tone: Obiettivo, data-driven, decision-ready
+Audience: Steering committee / Product owner
+Lunghezza: Max 2 pagine
+Include: Risk mitigation per recommendation
 ```
 
 ---
@@ -496,10 +523,11 @@ Include: Edge cases nei criteria dove rilevante
 
 ### **Step 1: Scegli Task Ricorrente**
 Esempi:
-- Status report weekly
-- Email stakeholder update
+- Recap mail settimanali
+- Strutturare linee guida operative
 - Meeting notes → action items
-- Requirements refinement
+- Generare matrice RACI
+- Proposta commerciale per cliente
 - User feedback synthesis
 
 ### **Step 2: Compila Ogni Componente RACE**

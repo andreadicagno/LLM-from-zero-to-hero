@@ -7,7 +7,7 @@ tags: [prompt-engineering, meta-prompting, optimization, delegation]
 
 # 🔄 Meta-Prompting: Far Scrivere Prompt a Claude
 
-> ⏱️ **Durata**: 10 minuti
+> ⏱️ **Durata**: 15 minuti
 > 🎯 **Livello**: Intermedio/Avanzato
 
 ---
@@ -17,6 +17,7 @@ tags: [prompt-engineering, meta-prompting, optimization, delegation]
 - ✅ Comprendere cos'è meta-prompting
 - ✅ Delegare creazione prompt all'LLM
 - ✅ Ottimizzare prompt esistenti
+- ✅ Usare clarifying questions per task complessi e ambigui
 - ✅ Creare template library rapidamente
 
 ---
@@ -55,24 +56,25 @@ Specs:
 Genera prompt strutturato riutilizzabile.
 ```
 
-### **Esempio PM - Status Reports**
+### **Esempio Funzionale/Service Design - Linee Guida Operative**
 
 ```
-Sono PM e devo creare weekly status reports per executive committee.
+Devo creare documento di linee guida operative per nuovo processo aziendale.
 
-Help me create effective prompt per questi reports.
+Help me create effective prompt per strutturare queste linee guida.
 
 Specs:
-- Obiettivo: Report conciso ma completo per C-level
-- Input: Notes team + metrics da dashboard
-- Output: Email professionale, max 400 parole
-- Sezioni: Progress, Risks, Next Steps
-- Tone: Professionale, data-driven
+- Obiettivo: Documento operativo chiaro per team
+- Input: Appunti processo + best practices + vincoli
+- Output: Linee guida strutturate, formato markdown
+- Sezioni: Scopo, Processo step-by-step, Ruoli, Eccezioni, FAQ
+- Audience: Team operativo (mix seniority)
+- Tone: Chiaro, procedurale, ma non troppo rigido
 
 Genera prompt riutilizzabile con:
-1. Role e context
-2. Struttura input-output
-3. Template formato
+1. Role e context appropriati
+2. Struttura sezioni linee guida
+3. Template formato output
 ```
 
 **Claude genera** prompt completo pronto all'uso ✅
@@ -166,6 +168,132 @@ Output: 3 templates + usage guide
 
 ---
 
+## 🔍 Pattern 4: Clarifying Questions (Interactive Elicitation)
+
+### **Cos'è**
+
+Invece di descrivere il task completo subito, chiedi all'LLM di **farti domande** per guidarti nella definizione dei requirements. Tecnica particolarmente utile quando sei incerto su come strutturare un prompt complesso o quali informazioni includere.
+
+### **Quando Usare**
+
+✅ **Task complesso** dove sei incerto su cosa specificare
+✅ **Non sai quali informazioni** sono necessarie per un prompt efficace
+✅ **Primo approccio** a dominio o task non familiare
+✅ **Vuoi che l'LLM ti guidi** nel pensiero strutturato
+✅ **Task ricorrente** che vuoi standardizzare ma non conosci tutti i dettagli
+
+❌ **Non usare** per task semplici o urgentissimi (il ciclo domande/risposte aggiunge tempo)
+
+### **Pattern Base**
+
+```markdown
+Devo [task generale/obiettivo].
+
+Fammi domande per chiarire meglio:
+- Obiettivo specifico e deliverable atteso
+- Context e informazioni necessarie
+- Formato output desiderato
+- Vincoli e constraints da considerare
+- Audience e tone appropriato
+
+Dopo le mie risposte, genera prompt RACE ottimale riutilizzabile.
+```
+
+---
+
+### **Esempio 1: PM - Design Sprint Planning**
+
+**Scenario**: PM deve pianificare design sprint ma non sa come strutturare agenda
+
+**User Prompt**:
+```
+Devo pianificare un design sprint ma non sono sicuro di come strutturarlo.
+
+Fammi domande per chiarire:
+- Obiettivi dello sprint
+- Team composition
+- Constraints (tempo, risorse)
+- Output attesi
+- Stakeholder da coinvolgere
+
+Poi generami prompt template riutilizzabile per future sprint planning.
+```
+
+**Claude risponde con domande**:
+```
+1. Qual è il problema specifico o feature da esplorare nello sprint?
+2. Durata dello sprint? (3-5 giorni tipicamente)
+3. Quanti partecipanti? Ruoli rappresentati?
+4. Ci sono decisori che devono approvare output?
+5. Budget/risorse per prototipazione?
+6. User testing è incluso nel timeline?
+7. Deliverable finale: concept? prototipo? roadmap?
+```
+
+**User risponde**, poi Claude genera prompt strutturato ottimale ✅
+
+---
+
+### **Esempio 2: Service Design - User Research Planning**
+
+**Scenario**: Service Designer deve fare user research ma scope non chiaro
+
+**User Prompt**:
+```
+Devo pianificare user research per nuovo servizio digitale.
+
+Non sono sicuro di scope e approccio. Fammi domande per chiarire:
+- Metodo research appropriato (interviste? survey? test?)
+- Sample size e recruitment
+- Timeline e budget
+- Research questions prioritarie
+- Stakeholder requirements
+
+Genera poi prompt per research plan completo.
+```
+
+**Claude fa domande**:
+```
+1. A che stadio è il servizio? (concept/prototype/live)
+2. Obiettivo primario research: exploratory, evaluative, o validazione ipotesi?
+3. Target users: quanti segmenti? demographics?
+4. Timeline disponibile? (giorni/settimane/mesi)
+5. Budget per incentivi partecipanti?
+6. Output atteso: insights report? persona? journey map?
+7. Stakeholder aspettative: qualitativo, quantitativo, o mix?
+```
+
+**User risponde** con specifiche → Claude genera research plan template ✅
+
+---
+
+### **Best Practices Clarifying Questions**
+
+**✅ Quando Chiedere Domande**:
+- Task nuovo/complesso dove non sai da dove iniziare
+- Troppi requisiti possibili e non sai quali prioritizzare
+- Vuoi standard riutilizzabile ma non conosci tutti casi d'uso
+- Primo approccio a workflow aziendale specifico
+
+**✅ Come Rispondere Efficacemente**:
+- **Sii specifico** nelle risposte (evita "dipende", dai esempi concreti)
+- **Fornisci contesto** anche se non richiesto esplicitamente
+- **Chiarisci priorità** tra requirements (must-have vs nice-to-have)
+- **Condividi esempi** di input/output se disponibili
+
+**⏹️ Quando Fermarsi**:
+- Quando hai informazioni sufficienti per prompt completo
+- Tipicamente dopo **4-6 domande/risposte** (più = diminishing returns)
+- Quando ulteriori domande sono troppo specifiche per caso singolo
+
+**🔗 Workflow Completo**:
+1. **Pattern 4 (questo)**: Clarifying questions → raccogli requirements
+2. **Pattern 1**: Generate from Scratch → crea prompt strutturato con info raccolte
+3. **Test** prompt generato
+4. **Pattern 2**: Optimize se necessario
+
+---
+
 ## 🔄 Meta-Prompting Iterativo
 
 **Step 1**: Chiedi primo prompt
@@ -224,8 +352,8 @@ Raffina per:
 ### **Quando Chiedi a Claude di Generare**:
 
 **✅ Sii Specifico su Obiettivo**
-- Vago: "Genera prompt per status report"
-- Chiaro: "Genera prompt per trasformare notes in executive email 300 parole, formato [X]"
+- Vago: "Genera prompt per recap mail clienti"
+- Chiaro: "Genera prompt per trasformare thread email in recap strutturato 300 parole, formato: Decisioni/Action Items/Next Steps"
 
 **✅ Fornisci Esempio Input/Output**
 - Mostra esempio input che darai
@@ -254,6 +382,8 @@ Raffina per:
 ✨ **Meta-Prompting = Delegare Creazione**: LLM scrive prompt per te
 
 ✨ **Utile per Task Nuovi**: Quando non sai da dove iniziare
+
+✨ **Clarifying Questions = Guida Interattiva**: LLM ti fa domande per chiarire requirements quando task è complesso o ambiguo
 
 ✨ **Pattern Iterativo**: describe → generate → test → refine
 

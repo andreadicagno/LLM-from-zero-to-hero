@@ -129,7 +129,7 @@ Mostra ragionamento completo per ogni step.
 
 ---
 
-### **Pattern 2: "Let's Think Step by Step"**
+### **Pattern 2: "Ragioniamo Passo dopo Passo"**
 
 Il più semplice. Lasci l'LLM decidere i passaggi del ragionamento.
 
@@ -137,10 +137,10 @@ Il più semplice. Lasci l'LLM decidere i passaggi del ragionamento.
 ```
 [Il tuo prompt]
 
-Let's approach this step by step:
-- First, let's...
-- Then, we should...
-- Finally, we can conclude...
+Affrontiamo questo passo dopo passo:
+- Primo, analizziamo...
+- Poi, valutiamo...
+- Infine, concludiamo...
 ```
 
 **Esempio PMO - Portfolio Risk Assessment**:
@@ -153,7 +153,7 @@ Portfolio:
 - Settore: Digital transformation per finance
 - Concern principale: concentrazione risorse su pochi key people
 
-Let's think step by step:
+Ragioniamo passo dopo passo:
 1. Identificare pattern nei progetti Red/Amber
 2. Analizzare dipendenze e rischi sistemici
 3. Valutare impact se worst-case scenarios
@@ -164,7 +164,7 @@ Mostra analisi completa prima delle raccomandazioni.
 
 ---
 
-### **Pattern 3: "Before Answering..." (Pre-Reasoning)**
+### **Pattern 3: "Prima di Rispondere..." (Pre-Ragionamento)**
 
 Forza ragionamento preliminare prima della risposta.
 
@@ -172,11 +172,11 @@ Forza ragionamento preliminare prima della risposta.
 ```
 [Il tuo prompt]
 
-Before providing the final answer, please:
-- Identify key factors
-- Analyze trade-offs
-- Consider implications
-- Then give your recommendation
+Prima di fornire la risposta finale:
+- Identifica i fattori chiave
+- Analizza i trade-off
+- Considera le implicazioni
+- Poi fornisci la tua raccomandazione
 ```
 
 **Esempio Service Design - User Flow Prioritization**:
@@ -193,7 +193,7 @@ Vincoli:
 - 5 partecipanti test confermati
 - Stakeholder vuole risultati Q1
 
-Before recommending, please:
+Prima di raccomandare:
 1. Valuta ogni opzione su: user value, complexity, data quality
 2. Considera vincoli tempo/risorse
 3. Analizza trade-off quick win vs high impact
@@ -326,37 +326,36 @@ Output:
 
 ## 💡 Esempi Pratici per Ruolo
 
-### **Esempio 1: PMO - Status Report Standardization**
+### **Esempio 1: PMO/Funzionale - Matrice RACI Generation**
 
 ```
-Trasforma status update informali in formato standard executive.
+Genera matrice RACI da descrizione attività progetto.
 
-Formato:
-- Status: [RAG]
-- Progress: [% e milestone]
-- Risks: [top 2]
-- Next: [prossimi step]
+Formato tabella markdown:
+| Attività | PM | Tech Lead | Team Dev | Stakeholder |
+|----------|----|-----------|-----------| ------------|
+| [Nome]   | R/A/C/I | R/A/C/I | R/A/C/I | R/A/C/I |
+
+Legenda: R=Responsible, A=Accountable, C=Consulted, I=Informed
 
 Esempio 1:
-Input: "Tutto ok, testing fatto. Ancora bug minori. Deploy settimana prossima."
+Input: "Fase design soluzione: PM coordina, Tech Lead approva architettura, Dev team consulted per feasibility, Stakeholder informati."
 
 Output:
-Status: 🟢 Green
-Progress: 85% - Testing completato, deployment prep in corso
-Risks: (1) Bug minori in QA - mitigation attiva, (2) Nessuno critico
-Next: Production deployment settimana 23
+| Attività | PM | Tech Lead | Team Dev | Stakeholder |
+|----------|-----|-----------|----------|-------------|
+| Design soluzione | R | A | C | I |
 
 Esempio 2:
-Input: "Indietro 2 settimane. Cliente cambiato requirements. Deadline a rischio."
+Input: "Testing UAT: Team Dev responsabile fix, Tech Lead consulted, PM accountable rilascio, Stakeholder eseguono test."
 
 Output:
-Status: 🔴 Red
-Progress: 40% - 2 settimane ritardo per requirement changes
-Risks: (1) Scope creep - volatilità requirements, (2) Deadline at risk - rebaseline necessario
-Next: Scope review con sponsor, piano rivisto entro venerdì
+| Attività | PM | Tech Lead | Team Dev | Stakeholder |
+|----------|-----|-----------|----------|-------------|
+| Testing UAT | A | C | R | R |
 
-Ora trasforma:
-Input: "Migration quasi finita. Problema database risolto. Manca documentazione."
+Ora genera:
+Input: "Deployment produzione: Tech Lead esegue, PM approva go-live, Dev team in standby, Stakeholder informati su timeline."
 
 Output:
 ```
@@ -404,6 +403,12 @@ Output:
 
 ```
 Trasforma requirements in user stories Agile.
+
+:::info Convenzione Standard
+Il formato "As a... I want... So that..." è la convenzione Agile universale per user stories,
+mantenuta in inglese anche in contesti italiani. È riconosciuta da tutti gli strumenti
+di project management (Jira, Azure DevOps, etc.) e dalla comunità Agile internazionale.
+:::
 
 Formato:
 As a [user type]

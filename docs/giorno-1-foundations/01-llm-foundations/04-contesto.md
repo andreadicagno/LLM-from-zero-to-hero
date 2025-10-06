@@ -386,7 +386,7 @@ Analizza actual spend da Budget2025_Q1.xlsx"
 
 **Context Window**:
 - "Memoria di lavoro" LLM, misurata in token
-- Claude Sonnet 4 & Gemini 2.5: 1M token = ~3000 pagine = game changer
+- Claude Sonnet 4 & Gemini 2.5 Pro: 1M token = ~3000 pagine = game changer
 - GPT-5: 400K token = ~1200 pagine = ottimo per maggior parte use case
 - Include: system prompt + chat history + docs + nuovi messaggi
 

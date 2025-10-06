@@ -30,10 +30,10 @@ Al termine di questa sezione sarai in grado di:
 
 | Modalità | Esempio | LLM che la supporta |
 |----------|---------|---------------------|
-| **Testo** | Prompt scritti | Tutti (GPT-5, Claude Sonnet 4, Gemini 2.5) |
-| **Immagini** | Screenshot, foto, diagrammi | GPT-5, Claude Sonnet 4, Gemini 2.5 |
-| **Audio** | File MP3, registrazioni | GPT-5 (con Whisper), Gemini 2.5 nativo |
-| **Video** | File MP4, analisi frame | Gemini 2.5 (nativo), GPT-5 (frame extraction) |
+| **Testo** | Prompt scritti | Tutti (GPT-5, Claude Sonnet 4, Gemini 2.5 Pro) |
+| **Immagini** | Screenshot, foto, diagrammi | GPT-5, Claude Sonnet 4, Gemini 2.5 Pro |
+| **Audio** | File MP3, registrazioni | GPT-5 (con Whisper), Gemini 2.5 Pro nativo |
+| **Video** | File MP4, analisi frame | Gemini 2.5 Pro (nativo), GPT-5 (frame extraction) |
 | **Documenti** | PDF, Word, Excel | Tutti con parsing avanzato |
 
 :::tip 💡 Focus del Workshop
