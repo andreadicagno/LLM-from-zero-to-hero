@@ -701,8 +701,7 @@ Dall'esercizio dovresti aver consolidato:
 
 **Refresh concetti se necessario**:
 - [Framework RACE](../prompt-engineering-teoria/framework-race) - Struttura completa prompt
-- [Chain-of-Thought](../prompt-engineering-teoria/chain-of-thought) - Ragionamento step-by-step
-- [Few-Shot Learning](../prompt-engineering-teoria/few-shot-learning) - Guidare con esempi
+- [Tecniche Avanzate](../prompt-engineering-teoria/tecniche-avanzate) - Chain-of-Thought, Few-Shot, Multi-Perspective
 - [Debugging Prompt](../prompt-engineering-teoria/debugging) - Troubleshooting sistematico
 
 ---

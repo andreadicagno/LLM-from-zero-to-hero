@@ -1,13 +1,13 @@
 ---
-title: Framework RACE
-description: Metodo sistematico per costruire prompt efficaci con Role, Action, Context, Expectations
-sidebar_position: 2
-tags: [prompt-engineering, RACE, framework, template]
+title: Framework RACE per Prompt Efficaci
+description: Metodo sistematico per costruire prompt che generano risultati precisi e utilizzabili ogni volta
+sidebar_position: 1
+tags: [prompt-engineering, RACE, framework, anatomia, best-practices]
 ---
 
-# 🏁 Framework RACE
+# 🏁 Framework RACE per Prompt Efficaci
 
-> ⏱️ **Durata**: 15 minuti
+> ⏱️ **Durata**: 20 minuti
 > 🎯 **Livello**: Base/Intermedio
 
 ---
@@ -18,8 +18,31 @@ Al termine di questa sezione sarai in grado di:
 
 - ✅ Padroneggiare i 4 componenti del framework RACE
 - ✅ Applicare RACE per costruire prompt strutturati
+- ✅ Trasformare prompt vaghi in prompt efficaci e actionable
 - ✅ Utilizzare template RACE riutilizzabili per il tuo ruolo
 - ✅ Creare libreria personale di prompt template
+
+---
+
+## 💡 Introduzione: Perché Serve un Framework?
+
+**Prompt Engineering** è l'arte e la scienza di scrivere istruzioni efficaci per gli LLM. È la differenza tra ottenere output generici e inutilizzabili, e risultati precisi che fanno risparmiare ore di lavoro.
+
+**Senza framework sistematico**:
+- ❌ Output generico non utilizzabile
+- ❌ 5-6 iterazioni per ogni task
+- ❌ Risultati inconsistenti
+- ❌ Perdita tempo e frustrazione
+
+**Con framework RACE**:
+- ✅ Output preciso al primo tentativo
+- ✅ 1-2 iterazioni massimo
+- ✅ Risultati consistenti e riproducibili
+- ✅ Template riutilizzabili
+
+:::tip Impatto Real-World
+Team che adottano RACE per task ricorrenti riportano **60-70% riduzione tempo** per generare deliverable standard (report, email, documenti).
+:::
 
 ---
 
@@ -32,15 +55,16 @@ Al termine di questa sezione sarai in grado di:
 - 📋 **C** - **Context** (Contesto)
 - 🎯 **E** - **Expectations** (Aspettative)
 
-**Perché usarlo?**
-- ✅ Sistematico: non ti dimentichi componenti critici
-- ✅ Riproducibile: stessa qualità ogni volta
-- ✅ Scalabile: crea template riutilizzabili
-- ✅ Efficace: riduce iterazioni da 5-6 a 1-2
+**Formula base**:
+```
+[ROLE] + [ACTION] + [CONTEXT] + [EXPECTATIONS] = Prompt Efficace
+```
 
-:::tip Real-World Impact
-Team che adottano RACE per task ricorrenti riportano **60-70% riduzione tempo** per generare deliverable standard (report, email, documenti).
-:::
+**Perché in quest'ordine?**
+1. **Role**: Imposta la "mentalità" dell'LLM
+2. **Action**: Chiarisce subito l'obiettivo
+3. **Context**: Fornisce info necessarie per il task
+4. **Expectations**: Definisce come vuoi l'output
 
 ---
 
@@ -65,7 +89,7 @@ Attiva pattern linguistici, prospettive e tono appropriati per l'expertise richi
 - Focus area: "specializzato in...", "con focus su..."
 - Industry: "nel settore banking", "per aziende SaaS"
 
-### **Esempi di Ruoli Efficaci**
+### **Esempi di Ruoli Efficaci per Audience Workshop**
 
 **Per Project Manager**:
 ```
@@ -103,7 +127,7 @@ Per task semplici e generici (es: "traduci questo testo"), il ruolo è opzionale
 Il task specifico che l'LLM deve eseguire
 
 ### **Perché è Cruciale**
-Senza azione chiara, l'LLM non sa cosa produrre
+Senza azione chiara, l'LLM non sa cosa produrre. L'azione deve rispondere a: "Cosa deve produrre l'LLM?"
 
 ### **Verbi Efficaci per Categoria**
 
@@ -128,8 +152,6 @@ Senza azione chiara, l'LLM non sa cosa produrre
 | "Scrivi qualcosa per il cliente" | "Drafta email formale al cliente per comunicare slittamento deadline con mitigation plan" |
 | "Guarda questi dati" | "Identifica top 3 trend emergenti dal dataset Q4 e genera executive summary con raccomandazioni" |
 
-**Regola d'oro**: L'azione deve rispondere chiaramente a "Cosa deve produrre l'LLM?"
-
 ---
 
 ## 📋 C - CONTEXT (Contesto)
@@ -140,9 +162,15 @@ Background, situazione, vincoli, informazioni necessarie per task
 ### **Perché è Fondamentale**
 L'LLM non ha accesso al tuo contesto. Senza contesto = output generico e inutilizzabile.
 
-### **Cosa Includere nel Contesto**
+:::warning Errore Comune
+Non assumere che l'LLM "capisca" il contesto implicito. Se è rilevante per il task, esplicitalo sempre.
 
-**Checklist Contesto Completo**:
+❌ "Analizza il problema" → Quale problema?
+✅ "Analizza il problema di performance emerso nello sprint 5 del progetto Core Banking Migration..."
+:::
+
+### **Checklist Contesto Completo**
+
 - 🎯 Background progetto/situazione
 - 💰 Vincoli (budget, timeline, risorse)
 - 👥 Stakeholder rilevanti (chi, ruoli, influenza)
@@ -204,20 +232,20 @@ Contesto:
 ## 🎯 E - EXPECTATIONS (Aspettative)
 
 ### **Cosa Definisce**
-Come vuoi l'output: formato, struttura, lunghezza, tone, deliverable finale
+Come vuoi l'output: formato, struttura, lunghezza, tone, stile, esempi
 
 ### **Perché è Potente**
 Specificare expectations precise = zero iterazioni per riformattare. Output ready-to-use.
 
-### **Aspetti da Specificare**
+### **Componenti di Expectations**
 
 **1. Formato Output**:
-- Tabella (specifica colonne)
-- Lista (numerata, bullet, checklist)
-- Email (subject + body)
-- Documento (sezioni specifiche)
-- Presentazione (slide structure)
-- JSON/CSV (per export)
+- 📊 Tabella (specifica colonne)
+- 📝 Lista (numerata, bullet, checklist)
+- 📧 Email (subject + body)
+- 📄 Documento (sezioni specifiche)
+- 💻 Presentazione (slide structure)
+- 💾 JSON/CSV (per export)
 
 **2. Lunghezza**:
 - Word count: "max 300 parole", "tra 500-700 parole"
@@ -226,10 +254,11 @@ Specificare expectations precise = zero iterazioni per riformattare. Output read
 - Specificity: "3 bullet points, ciascuno max 50 parole"
 
 **3. Tone & Style**:
-- Formale vs Casual
-- Tecnico vs Business-friendly
-- Data-driven vs Narrativo
-- Confident vs Cautious
+- 🎩 **Formale**: per executive, board, clienti enterprise
+- 💬 **Casual**: per team interno, brainstorming
+- 🔬 **Tecnico**: per audience tech, detailed
+- 📚 **Educativo**: per training, onboarding
+- 💼 **Business-friendly**: evita jargon, focus ROI/value
 
 **4. Audience**:
 - C-level (executive summary, high-level)
@@ -237,11 +266,13 @@ Specificare expectations precise = zero iterazioni per riformattare. Output read
 - Stakeholder esterni (context completo)
 - Team interno (shorthand ok)
 
-**5. Deliverable Type**:
-- "Pronto per invio email"
-- "Draft da rivedere"
-- "Final version"
-- "Template riutilizzabile"
+**5. Esempi (Few-Shot)**:
+Quando il formato è particolare o difficile da descrivere a parole:
+```
+Esempio:
+Input: [esempio input]
+Output desiderato: [come vuoi sia formattato]
+```
 
 ### **Esempio Expectations Complete**
 
@@ -263,62 +294,60 @@ Expectations:
 
 ---
 
-## 💼 RACE Completo - Esempio PM
+## 💡 Esempio Completo: Prompt Debole → RACE Forte
 
-Vediamo RACE applicato end-to-end per un caso reale.
+### ❌ **Prompt Debole (Inefficace)**
 
-### **Scenario**: Risk Analysis Email per Sponsor
+```
+"Scrivi un report sul progetto"
+```
+
+**Problemi**:
+- No contesto (quale progetto?)
+- Task vago (che tipo di report?)
+- No formato (email? presentazione? documento?)
+- No audience (chi lo legge?)
+- No vincoli (lunghezza? sezioni?)
+
+**Risultato**: Output generico di 2 paragrafi vaghi, inutilizzabile ❌
+
+---
+
+### ✅ **Prompt RACE Forte (Efficace)**
 
 ```markdown
 [ROLE]
-Sei un Senior Project Manager con 10 anni di esperienza in progetti
-di digital transformation per il settore bancario.
+Sei un Project Manager esperto in progetti IT enterprise.
 
 [ACTION]
-Scrivi una risk analysis email per il project sponsor per comunicare
-situazione rischi e richiedere decisioni critiche.
+Scrivi un executive summary del progetto "Digital Transformation Platform" per il CFO.
 
 [CONTEXT]
-Progetto: Core Banking System Migration
-Cliente: Banca nazionale, 2M clienti, settore altamente regolamentato
-Budget: €5M | Timeline: 12 mesi (siamo al mese 7)
-Status: 55% completato (target era 60% - leggero ritardo)
-Team: 15 persone (8 dev, 3 BA, 2 QA, 1 PM, 1 architect)
-
-Issue critica emersa questa settimana:
-- Legacy system ha API non documentate (scoperto durante integration)
-- Documentazione tecnica anni '90 incompleta
-- 2 developer originali legacy system sono in pensione
-- Reverse engineering richiederà 3-4 settimane extra
-
-Team concerns:
-- Possibili altri "unknown unknowns" nel legacy code
-- Risk di ulteriori slittamenti se emergono altri gap
-- Morale team in calo per continue sorprese
-
-Sponsor context:
-- C-level, limitata conoscenza tecnica
-- Focus primario: rispettare go-live date (regulatory deadline)
-- Budget approval richiede business case solido
+Progetto: Digital Transformation Platform
+Cliente: ABC Corp (Fortune 500, settore retail)
+Budget: €2M | Timeline: 9 mesi
+Status: 60% completato, 2 settimane ritardo
+Team: 15 persone
+Milestone recente: Migration fase 1 completata con successo
+Risk principale: integrazione con legacy ERP più complessa del previsto
+Prossimi step: Deployment fase 2 in Q1 2025
 
 [EXPECTATIONS]
 Formato: Email formale
 Lunghezza: 350-450 parole
-Struttura:
-1. Situation Summary (1 paragrafo - what happened)
-2. Risk Analysis (tabella con Top 3 risks)
-   Colonne: Risk | Likelihood (H/M/L) | Impact | Mitigation Proposed
-3. Decision Needed (bullet list chiaro)
-4. Recommended Action (1 paragrafo con rationale)
+Struttura obbligatoria:
+1. 📊 Progress (milestone + % completion)
+2. ⚠️ Risks & Issues (top 2 con mitigation plan)
+3. ➡️ Next Steps (priority actions + timeline)
 
-Tone: Professionale, proactive (no panic), solution-oriented
+Tone: Conciso, business-oriented, data-driven
+Audience: CFO (limitata conoscenza tecnica)
 Focus: Business impact (timeline, budget, compliance)
 Evita: Technical jargon
 Include: Specific data points (dates, effort estimates)
-Ask: Explicit decision point con opzioni A/B
 ```
 
-**Output atteso**: Email professionale pronta per invio, con analisi chiara e decision point esplicito per lo sponsor.
+**Risultato**: Email executive di 380 parole, pronta per invio, formato perfetto ✅
 
 ---
 
@@ -440,7 +469,7 @@ Compliance/Regulatory: [Se applicabile]
 [E]
 Formato: User Stories Agile
 Struttura per story:
-```
+
 As a [user type]
 I want to [action/capability]
 So that [business benefit]
@@ -453,7 +482,6 @@ Acceptance Criteria:
 Story Points Estimate: [Fibonacci]
 Priority: [H/M/L]
 Dependencies: [Se presenti]
-```
 
 Numero stories: Massimo 5-6 (break down feature se troppo grande)
 Tone: Chiaro, specifico, testabile
@@ -553,6 +581,32 @@ Output: Ready to paste in project management tool
 
 ---
 
+## ⚠️ Errori Comuni da Evitare
+
+### 1. Prompt Troppo Vago
+❌ "Aiutami con questa cosa"
+❌ "Fai qualcosa con questi dati"
+✅ "Analizza questo dataset CSV e identifica i top 5 trend emergenti nell'ultimo quarter"
+
+### 2. Prompt Troppo Lungo e Non Strutturato
+❌ Muro di testo di 500 parole senza separazioni, tutto insieme, context mescolato con task...
+✅ Sezioni chiare: [R] | [A] | [C] | [E] (usa spazi bianchi!)
+
+### 3. Assumere Contesto Implicito
+❌ "Analizza il problema" (quale problema?)
+❌ "Come al solito" (l'LLM non sa il "solito")
+✅ Esplicita sempre il contesto necessario
+
+### 4. Non Specificare Formato
+❌ "Dammi un report" → Ottieni formato random
+✅ "Report formato: 1) Executive Summary, 2) Dettaglio, 3) Raccomandazioni. Max 2 pagine."
+
+### 5. Usare Riferimenti Temporali Ambigui
+❌ "Dati di ieri", "la settimana scorsa"
+✅ "Dati del 2025-01-05", "dati dal 2024-12-28 al 2025-01-03"
+
+---
+
 ## 🔑 Key Takeaways
 
 :::tip Punti Chiave da Ricordare
@@ -567,28 +621,27 @@ Output: Ready to paste in project management tool
 
 ✨ **Itera per Perfezionare**: Primo tentativo raramente perfetto. Raffina basandoti su output reali
 
+✨ **Specificità > Genericità**: "Analizza rischi tecnici del progetto X nel mese 7" > "Dimmi dei rischi"
+
 :::
 
 ---
 
 ## 🔗 Risorse Aggiuntive
 
-**Prossime Tecniche**:
-- [Chain-of-Thought](./chain-of-thought) - Per problemi complessi che richiedono ragionamento multi-step
-- [Few-Shot Learning](./few-shot-learning) - Guidare con esempi per output ultra-consistente
+**Approfondimenti**:
+- [Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) - Guida ufficiale Claude
+- [OpenAI Prompt Engineering Best Practices](https://platform.openai.com/docs/guides/prompt-engineering) - Best practices GPT
 
-**Best Practices**:
-- Salva i tuoi migliori RACE template in documento condiviso team
-- Versiona i template quando li migliori (v1, v2, etc.)
-- Documenta quando/come usare ciascun template
+**Prossime Tecniche Avanzate**:
+Ora che padroneggi RACE, esplora tecniche avanzate per situazioni specifiche: Chain-of-Thought per problemi complessi, Few-Shot per output consistente, Role-Based per prospettive multiple.
 
 ---
 
 ## ➡️ Prossimi Passi
 
-Hai padroneggiato RACE! Ora esplora tecniche avanzate per situazioni specifiche.
+Hai padroneggiato il framework RACE! Ora impara tecniche avanzate per casi d'uso specifici.
 
-👉 **[Continua con Chain-of-Thought Prompting →](./chain-of-thought)**
+👉 **[Continua con Tecniche Avanzate →](./tecniche-avanzate)**
 
-Per problemi complessi che richiedono analisi multi-step, la tecnica Chain-of-Thought farà la differenza.
-
+Scopri Chain-of-Thought per ragionamento multi-step, Few-Shot Learning per output consistente, e Role-Based prompting per analisi multi-prospettiva.

@@ -1,7 +1,7 @@
 ---
 title: Meta-Prompting
 description: Far scrivere e ottimizzare prompt a Claude stesso - delega la creazione
-sidebar_position: 6
+sidebar_position: 3
 tags: [prompt-engineering, meta-prompting, optimization, delegation]
 ---
 

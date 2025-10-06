@@ -61,10 +61,9 @@ Costruisci la tua library di prompt template riutilizzabili per task ricorrenti 
 - Chiedi feedback ai colleghi (peer learning)
 
 **📚 Hai Bisogno di Refresh?**:
-- Framework RACE → [Modulo 2.2](../prompt-engineering-teoria/framework-race)
-- Chain-of-Thought → [Modulo 2.3](../prompt-engineering-teoria/chain-of-thought)
-- Few-Shot Learning → [Modulo 2.4](../prompt-engineering-teoria/few-shot-learning)
-- Debugging Prompt → [Modulo 2.7](../prompt-engineering-teoria/debugging)
+- Framework RACE → [Modulo 2.1](../prompt-engineering-teoria/framework-race)
+- Tecniche Avanzate (CoT, Few-Shot, Multi-Perspective) → [Modulo 2.2](../prompt-engineering-teoria/tecniche-avanzate)
+- Debugging Prompt → [Modulo 2.4](../prompt-engineering-teoria/debugging)
 
 ---
 

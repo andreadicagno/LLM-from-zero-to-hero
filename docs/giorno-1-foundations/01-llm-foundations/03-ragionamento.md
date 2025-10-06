@@ -962,7 +962,7 @@ Genera 3 titoli per presentazione progetto
 **Approfondimenti**:
 - 📖 [Attention Is All You Need](https://arxiv.org/abs/1706.03762) - Paper originale Transformer (tecnico)
 - 📖 [Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) - Spiegazione visiva
-- 📖 [Chain-of-Thought Prompting](../prompt-engineering-teoria/chain-of-thought) - Migliorare reasoning
+- 📖 [Chain-of-Thought Prompting](../prompt-engineering-teoria/tecniche-avanzate) - Migliorare reasoning
 
 **Interactive**:
 - 🔧 [Talk to Transformer](https://talktotransformer.com/) - Vedi token generation in real-time

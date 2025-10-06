@@ -1,7 +1,7 @@
 ---
 title: Debugging e Ottimizzazione Prompt
 description: Diagnosi sistematica e troubleshooting per prompt inefficaci
-sidebar_position: 7
+sidebar_position: 4
 tags: [prompt-engineering, debugging, optimization, troubleshooting]
 ---
 
@@ -343,6 +343,16 @@ Task:
 ---
 
 ## ➡️ Dove Andare da Qui
+
+Prima di passare agli esercizi, esplora pattern avanzati per workflow enterprise complessi:
+
+👉 **[Continua con Pattern Avanzati →](./advanced-patterns)**
+
+Impara prompt chaining, multi-turn conversation management, context window optimization, e constrained generation per casi d'uso sofisticati.
+
+---
+
+**Oppure vai direttamente alla pratica**:
 
 👉 **[Vai agli Esercizi Pratici →](../esercizi-pratici)**
 

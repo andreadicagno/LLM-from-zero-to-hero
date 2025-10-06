@@ -136,6 +136,11 @@ const config: Config = {
           position: 'left',
         },
         {to: '/blog', label: 'Annunci', position: 'left'},
+        {
+          href: 'https://github.com/andreadicagno/LLM-from-zero-to-hero',
+          label: 'GitHub',
+          position: 'right',
+        }
       ],
     },
     footer: {

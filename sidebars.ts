@@ -33,13 +33,11 @@ const sidebars: SidebarsConfig = {
           label: '02 - Prompt Engineering',
           items: [
             'giorno-1-foundations/prompt-engineering-teoria/index',
-            'giorno-1-foundations/prompt-engineering-teoria/anatomia-prompt',
             'giorno-1-foundations/prompt-engineering-teoria/framework-race',
-            'giorno-1-foundations/prompt-engineering-teoria/chain-of-thought',
-            'giorno-1-foundations/prompt-engineering-teoria/few-shot-learning',
-            'giorno-1-foundations/prompt-engineering-teoria/role-based',
+            'giorno-1-foundations/prompt-engineering-teoria/tecniche-avanzate',
             'giorno-1-foundations/prompt-engineering-teoria/meta-prompting',
             'giorno-1-foundations/prompt-engineering-teoria/debugging',
+            'giorno-1-foundations/prompt-engineering-teoria/advanced-patterns',
           ],
         },
         {
