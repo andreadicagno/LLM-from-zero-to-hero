@@ -41,6 +41,7 @@ const config: Config = {
       'classic',
       {
         docs: {
+          routeBasePath: '/', // Docs at the root instead of /docs
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -96,32 +97,26 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'mainSidebar',
-          position: 'left',
-          label: 'Corso',
-        },
-        {
           type: 'dropdown',
           label: 'Giorni',
           position: 'left',
           items: [
             {
               label: 'Giorno 1: Foundations',
-              to: '/docs/giorno-1-foundations',
+              to: '/giorno-1-foundations',
             },
             {
               label: 'Giorno 2: Claude Features',
-              to: '/docs/giorno-2-claude-features',
+              to: '/giorno-2-claude-features',
             },
             {
               label: 'Giorno 3: Claude Code',
-              to: '/docs/giorno-3-claude-code',
+              to: '/giorno-3-claude-code',
             },
           ],
         },
         {
-          to: '/docs/risorse',
+          to: '/risorse',
           label: 'Risorse',
           position: 'left',
         },
@@ -141,15 +136,15 @@ const config: Config = {
           items: [
             {
               label: 'Home',
-              to: '/docs',
+              to: '/',
             },
             {
               label: 'Informazioni Generali',
-              to: '/docs/informazioni-generali',
+              to: '/informazioni-generali',
             },
             {
               label: 'Risorse',
-              to: '/docs/risorse',
+              to: '/risorse',
             },
           ],
         },
@@ -158,15 +153,15 @@ const config: Config = {
           items: [
             {
               label: 'Giorno 1: Foundations',
-              to: '/docs/giorno-1-foundations',
+              to: '/giorno-1-foundations',
             },
             {
               label: 'Giorno 2: Claude Features',
-              to: '/docs/giorno-2-claude-features',
+              to: '/giorno-2-claude-features',
             },
             {
               label: 'Giorno 3: Claude Code',
-              to: '/docs/giorno-3-claude-code',
+              to: '/giorno-3-claude-code',
             },
           ],
         },

@@ -52,4 +52,4 @@ In questa sezione pubblicheremo:
 
 **Pronto a iniziare?** Esplora i contenuti del corso nel menu e preparati a diventare un LLM power user! 💪
 
-*Hai domande? Controlla la sezione [FAQ](/docs/risorse/faq) o contattaci.*
+*Hai domande? Controlla la sezione [FAQ](/risorse/faq) o contattaci.*

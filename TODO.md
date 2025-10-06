@@ -601,6 +601,25 @@ Per ogni partecipante:
 **Task Completati**:
 - [x] Creazione index.md overview modulo (123 righe, quick navigation style)
 - [x] Creazione esercizio-1-ottimizzazione.md (727 righe)
+- [x] Creazione esercizio-2-template.md (659 righe)
+- [x] Fix MDX errors e broken links
+- [x] Test build finale: SUCCESS ✅
+
+**Deliverables Sessione 7**:
+- ✅ Modulo 3 Esercizi Pratici completo (3 file, ~1,509 righe)
+- ✅ 2 esercizi hands-on immediatamente utilizzabili
+- ✅ **GIORNO 1 COMPLETATO AL 100%**
+
+**Stato**: Giorno 1 completato (60% progetto totale). Pronto per finalizzazione pre-workshop.
+
+---
+
+### Sessione 8 - 2025-10-06 ✅ COMPLETATA
+**Focus**: Finalizzazione Pre-Workshop Giorno 1
+
+**Task Completati**:
+- [x] Creazione index.md overview modulo (123 righe, quick navigation style)
+- [x] Creazione esercizio-1-ottimizzazione.md (727 righe)
   - 3 prompt deboli da ottimizzare (PM, Funzionale, Service Design)
   - Template documentazione Before/After
   - Varianti per 4 ruoli
@@ -715,11 +734,56 @@ cp .workshop-plan/templates/module-template.md docs/[path]/nuovo-modulo.md
 
 **📊 Progressi**: Fase 3 completata (60%). **GIORNO 1 COMPLETATO AL 100%**. Prossimo: Giorno 2 - Claude Advanced Features.
 
-**🆕 Ultimo Aggiornamento (Sessione 7 - 2025-10-06)**:
-- ✅ Completato Modulo 3: Esercizi Pratici (3 file, ~1,509 righe)
-- ✅ Esercizio 1: Ottimizzazione Prompt Inefficaci (727 righe)
-- ✅ Esercizio 2: Creare Template Personalizzati (659 righe)
-- ✅ Build Docusaurus SUCCESS (solo warning anchors per glossario futuro)
-- ✅ Fix broken links MDX (tutti i link corretti)
-- ✅ **GIORNO 1 COMPLETATO AL 100%** (20 file, ~8,700 righe totali)
-- 🎯 Pronto per Giorno 2: Claude Advanced Features
+**🆕 Ultimo Aggiornamento (Sessione 8 - 2025-10-06)**:
+- ✅ **FINALIZZAZIONE PRE-WORKSHOP COMPLETATA**
+- ✅ Creato Glossario base (25+ termini chiave)
+- ✅ Creata FAQ workshop (15+ domande pratiche)
+- ✅ Creati Link Utili (risorse complete)
+- ✅ Aggiornata Homepage (card 3 giorni workshop)
+- ✅ Aggiornato index Risorse con link
+- ✅ Messaging "Coming Soon" per Giorno 2 e 3
+- ✅ Checklist preparazione in Giorno 1
+- ✅ Build Docusaurus SUCCESS (solo warning anchors non-critici)
+- ✅ Fix broken link FAQ
+- 🎉 **REPOSITORY PRONTO PER WORKSHOP 08/10/2025**
+
+---
+
+### Sessione 8 - 2025-10-06 ✅ COMPLETATA
+**Focus**: Finalizzazione Pre-Workshop Giorno 1
+
+**Task Completati**:
+- [x] Assessment dettagliato stato Giorno 1
+- [x] Creato `docs/risorse/glossario.md` (25+ termini chiave, ~370 righe)
+- [x] Creato `docs/risorse/faq.md` (15+ domande pratiche, ~272 righe)
+- [x] Creato `docs/risorse/link-utili.md` (risorse complete, ~250 righe)
+- [x] Aggiornato `docs/risorse/index.md` con overview risorse (~117 righe)
+- [x] Aggiornato `src/components/HomepageFeatures/index.tsx` (card 3 giorni)
+- [x] Aggiornato `src/components/HomepageFeatures/styles.module.css` (emoji styling)
+- [x] Aggiornato `docs/giorno-2-claude-features/index.md` con Coming Soon (~186 righe)
+- [x] Aggiornato `docs/giorno-3-claude-code/index.md` con Coming Soon (~282 righe)
+- [x] Aggiunta checklist preparazione in `docs/giorno-1-foundations/index.md`
+- [x] Fix broken link FAQ
+- [x] Build test finale: SUCCESS ✅ (solo warning anchors non-critici)
+
+**Deliverables Sessione 8**:
+- ✅ Glossario completo con 25+ termini Giorno 1
+- ✅ FAQ con 15+ domande workshop e troubleshooting
+- ✅ Link Utili con risorse organizzate (LLM platforms, tools, docs, community)
+- ✅ Homepage aggiornata con card navigazione 3 giorni
+- ✅ Giorno 2 e 3 index con preview e Coming Soon messaging
+- ✅ Checklist pre-workshop dettagliata per partecipanti
+- ✅ Build SUCCESS senza errori critici
+
+**Metriche**:
+- 5 file risorse creati (~1,009 righe)
+- 2 file homepage aggiornati
+- 2 file Giorno 2/3 index aggiornati (~468 righe)
+- 1 file Giorno 1 index enhanced
+- Totale: 10 file modificati/creati
+- Build time: ~8 secondi
+- Zero errori critici
+
+**Stato**: Finalizzazione pre-workshop completata. Repository pronto per workshop 08/10/2025.
+
+---

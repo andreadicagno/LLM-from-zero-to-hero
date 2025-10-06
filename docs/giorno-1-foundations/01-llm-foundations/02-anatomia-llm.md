@@ -337,7 +337,7 @@ Post-cutoff: usa web search o fornisci documenti aggiornati.
 **Approfondimenti**:
 - 📖 [Transformer Architecture Explained](https://jalammar.github.io/illustrated-transformer/) - Visualizzazione interattiva
 - 📖 [GPT vs Claude Comparison](https://www.anthropic.com/claude) - Docs ufficiali
-- 📖 [Glossario - Parametri](/docs/risorse/glossario#parametri) - Definizione tecnica
+- 📖 [Glossario - Parametri](/risorse/glossario#parametri) - Definizione tecnica
 
 **Tool**:
 - 🔧 [Artificial Analysis](https://artificialanalysis.ai) - Confronto performance modelli

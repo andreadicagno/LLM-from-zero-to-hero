@@ -115,7 +115,7 @@ Non limitarti a leggere. Apri Claude in parallelo e **prova ogni tecnica** mentr
 ## 🏁 Inizia Subito
 
 Sei pronto? Clicca qui sotto per iniziare il tuo percorso:
-🚀 **[Inizia il Giorno 1](/docs/giorno-1-foundations)**
+🚀 **[Inizia il Giorno 1](/giorno-1-foundations)**
 
 ---
 
@@ -123,7 +123,7 @@ Sei pronto? Clicca qui sotto per iniziare il tuo percorso:
 
 **Hai domande?**
 - 📧 Contatta il facilitatore
-- 🔗 Consulta la sezione [FAQ](/docs/risorse/faq)
+- 🔗 Consulta la sezione [FAQ](/risorse/faq)
 
 ---
 

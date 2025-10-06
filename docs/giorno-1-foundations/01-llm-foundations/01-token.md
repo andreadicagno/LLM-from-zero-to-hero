@@ -394,7 +394,7 @@ Tone: professionale, conciso.
 
 **Approfondimenti**:
 - 📖 [Token Economics](https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them) - Guida OpenAI
-- 📖 [Glossario - Token](/docs/risorse/glossario#token) - Definizione completa
+- 📖 [Glossario - Token](/risorse/glossario#token) - Definizione completa
 
 ---
 

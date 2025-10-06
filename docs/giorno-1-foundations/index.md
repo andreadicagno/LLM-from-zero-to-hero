@@ -86,6 +86,37 @@ Per partecipare al Giorno 1 dovresti:
 - 🔴 **Condividi**: I migliori insights emergono dalle discussioni di gruppo
 - 🔴 **Documenta**: Salva i tuoi prompt migliori in un documento
 
+### ✅ Checklist Pre-Workshop
+
+**Setup Tecnico** (da completare PRIMA del 08/10):
+- [ ] Account Claude.ai creato (gratuito: [claude.ai](https://claude.ai))
+- [ ] Browser aggiornato (Chrome, Firefox, Safari, Edge)
+- [ ] Laptop carico e connessione internet verificata
+- [ ] Bookmark questo sito per accesso rapido
+
+**Preparazione Contenuti**:
+- [ ] Identificati 2-3 task ripetitivi del tuo lavoro (es: status report, meeting notes)
+- [ ] Raccolti esempi di documenti che produci regolarmente (anonimizzati se necessario)
+- [ ] Lista domande/curiosità sull'AI per la sessione
+
+**Materiali Utili** (opzionali ma consigliati):
+- [ ] Quaderno per appunti (o documento digitale)
+- [ ] File di esempio da cui generare contenuti durante esercizi
+- [ ] Lettura [FAQ](/risorse/faq) sezione "Sul Workshop"
+
+**Mindset**:
+- [ ] Mentalità sperimentale (provare e sbagliare è parte dell'apprendimento!)
+- [ ] Nessuna aspettativa di perfezione al primo tentativo
+- [ ] Ready to share e imparare dai colleghi
+
+:::tip 💡 Pro Tip
+Durante il workshop, tieni aperte 2 tabs nel browser:
+1. Questo sito (per seguire i materiali)
+2. Claude.ai (per provare in tempo reale)
+
+L'apprendimento pratico è 10x più efficace della sola lettura!
+:::
+
 ---
 
 ## 🔑 Key Concepts del Giorno
@@ -138,16 +169,16 @@ Dopo il Giorno 1:
 3. **Documenta**: Crea una prompt library personale
 4. **Prepara Giorno 2**: Pensa a progetti/workflow da ottimizzare con Claude Projects
 
-➡️ [Continua con Giorno 2: Claude Advanced Features](/docs/giorno-2-claude-features) (Mercoledì 15/10/2025)
+➡️ [Continua con Giorno 2: Claude Advanced Features](/giorno-2-claude-features) (Mercoledì 15/10/2025)
 
 ---
 
 ## 📚 Risorse Aggiuntive
 
-- 📖 [Glossario Termini](/docs/risorse/glossario) - Tutti i termini tecnici spiegati
-- 📝 [Template Library](/docs/risorse/template-prompt) - Collezione completa template
-- ❓ [FAQ](/docs/risorse/faq) - Domande frequenti
-- 🔗 [Link Utili](/docs/risorse/link-utili) - Documentazione e tool
+- 📖 [Glossario Termini](/risorse/glossario) - Tutti i termini tecnici spiegati
+- 📝 [Template Library](/risorse/template-prompt) - Collezione completa template
+- ❓ [FAQ](/risorse/faq) - Domande frequenti
+- 🔗 [Link Utili](/risorse/link-utili) - Documentazione e tool
 
 ---
 
