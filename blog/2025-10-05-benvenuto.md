@@ -1,13 +1,13 @@
 ---
 slug: benvenuto-workshop-llm
-title: Benvenuto al Workshop LLM!
+title: Benvenuto a LLM from 0 to Hero!
 authors: [andrea]
 tags: [annunci, workshop]
 ---
 
-# Benvenuto al Workshop LLM: From Casual User to Power User 🚀
+# Benvenuto a LLM from 0 to Hero 🦸🏻‍♂️
 
-Siamo entusiasti di presentare il **Workshop LLM**, un percorso intensivo di 3 giorni pensato per trasformare utenti occasionali di LLM in veri power user!
+Siamo entusiasti di presentare **LLM from 0 to Hero**, un percorso intensivo di 3 giorni pensato per trasformarti da principiante a eroe degli LLM!
 
 <!-- truncate -->
 

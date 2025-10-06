@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Docusaurus-based educational workshop site titled "Workshop LLM: From Casual User to Power User" - a comprehensive 3-day Italian-language course teaching non-technical professionals (PM, PMO, Service Design, Functional roles) how to master Claude and LLMs.
+This is a Docusaurus-based educational workshop site titled "LLM from 0 to Hero 🦸🏻‍♂️" - a comprehensive 3-day Italian-language course teaching non-technical professionals (PM, PMO, Service Design, Functional roles) how to master Claude and LLMs.
 
 **Workshop Structure**:
 - **Day 1**: LLM Foundations & Prompt Engineering (✅ Complete)

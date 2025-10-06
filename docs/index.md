@@ -1,10 +1,10 @@
 ---
-title: Workshop LLM
-description: From Casual User to Power User - Corso pratico per PM, PMO, Service Design e Funzionali
+title: LLM from 0 to Hero
+description: Corso pratico per PM, PMO, Service Design e Funzionali - Da zero a eroe in 3 giorni
 sidebar_position: 1
 ---
 
-# Workshop LLM: From Casual User to Power User
+# LLM from 0 to Hero 🦸🏻‍♂️
 
 > 🎯 **Trasforma il modo in cui lavori con l'AI**
 > Un percorso pratico di 3 giorni per dominare gli LLM nel tuo lavoro quotidiano

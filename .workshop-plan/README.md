@@ -1,8 +1,8 @@
 # 📁 Workshop Planning Documentation
 
-> **Directory di Pianificazione del Progetto Workshop LLM**
+> **Directory di Pianificazione del Progetto LLM from 0 to Hero**
 >
-> Questa cartella contiene tutta la documentazione necessaria per sviluppare il sito Docusaurus del workshop "LLM: from Casual User to Power User".
+> Questa cartella contiene tutta la documentazione necessaria per sviluppare il sito Docusaurus del workshop "LLM from 0 to Hero 🦸🏻‍♂️".
 
 ---
 

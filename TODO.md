@@ -1,4 +1,4 @@
-# 📋 TODO - Workshop LLM: from Casual User to Power User
+# 📋 TODO - LLM from 0 to Hero 🦸🏻‍♂️
 
 > **Last Updated**: 2025-10-06
 > **Status**: Giorno 1 Complete ✅ (100%)
