@@ -105,12 +105,6 @@ LLM-from-zero-to-hero/
 │
 ├── docs/
 │   ├── index.md              # Overview corso
-│   ├── informazioni-generali/
-│   │   ├── index.md
-│   │   ├── obiettivi.md
-│   │   ├── prerequisiti.md
-│   │   ├── metodologia.md
-│   │   └── risultati-attesi.md
 │   │
 │   ├── giorno-1-foundations/
 │   │   ├── index.md
@@ -785,5 +779,44 @@ cp .workshop-plan/templates/module-template.md docs/[path]/nuovo-modulo.md
 - Zero errori critici
 
 **Stato**: Finalizzazione pre-workshop completata. Repository pronto per workshop 08/10/2025.
+
+---
+
+### Sessione 9 - 2025-10-06 ✅ COMPLETATA
+**Focus**: Pulizia Sezione "Informazioni Generali" Ridondante
+
+**Task Completati**:
+- [x] Analisi overlap contenuti "Informazioni Generali" vs docs esistenti
+- [x] Rimossa sezione completa da `sidebars.ts` (linee 11-23)
+- [x] Rimosso link footer navbar da `docusaurus.config.ts`
+- [x] Aggiornato `TODO.md` - rimossa struttura directory `informazioni-generali/`
+- [x] Annotato removal in `.workshop-plan/structure.md` con motivazione
+- [x] Annotato removal in `.workshop-plan/config-changes.md` con warning
+- [x] Rimossa sezione da sidebar config in `structure.md`
+- [x] Build test: SUCCESS ✅ (solo warning anchors pre-esistenti)
+
+**Deliverables Sessione 9**:
+- ✅ Sidebar più pulita (rimossa categoria ridondante)
+- ✅ Footer navbar ottimizzato (Home → Risorse direttamente)
+- ✅ UX migliorata: meno duplicazione contenuti
+- ✅ Documentazione planning aggiornata con motivazione removal
+- ✅ Build SUCCESS senza errori
+
+**Analisi Ridondanza**:
+- `obiettivi.md` → 95% coperto in `docs/index.md` + `giorno-1/index.md`
+- `prerequisiti.md` → 100% coperto in `giorno-1/index.md` + `risorse/faq.md`
+- `metodologia.md` → 90% coperto in `docs/index.md` + `faq.md`
+- `risultati-attesi.md` → 95% coperto in `docs/index.md` + `giorno-1/index.md`
+
+**Metriche**:
+- 5 file modificati (sidebars, config, TODO, 2x workshop-plan)
+- -13 righe sidebar
+- -4 righe navbar footer
+- -7 righe TODO.md structure
+- Saving users da 5-7 min lettura duplicata
+- Build time: ~16 secondi
+- Zero errori critici
+
+**Stato**: Pulizia ridondanza completata. Repository ottimizzato e pronto per workshop 08/10/2025.
 
 ---

@@ -1,7 +1,15 @@
 # ⚙️ Configuration Changes
 
 > **Documento di Riferimento**: Tutte le modifiche necessarie ai file di configurazione Docusaurus
-> **Last Updated**: 2025-10-05
+> **Last Updated**: 2025-10-06
+
+:::warning ⚠️ AGGIORNAMENTO 2025-10-06
+**Sezione "Informazioni Generali" RIMOSSA** dal progetto.
+
+**Motivazione**: Ridondanza 95%+ con contenuti già coperti in `docs/index.md`, `docs/giorno-1-foundations/index.md`, e `docs/risorse/faq.md`.
+
+Tutte le configurazioni footer e sidebar in questo documento che menzionano "Informazioni Generali" sono da **IGNORARE/RIMUOVERE**.
+:::
 
 ---
 

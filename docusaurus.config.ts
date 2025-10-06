@@ -139,10 +139,6 @@ const config: Config = {
               to: '/',
             },
             {
-              label: 'Informazioni Generali',
-              to: '/informazioni-generali',
-            },
-            {
               label: 'Risorse',
               to: '/risorse',
             },

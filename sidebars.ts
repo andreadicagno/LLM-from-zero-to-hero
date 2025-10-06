@@ -8,20 +8,6 @@ const sidebars: SidebarsConfig = {
       label: 'Home',
     },
 
-    // Informazioni Generali
-    {
-      type: 'category',
-      label: 'Informazioni Generali',
-      collapsed: false,
-      items: [
-        'informazioni-generali/index',
-        'informazioni-generali/obiettivi',
-        'informazioni-generali/prerequisiti',
-        'informazioni-generali/metodologia',
-        'informazioni-generali/risultati-attesi',
-      ],
-    },
-
     // Giorno 1
     {
       type: 'category',

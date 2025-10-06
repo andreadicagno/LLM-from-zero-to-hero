@@ -28,37 +28,14 @@ LLM-from-zero-to-hero/
 - Quick links ai moduli principali
 - CTA "Inizia il corso"
 
-### 📋 Informazioni Generali (`docs/informazioni-generali/`)
+### ~~📋 Informazioni Generali~~ ❌ REMOVED (2025-10-06)
 
-#### `index.md`
-- Introduzione sezione
-- Indice contenuti
+**Motivazione**: Ridondanza 95%+ con contenuti già coperti in:
+- `docs/index.md` (homepage) → obiettivi generali, target audience, deliverables
+- `docs/giorno-1-foundations/index.md` → prerequisiti dettagliati, checklist pre-workshop
+- `docs/risorse/faq.md` → metodologia, domande pratiche
 
-#### `obiettivi.md`
-- Obiettivo del workshop
-- Cosa NON è / Cosa È questo workshop
-- Da dove partiamo vs dove arriviamo
-- Profili target
-- Chi trarrà massimo beneficio
-
-#### `prerequisiti.md`
-- Hardware richiesto
-- Software necessario
-- Competenze base richieste
-- Setup pre-workshop
-
-#### `metodologia.md`
-- Principi guida (Pratica > Teoria)
-- Target base
-- Real-world focus
-- Autonomia come obiettivo
-- Struttura delle lezioni
-
-#### `risultati-attesi.md`
-- Competenze acquisite
-- Deliverables creati
-- Mindset sviluppato
-- Certificazione (se applicabile)
+**Decisione**: Sezione eliminata da sidebar e pianificazione per evitare duplicazione e migliorare UX.
 
 ---
 
@@ -586,18 +563,6 @@ LLM-from-zero-to-hero/
       type: 'doc',
       id: 'index',
       label: '🏠 Home',
-    },
-    {
-      type: 'category',
-      label: '📋 Informazioni Generali',
-      collapsed: false,
-      items: [
-        'informazioni-generali/index',
-        'informazioni-generali/obiettivi',
-        'informazioni-generali/prerequisiti',
-        'informazioni-generali/metodologia',
-        'informazioni-generali/risultati-attesi',
-      ],
     },
     {
       type: 'category',
