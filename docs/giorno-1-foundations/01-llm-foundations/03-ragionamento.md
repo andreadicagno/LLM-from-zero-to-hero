@@ -76,7 +76,7 @@ Output generato token-by-token:
 - **Bassa (0.1-0.3)**: Output deterministico, preciso, ripetibile
 - **Alta (0.8-1.0)**: Output creativo, vario, sorprendente
 
-Approfondiremo nel dettaglio in [Concetti Essenziali: Temperature](concetti-chiave#-temperature-creatività-vs-precisione)
+Approfondiremo nel dettaglio in [Concetti Essenziali: Temperature](concetti-chiave)
 :::
 
 **Con Temperature Bassa (0.1)**: Sceglie quasi sempre "tappeto" (deterministic)

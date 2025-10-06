@@ -243,6 +243,27 @@ Genera prompt riutilizzabile in formato RACE."
 
 ---
 
+### Parametri
+**Definizione**: Valori configurabili che controllano il comportamento del modello durante la generazione di testo. I parametri principali includono temperatura, top-p, max tokens, e frequency penalty.
+
+**Parametri chiave**:
+- **Temperature** (0.0-1.0): Controlla casualità/creatività dell'output
+- **Max Tokens**: Limite lunghezza risposta generata
+- **Top-p** (nucleus sampling): Alternativa a temperature per controllo variabilità
+- **Frequency Penalty**: Riduce ripetizioni nel testo
+
+**Dove configurarli**:
+- API: Specificati nella richiesta
+- ChatGPT: Settings → Model parameters (non sempre disponibile)
+- Claude Web: Non esposti (usa default ottimali)
+- Claude Code: Configurabili per task specifici
+
+**Regola pratica per non-tecnici**: Nella maggior parte dei casi i default funzionano bene. Modifica solo se hai esigenze specifiche (es: brainstorming creativo → alta temperature; documentazione tecnica → bassa temperature).
+
+**Related**: Temperature, LLM, Inference
+
+---
+
 ## R
 
 ### RACE Framework

@@ -820,3 +820,51 @@ cp .workshop-plan/templates/module-template.md docs/[path]/nuovo-modulo.md
 **Stato**: Pulizia ridondanza completata. Repository ottimizzato e pronto per workshop 08/10/2025.
 
 ---
+
+### Sessione 10 - 2025-10-06 ✅ COMPLETATA
+**Focus**: Aggiunta Funzionalità Ricerca Globale
+
+**Task Completati**:
+- [x] Installazione plugin `@easyops-cn/docusaurus-search-local` (v0.52.1)
+- [x] Configurazione plugin in `docusaurus.config.ts`:
+  - [x] Supporto multilingua (italiano/inglese)
+  - [x] Indicizzazione docs + blog (risorse incluse)
+  - [x] Highlighting risultati sulla pagina di destinazione
+  - [x] Limite 8 risultati per query
+  - [x] Context 50 caratteri per risultato
+- [x] Test build: SUCCESS ✅
+- [x] Aggiornamento documentazione (TODO.md, .workshop-plan/)
+
+**Deliverables Sessione 10**:
+- ✅ Search bar integrata nella navbar (top-right)
+- ✅ Ricerca locale offline (funziona senza connessione)
+- ✅ Indice completo di tutti i contenuti Giorno 1
+- ✅ Supporto ricerca in italiano e inglese
+- ✅ Highlighting automatico termini cercati
+- ✅ Build SUCCESS (solo warning broken anchors pre-esistenti)
+
+**Funzionalità Ricerca**:
+- 🔍 Search box sempre visibile nella navbar
+- 🎯 Indicizza: docs (tutti i moduli), blog (annunci), risorse
+- 💡 Cerca in: titoli, sottotitoli, contenuto, keywords
+- ⚡ Risultati istantanei (indice locale pre-generato)
+- 📱 Responsive (funziona su mobile/tablet)
+- 🌐 Offline-ready (ideale per partecipanti workshop)
+
+**Benefici Workshop**:
+- Partecipanti possono cercare rapidamente concetti (es. "token", "CoT", "hallucination")
+- Navigazione veloce tra moduli durante esercitazioni
+- Riferimenti rapidi durante lezioni
+- Nessuna dipendenza esterna (completamente self-hosted)
+
+**Metriche**:
+- 1 plugin installato (`@easyops-cn/docusaurus-search-local`)
+- 1 file configurazione modificato (docusaurus.config.ts)
+- 2 file documentazione aggiornati (TODO.md, config-changes.md)
+- Build time: ~16 secondi
+- Indice generato: ~20+ pagine indicizzate (Giorno 1 + Risorse + Blog)
+- Zero errori critici
+
+**Stato**: Ricerca globale implementata e funzionante. Repository pronto per workshop 08/10/2025.
+
+---

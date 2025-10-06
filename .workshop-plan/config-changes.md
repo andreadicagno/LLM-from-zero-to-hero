@@ -1036,3 +1036,93 @@ export default function Home() {
 ---
 
 **🎯 Applica queste modifiche dopo aver creato la struttura docs/ completa**
+
+---
+
+## 8️⃣ Ricerca Globale - IMPLEMENTATA ✅
+
+### Plugin Installato: `@easyops-cn/docusaurus-search-local` v0.52.1
+
+**Data Implementazione**: 2025-10-06 (Sessione 10)
+
+#### Configurazione Attiva
+
+Il plugin di ricerca locale è stato installato e configurato in `docusaurus.config.ts`:
+
+```typescript
+themes: [
+  [
+    require.resolve("@easyops-cn/docusaurus-search-local"),
+    {
+      hashed: true,
+      language: ["it", "en"],
+      indexDocs: true,
+      indexBlog: true,
+      indexPages: false,
+      docsRouteBasePath: '/',
+      highlightSearchTermsOnTargetPage: true,
+      searchResultLimits: 8,
+      searchResultContextMaxLength: 50,
+    },
+  ],
+],
+```
+
+#### Funzionalità
+
+✅ **Search Bar**: Integrata automaticamente nella navbar (top-right)
+✅ **Indicizzazione**:
+- Tutti i docs (Giorno 1, 2, 3, Risorse)
+- Blog/Annunci
+- Esclude pagine statiche
+
+✅ **Caratteristiche**:
+- Ricerca locale offline (nessuna dipendenza esterna)
+- Supporto multilingua (italiano/inglese)
+- Highlighting termini cercati sulla pagina
+- Risultati istantanei (indice pre-generato al build)
+- Max 8 risultati per query
+- Context snippet di 50 caratteri
+
+#### Traduzioni
+
+Il plugin usa traduzioni automatiche basate sul locale del sito (`i18n.defaultLocale: 'it'`).
+Le traduzioni custom non sono supportate nella configurazione attuale del plugin.
+
+#### Test
+
+- ✅ Build SUCCESS (`npm run build`)
+- ✅ Search box visibile in navbar
+- ✅ Indice generato correttamente
+- ✅ ~20+ pagine indicizzate (Giorno 1 + Risorse + Blog)
+
+#### Benefici Workshop
+
+🎯 **Partecipanti possono**:
+- Cercare rapidamente concetti (es. "token", "temperature", "hallucination")
+- Trovare esercizi specifici
+- Navigare tra moduli durante le pause
+- Rivedere contenuti senza connessione internet
+
+#### Note Tecniche
+
+⚠️ **Importante**:
+- Il plugin genera l'indice durante `npm run build`
+- Indice incluso nel bundle (~100-500KB a seconda dei contenuti)
+- Completamente self-hosted, nessuna API key richiesta
+- Funziona offline (ideale per workshop in aule con WiFi limitato)
+
+#### Alternative Considerate
+
+❌ **Algolia DocSearch**: Scartato perché richiede:
+- Application process
+- API keys
+- Connessione internet costante
+- Non ideale per workshop con partecipanti
+
+✅ **@easyops-cn/docusaurus-search-local**: Scelto per:
+- Setup immediato (5 minuti)
+- Zero dipendenze esterne
+- Supporto italiano
+- Offline-ready
+- Gratuito e open source

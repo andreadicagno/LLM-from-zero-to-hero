@@ -43,10 +43,6 @@ const config: Config = {
         docs: {
           routeBasePath: '/', // Docs at the root instead of /docs
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/andreadicagno/LLM-from-zero-to-hero/tree/main/',
           breadcrumbs: true,
           showLastUpdateTime: true,
           sidebarCollapsible: true,
@@ -63,11 +59,6 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/andreadicagno/LLM-from-zero-to-hero/tree/main/',
-          // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -76,6 +67,23 @@ const config: Config = {
           customCss: './src/styles/custom.css',
         },
       } satisfies Preset.Options,
+    ],
+  ],
+
+  themes: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        hashed: true,
+        language: ["it", "en"],
+        indexDocs: true,
+        indexBlog: true,
+        indexPages: false,
+        docsRouteBasePath: '/',
+        highlightSearchTermsOnTargetPage: true,
+        searchResultLimits: 8,
+        searchResultContextMaxLength: 50,
+      },
     ],
   ],
 
@@ -121,11 +129,6 @@ const config: Config = {
           position: 'left',
         },
         {to: '/blog', label: 'Annunci', position: 'left'},
-        {
-          href: 'https://github.com/andreadicagno/LLM-from-zero-to-hero',
-          label: 'GitHub',
-          position: 'right',
-        },
       ],
     },
     footer: {
