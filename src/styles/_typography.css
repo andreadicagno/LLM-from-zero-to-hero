@@ -1,0 +1,257 @@
+/**
+ * 🔤 TYPOGRAPHY
+ *
+ * Font families, sizes, weights, and line heights
+ * Optimized for readability and performance
+ *
+ * Philosophy:
+ * - System fonts for zero latency (already installed on OS)
+ * - Monospace fonts for code blocks
+ * - Responsive font sizes
+ * - Optimal line heights for readability
+ */
+
+/* ============================================================================
+   📚 FONT FAMILIES
+   ============================================================================ */
+
+:root {
+  /* Sans-Serif Font Stack (Body Text) */
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+
+  /* Monospace Font Stack (Code) */
+  --ifm-font-family-monospace: 'SFMono-Regular', 'Roboto Mono', 'Consolas',
+    'Liberation Mono', 'Menlo', 'Courier', monospace;
+}
+
+/* ============================================================================
+   📏 FONT SIZES
+   ============================================================================ */
+
+:root {
+  /* Base Font Size */
+  --ifm-font-size-base: 16px;
+
+  /* Headings */
+  --ifm-h1-font-size: 2rem; /* 32px */
+  --ifm-h2-font-size: 1.5rem; /* 24px */
+  --ifm-h3-font-size: 1.25rem; /* 20px */
+  --ifm-h4-font-size: 1.125rem; /* 18px */
+  --ifm-h5-font-size: 1rem; /* 16px */
+  --ifm-h6-font-size: 0.875rem; /* 14px */
+
+  /* Text Sizes */
+  --ifm-font-size-small: 0.875rem; /* 14px */
+  --ifm-font-size-tiny: 0.75rem; /* 12px */
+
+  /* Code */
+  --ifm-code-font-size: 0.875rem; /* 14px */
+  --ifm-pre-font-size: 0.875rem; /* 14px */
+
+  /* Sidebar */
+  --ifm-menu-link-font-size: 0.813rem; /* 13px */
+
+  /* Navbar */
+  --ifm-navbar-link-font-size: 0.875rem; /* 14px */
+}
+
+/* ============================================================================
+   💪 FONT WEIGHTS
+   ============================================================================ */
+
+:root {
+  /* Base weights */
+  --ifm-font-weight-light: 300;
+  --ifm-font-weight-normal: 400;
+  --ifm-font-weight-medium: 500;
+  --ifm-font-weight-semibold: 600;
+  --ifm-font-weight-bold: 700;
+
+  /* Headings */
+  --ifm-heading-font-weight: 600;
+
+  /* Specific Elements */
+  --ifm-navbar-link-font-weight: 500;
+  --ifm-menu-link-font-weight: 500;
+  --ifm-menu-link-font-weight-active: 600;
+}
+
+/* ============================================================================
+   📐 LINE HEIGHTS
+   ============================================================================ */
+
+:root {
+  /* Body Text */
+  --ifm-line-height-base: 1.7;
+
+  /* Headings */
+  --ifm-heading-line-height: 1.4;
+
+  /* Code */
+  --ifm-pre-line-height: 1.5;
+
+  /* Small Text */
+  --ifm-line-height-small: 1.6;
+  --ifm-line-height-tiny: 1.2;
+}
+
+/* ============================================================================
+   🎯 TYPOGRAPHY STYLES
+   ============================================================================ */
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--ifm-heading-font-weight);
+  line-height: var(--ifm-heading-line-height);
+  color: var(--ifm-heading-color);
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+h1 {
+  font-size: var(--ifm-h1-font-size);
+  margin-top: 0;
+}
+
+h2 {
+  font-size: var(--ifm-h2-font-size);
+}
+
+h3 {
+  font-size: var(--ifm-h3-font-size);
+}
+
+h4 {
+  font-size: var(--ifm-h4-font-size);
+}
+
+h5 {
+  font-size: var(--ifm-h5-font-size);
+}
+
+h6 {
+  font-size: var(--ifm-h6-font-size);
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 1em;
+  line-height: var(--ifm-line-height-base);
+  color: var(--ifm-font-color-base);
+}
+
+/* Links */
+a {
+  color: var(--ifm-link-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--ifm-link-hover-color);
+  text-decoration: underline;
+}
+
+/* Strong/Bold */
+strong,
+b {
+  font-weight: var(--ifm-font-weight-bold);
+}
+
+/* Emphasis/Italic */
+em,
+i {
+  font-style: italic;
+}
+
+/* Small Text */
+small {
+  font-size: var(--ifm-font-size-small);
+  line-height: var(--ifm-line-height-small);
+}
+
+/* Code (Inline) */
+code {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: var(--ifm-code-font-size);
+  background-color: var(--ifm-code-background);
+  border: 1px solid var(--ifm-code-border-color);
+  border-radius: 4px;
+  padding: 0.15rem 0.35rem;
+}
+
+/* Lists */
+ul,
+ol {
+  margin-bottom: 1em;
+  line-height: var(--ifm-line-height-base);
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--ifm-color-primary);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: var(--ifm-font-color-base);
+  font-style: italic;
+}
+
+/* ============================================================================
+   📱 RESPONSIVE TYPOGRAPHY
+   ============================================================================ */
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+  :root {
+    --ifm-font-size-base: 15px;
+    --ifm-h1-font-size: 1.75rem; /* 28px */
+    --ifm-h2-font-size: 1.375rem; /* 22px */
+    --ifm-h3-font-size: 1.125rem; /* 18px */
+  }
+}
+
+/* Large screens */
+@media screen and (min-width: 1440px) {
+  :root {
+    --ifm-font-size-base: 17px;
+  }
+}
+
+/* ============================================================================
+   🎨 SIDEBAR & NAVBAR TYPOGRAPHY
+   ============================================================================ */
+
+/* Sidebar Menu */
+.menu__link {
+  font-size: var(--ifm-menu-link-font-size);
+  font-weight: var(--ifm-menu-link-font-weight);
+  color: var(--ifm-menu-color);
+}
+
+.menu__link--active {
+  font-weight: var(--ifm-menu-link-font-weight-active);
+  color: var(--ifm-menu-color-active);
+}
+
+/* Navbar Links */
+.navbar__link {
+  font-size: var(--ifm-navbar-link-font-size);
+  font-weight: var(--ifm-navbar-link-font-weight);
+}
+
+/* Navbar Title */
+.navbar__title {
+  font-size: 1rem;
+  font-weight: var(--ifm-font-weight-semibold);
+}

@@ -1,0 +1,340 @@
+/**
+ * 📝 ADMONITIONS (Callouts)
+ *
+ * Styled callout boxes for notes, tips, warnings, etc.
+ * Five semantic types with distinct colors and icons
+ *
+ * Types:
+ * - Note (📝): Yellow/Amber - General notes and information
+ * - Info (ℹ️): Blue - Informational content
+ * - Tip (✅): Green - Helpful tips and best practices
+ * - Warning (⚠️): Orange - Warnings and cautions
+ * - Danger (❌): Red - Critical warnings and errors
+ *
+ * Features:
+ * - 5px left border with semantic color
+ * - Subtle background colors
+ * - Icon support
+ * - Light and dark mode variants
+ */
+
+/* ============================================================================
+   📋 BASE ADMONITION STYLES
+   ============================================================================ */
+
+.admonition {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 5px solid;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease;
+}
+
+.admonition:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Admonition heading */
+.admonition h5,
+.admonition .admonition-heading {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Admonition icon */
+.admonition-icon {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* Admonition content */
+.admonition-content {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.admonition-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================================================
+   📝 NOTE ADMONITION (Yellow/Amber)
+   ============================================================================ */
+
+.admonition-note,
+.alert--secondary {
+  background-color: var(--admonition-note-bg);
+  border-left-color: var(--admonition-note-border);
+}
+
+.admonition-note .admonition-heading,
+.admonition-note h5,
+.alert--secondary .admonition-heading,
+.alert--secondary h5 {
+  color: var(--admonition-note-border);
+}
+
+.admonition-note .admonition-icon,
+.alert--secondary .admonition-icon {
+  color: var(--admonition-note-icon);
+}
+
+/* ============================================================================
+   ℹ️ INFO ADMONITION (Blue)
+   ============================================================================ */
+
+.admonition-info,
+.alert--info {
+  background-color: var(--admonition-info-bg);
+  border-left-color: var(--admonition-info-border);
+}
+
+.admonition-info .admonition-heading,
+.admonition-info h5,
+.alert--info .admonition-heading,
+.alert--info h5 {
+  color: var(--admonition-info-border);
+}
+
+.admonition-info .admonition-icon,
+.alert--info .admonition-icon {
+  color: var(--admonition-info-icon);
+}
+
+/* ============================================================================
+   ✅ TIP ADMONITION (Green)
+   ============================================================================ */
+
+.admonition-tip,
+.admonition-success,
+.alert--success {
+  background-color: var(--admonition-tip-bg);
+  border-left-color: var(--admonition-tip-border);
+}
+
+.admonition-tip .admonition-heading,
+.admonition-tip h5,
+.admonition-success .admonition-heading,
+.admonition-success h5,
+.alert--success .admonition-heading,
+.alert--success h5 {
+  color: var(--admonition-tip-border);
+}
+
+.admonition-tip .admonition-icon,
+.admonition-success .admonition-icon,
+.alert--success .admonition-icon {
+  color: var(--admonition-tip-icon);
+}
+
+/* ============================================================================
+   ⚠️ WARNING ADMONITION (Orange)
+   ============================================================================ */
+
+.admonition-warning,
+.admonition-caution,
+.alert--warning {
+  background-color: var(--admonition-warning-bg);
+  border-left-color: var(--admonition-warning-border);
+}
+
+.admonition-warning .admonition-heading,
+.admonition-warning h5,
+.admonition-caution .admonition-heading,
+.admonition-caution h5,
+.alert--warning .admonition-heading,
+.alert--warning h5 {
+  color: var(--admonition-warning-border);
+}
+
+.admonition-warning .admonition-icon,
+.admonition-caution .admonition-icon,
+.alert--warning .admonition-icon {
+  color: var(--admonition-warning-icon);
+}
+
+/* ============================================================================
+   ❌ DANGER ADMONITION (Red)
+   ============================================================================ */
+
+.admonition-danger,
+.alert--danger {
+  background-color: var(--admonition-danger-bg);
+  border-left-color: var(--admonition-danger-border);
+}
+
+.admonition-danger .admonition-heading,
+.admonition-danger h5,
+.alert--danger .admonition-heading,
+.alert--danger h5 {
+  color: var(--admonition-danger-border);
+}
+
+.admonition-danger .admonition-icon,
+.alert--danger .admonition-icon {
+  color: var(--admonition-danger-icon);
+}
+
+/* ============================================================================
+   🎨 DOCUSAURUS SPECIFIC ADMONITION CLASSES
+   ============================================================================ */
+
+/* Docusaurus uses different class naming in some themes */
+.theme-admonition {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 5px solid;
+}
+
+/* Note */
+.theme-admonition-note {
+  background-color: var(--admonition-note-bg);
+  border-left-color: var(--admonition-note-border);
+}
+
+.theme-admonition-note .admonition-heading {
+  color: var(--admonition-note-border);
+}
+
+/* Info */
+.theme-admonition-info {
+  background-color: var(--admonition-info-bg);
+  border-left-color: var(--admonition-info-border);
+}
+
+.theme-admonition-info .admonition-heading {
+  color: var(--admonition-info-border);
+}
+
+/* Tip/Success */
+.theme-admonition-tip,
+.theme-admonition-success {
+  background-color: var(--admonition-tip-bg);
+  border-left-color: var(--admonition-tip-border);
+}
+
+.theme-admonition-tip .admonition-heading,
+.theme-admonition-success .admonition-heading {
+  color: var(--admonition-tip-border);
+}
+
+/* Warning/Caution */
+.theme-admonition-warning,
+.theme-admonition-caution {
+  background-color: var(--admonition-warning-bg);
+  border-left-color: var(--admonition-warning-border);
+}
+
+.theme-admonition-warning .admonition-heading,
+.theme-admonition-caution .admonition-heading {
+  color: var(--admonition-warning-border);
+}
+
+/* Danger */
+.theme-admonition-danger {
+  background-color: var(--admonition-danger-bg);
+  border-left-color: var(--admonition-danger-border);
+}
+
+.theme-admonition-danger .admonition-heading {
+  color: var(--admonition-danger-border);
+}
+
+/* ============================================================================
+   🎯 NESTED ADMONITIONS
+   ============================================================================ */
+
+.admonition .admonition {
+  margin: 1rem 0;
+  box-shadow: none;
+  border-left-width: 3px;
+}
+
+/* ============================================================================
+   📱 RESPONSIVE ADMONITIONS
+   ============================================================================ */
+
+@media screen and (max-width: 768px) {
+  .admonition {
+    padding: 0.875rem;
+    margin: 1.25rem 0;
+    border-left-width: 4px;
+  }
+
+  .admonition h5,
+  .admonition .admonition-heading {
+    font-size: 0.875rem;
+  }
+
+  .admonition-content {
+    font-size: 0.875rem;
+  }
+
+  .admonition-icon {
+    font-size: 1.125rem;
+  }
+}
+
+/* ============================================================================
+   ♿ ACCESSIBILITY
+   ============================================================================ */
+
+/* Focus states for keyboard navigation */
+.admonition:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Ensure proper contrast in all modes */
+[data-theme='dark'] .admonition {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .admonition:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================================================================
+   🎨 CUSTOM ADMONITION CONTENT STYLES
+   ============================================================================ */
+
+/* Code blocks inside admonitions */
+.admonition code {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .admonition code {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Links inside admonitions */
+.admonition a {
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* Lists inside admonitions */
+.admonition ul,
+.admonition ol {
+  margin-bottom: 0;
+  padding-left: 1.5rem;
+}
+
+.admonition li {
+  margin-bottom: 0.25rem;
+}
+
+.admonition li:last-child {
+  margin-bottom: 0;
+}

@@ -72,7 +72,7 @@ const config: Config = {
           onUntruncatedBlogPosts: 'warn',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: './src/styles/custom.css',
         },
       } satisfies Preset.Options,
     ],
@@ -90,7 +90,9 @@ const config: Config = {
       title: 'Workshop LLM',
       logo: {
         alt: 'Workshop LLM Logo',
-        src: 'img/logo.svg',
+        src: 'img/new_logo.png',
+        width: 34,
+        height: 34,
       },
       items: [
         {

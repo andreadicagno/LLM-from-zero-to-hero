@@ -1,0 +1,469 @@
+/**
+ * 🎨 CUSTOM STYLES - Workshop LLM
+ *
+ * Main stylesheet for "Workshop LLM: From Casual User to Power User"
+ * Professional blue/indigo theme with excellent readability
+ *
+ * Architecture:
+ * - Modular CSS structure
+ * - Light & Dark mode support
+ * - WCAG AA accessibility compliant
+ * - GitHub-inspired dark mode
+ * - System font stack for performance
+ *
+ * Author: Andrea di Cagno
+ * Version: 2.0
+ * Last Updated: 2025-10-06
+ */
+
+/* ============================================================================
+   📦 MODULE IMPORTS
+   ============================================================================ */
+
+/**
+ * Import order matters:
+ * 1. Colors (CSS variables foundation)
+ * 2. Typography (base text styles)
+ * 3. Code blocks (syntax highlighting)
+ * 4. Admonitions (callout boxes)
+ * 5. Utils (utilities & overrides)
+ */
+
+/* 🎨 Colors - Primary palette and semantic colors */
+@import './_colors.css';
+
+/* 🔤 Typography - Fonts, sizes, weights, line heights */
+@import './_typography.css';
+
+/* 💻 Code Blocks - Inline code and syntax highlighting */
+@import './_code-blocks.css';
+
+/* 📝 Admonitions - Callout boxes (note, tip, warning, etc.) */
+@import './_admonitions.css';
+
+/* 🛠️ Utils - Font smoothing, utilities, accessibility */
+@import './_utils.css';
+
+/* ============================================================================
+   🌐 INFIMA FRAMEWORK INTEGRATION
+   ============================================================================
+
+   Docusaurus uses Infima CSS framework by default.
+   These styles extend and customize Infima for our workshop theme.
+*/
+
+/* ============================================================================
+   📐 LAYOUT CUSTOMIZATIONS
+   ============================================================================ */
+
+/* Main container */
+.main-wrapper {
+  background-color: var(--ifm-background-color);
+  min-height: calc(100vh - var(--ifm-navbar-height) - var(--ifm-footer-height));
+}
+
+/* Content container */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Docs container */
+.docMainContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-Main-styles-module {
+  max-width: 100%;
+}
+
+/* ============================================================================
+   🧭 NAVBAR CUSTOMIZATIONS
+   ============================================================================ */
+
+.navbar {
+  background-color: var(--ifm-navbar-background-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--ifm-border-color);
+}
+
+[data-theme='dark'] .navbar {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.navbar__title {
+  font-weight: 600;
+  color: var(--ifm-navbar-link-color);
+}
+
+.navbar__logo {
+  margin-right: 0.75rem;
+}
+
+.navbar__item {
+  padding: 0 0.5rem;
+}
+
+.navbar__link {
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar__link:hover {
+  color: var(--ifm-color-primary);
+}
+
+.navbar__link--active {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+/* Dropdown menu */
+.dropdown__menu {
+  background-color: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+}
+
+.dropdown__link {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown__link:hover {
+  background-color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-primary);
+}
+
+/* ============================================================================
+   📚 SIDEBAR CUSTOMIZATIONS
+   ============================================================================ */
+
+.theme-doc-sidebar-container {
+  background-color: var(--ifm-background-color);
+  border-right: 1px solid var(--ifm-border-color);
+}
+
+.menu {
+  padding: 1rem;
+}
+
+.menu__list {
+  margin: 0;
+}
+
+.menu__list-item {
+  margin: 0.15rem 0;
+}
+
+.menu__link {
+  border-radius: 6px;
+  padding: 0.35rem 0.75rem;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.menu__link:hover {
+  background-color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-primary);
+}
+
+.menu__link--active {
+  background-color: rgba(27, 109, 255, 0.1);
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+[data-theme='dark'] .menu__link--active {
+  background-color: rgba(77, 141, 255, 0.15);
+}
+
+.menu__link--sublist-caret::after {
+  background-size: 1.25rem 1.25rem;
+  filter: var(--ifm-menu-link-sublist-icon-filter);
+}
+
+/* Sidebar category */
+.menu__list-item-collapsible {
+  border-radius: 6px;
+}
+
+.menu__caret::before {
+  background: var(--ifm-menu-link-sublist-icon) 50% / 1.25rem 1.25rem;
+}
+
+/* ============================================================================
+   📄 TABLE OF CONTENTS (TOC)
+   ============================================================================ */
+
+.table-of-contents {
+  font-size: 0.875rem;
+}
+
+.table-of-contents__link {
+  color: var(--ifm-menu-color);
+  padding: 0.25rem 0.5rem;
+  border-left: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.table-of-contents__link:hover {
+  color: var(--ifm-color-primary);
+  border-left-color: var(--ifm-color-primary);
+}
+
+.table-of-contents__link--active {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  border-left-color: var(--ifm-color-primary);
+}
+
+/* ============================================================================
+   🦶 FOOTER CUSTOMIZATIONS
+   ============================================================================ */
+
+.footer {
+  background-color: var(--ifm-footer-background-color);
+  border-top: 1px solid var(--ifm-border-color);
+  padding: 2rem 0;
+}
+
+.footer__title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ifm-heading-color);
+  margin-bottom: 0.75rem;
+}
+
+.footer__link-item {
+  font-size: 0.875rem;
+  color: var(--ifm-font-color-base);
+  transition: color 0.2s ease;
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-color-primary);
+}
+
+.footer__copyright {
+  font-size: 0.8125rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-top: 1.5rem;
+}
+
+/* ============================================================================
+   📑 PAGINATION
+   ============================================================================ */
+
+.pagination-nav__link {
+  border: 1px solid var(--ifm-border-color);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 2px 6px rgba(27, 109, 255, 0.15);
+}
+
+.pagination-nav__label {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+.pagination-nav__sublabel {
+  font-size: 0.875rem;
+  color: var(--ifm-font-color-base);
+}
+
+/* ============================================================================
+   📊 TABLES
+   ============================================================================ */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  font-size: 0.9375rem;
+}
+
+table thead {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+table thead tr {
+  border-bottom: 2px solid var(--ifm-border-color);
+}
+
+table th {
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  text-align: left;
+  color: var(--ifm-heading-color);
+}
+
+table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--ifm-table-border-color);
+}
+
+table tbody tr:hover {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+/* Responsive tables */
+@media screen and (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    font-size: 0.875rem;
+  }
+
+  table th,
+  table td {
+    padding: 0.5rem;
+  }
+}
+
+/* ============================================================================
+   🔘 BUTTONS & BADGES
+   ============================================================================ */
+
+.button {
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.button--primary {
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+}
+
+.button--primary:hover {
+  background-color: var(--ifm-color-primary-dark);
+  border-color: var(--ifm-color-primary-dark);
+}
+
+.badge {
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+}
+
+.badge--primary {
+  background-color: var(--ifm-color-primary);
+  color: #ffffff;
+}
+
+.badge--success {
+  background-color: var(--ifm-color-success);
+  color: #ffffff;
+}
+
+.badge--warning {
+  background-color: var(--ifm-color-warning);
+  color: #ffffff;
+}
+
+.badge--danger {
+  background-color: var(--ifm-color-danger);
+  color: #ffffff;
+}
+
+/* ============================================================================
+   📱 RESPONSIVE ADJUSTMENTS
+   ============================================================================ */
+
+@media screen and (max-width: 996px) {
+  /* Mobile navbar */
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  /* Mobile sidebar */
+  .theme-doc-sidebar-container {
+    border-right: none;
+  }
+
+  /* Mobile content */
+  .container {
+    padding: 0 0.75rem;
+  }
+}
+
+/* ============================================================================
+   🎯 HOMEPAGE SPECIFIC STYLES
+   ============================================================================ */
+
+.hero {
+  background: linear-gradient(
+    135deg,
+    var(--ifm-color-primary-lightest) 0%,
+    var(--ifm-color-primary) 100%
+  );
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Feature cards */
+.card {
+  border: 1px solid var(--ifm-border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  background-color: var(--ifm-background-surface-color);
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(27, 109, 255, 0.15);
+  border-color: var(--ifm-color-primary);
+  transform: translateY(-2px);
+}
+
+.card__header {
+  margin-bottom: 1rem;
+}
+
+.card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ifm-heading-color);
+}
+
+.card__body {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--ifm-font-color-base);
+}
+
+/* ============================================================================
+   ✨ FINAL TOUCHES
+   ============================================================================ */
+
+/* Improve overall contrast in dark mode */
+[data-theme='dark'] {
+  --ifm-background-surface-color: #161b22;
+}
+
+/* Smooth theme transitions */
+html[data-theme] {
+  transition: background-color 200ms ease-in-out;
+}
+
+/* End of custom.css */

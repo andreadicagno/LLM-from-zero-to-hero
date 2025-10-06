@@ -1,0 +1,175 @@
+/**
+ * 🎨 COLORS PALETTE
+ *
+ * Professional blue/indigo color scheme for Workshop LLM documentation
+ * Includes Light Mode and Dark Mode variants
+ *
+ * Philosophy:
+ * - Primary: Blue/Indigo professional (ionic-docs inspired)
+ * - Contrast: Optimized for WCAG AA accessibility
+ * - Dark mode: GitHub-inspired (#0d1117)
+ * - Semantic colors for admonitions
+ */
+
+/* ============================================================================
+   🔵 PRIMARY COLORS (Blue/Indigo)
+   ============================================================================ */
+
+:root {
+  /* Primary Colors - Light Mode */
+  --ifm-color-primary: #1b6dff;
+  --ifm-color-primary-dark: #0059f7;
+  --ifm-color-primary-darker: #0054ea;
+  --ifm-color-primary-darkest: #0046c1;
+  --ifm-color-primary-light: #3581ff;
+  --ifm-color-primary-lighter: #428aff;
+  --ifm-color-primary-lightest: #6ca4ff;
+
+  /* Background Colors - Light Mode */
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-footer-background-color: #ffffff;
+
+  /* Typography Colors - Light Mode */
+  --ifm-heading-color: #1c1e21;
+  --ifm-font-color-base: #3c4043;
+  --ifm-link-color: #1b6dff;
+  --ifm-link-hover-color: #0059f7;
+  --ifm-menu-color: #5f6368;
+  --ifm-menu-color-active: #1b6dff;
+
+  /* Code Block Colors - Light Mode */
+  --ifm-code-background: #f6f8fa;
+  --ifm-code-border-color: #e1e4e8;
+  --docusaurus-highlighted-code-line-bg: rgba(27, 109, 255, 0.1);
+}
+
+/* ============================================================================
+   🌙 DARK MODE COLORS
+   ============================================================================ */
+
+[data-theme='dark'] {
+  /* Primary Colors - Dark Mode */
+  --ifm-color-primary: #4d8dff;
+  --ifm-color-primary-dark: #2075ff;
+  --ifm-color-primary-darker: #1b6dff;
+  --ifm-color-primary-darkest: #005de0;
+  --ifm-color-primary-light: #74a5ff;
+  --ifm-color-primary-lighter: #89b2ff;
+  --ifm-color-primary-lightest: #c3d9ff;
+
+  /* Background Colors - Dark Mode (GitHub-inspired) */
+  --ifm-background-color: #0d1117;
+  --ifm-background-surface-color: #161b22;
+  --ifm-navbar-background-color: #0d1117;
+  --ifm-footer-background-color: #0d1117;
+  --ifm-color-emphasis-100: #161b22;
+  --ifm-color-emphasis-200: #21262d;
+  --ifm-color-emphasis-300: #30363d;
+  --ifm-color-emphasis-400: #484f58;
+  --ifm-color-emphasis-600: #6e7681;
+  --ifm-color-emphasis-700: #8b949e;
+  --ifm-color-emphasis-800: #c9d1d9;
+
+  /* Typography Colors - Dark Mode */
+  --ifm-heading-color: #e6edf3;
+  --ifm-font-color-base: #c9d1d9;
+  --ifm-link-color: #4d8dff;
+  --ifm-link-hover-color: #2075ff;
+  --ifm-menu-color: #c9d1d9;
+  --ifm-menu-color-active: #4d8dff;
+
+  /* Code Block Colors - Dark Mode */
+  --ifm-code-background: #161b22;
+  --ifm-code-border-color: #30363d;
+  --docusaurus-highlighted-code-line-bg: rgba(77, 141, 255, 0.1);
+}
+
+/* ============================================================================
+   📝 ADMONITIONS COLORS (Callouts)
+   ============================================================================ */
+
+:root {
+  /* Note (Yellow/Amber) */
+  --admonition-note-bg: #fef9e7;
+  --admonition-note-border: #f9a825;
+  --admonition-note-icon: #f9a825;
+
+  /* Info (Blue) */
+  --admonition-info-bg: #e3f2fd;
+  --admonition-info-border: #1976d2;
+  --admonition-info-icon: #1976d2;
+
+  /* Tip (Green) */
+  --admonition-tip-bg: #e8f5e9;
+  --admonition-tip-border: #388e3c;
+  --admonition-tip-icon: #388e3c;
+
+  /* Warning (Orange) */
+  --admonition-warning-bg: #fff3e0;
+  --admonition-warning-border: #f57c00;
+  --admonition-warning-icon: #f57c00;
+
+  /* Danger (Red) */
+  --admonition-danger-bg: #ffebee;
+  --admonition-danger-border: #d32f2f;
+  --admonition-danger-icon: #d32f2f;
+}
+
+[data-theme='dark'] {
+  /* Note (Yellow/Amber) - Dark */
+  --admonition-note-bg: #2d2410;
+  --admonition-note-border: #f9a825;
+  --admonition-note-icon: #f9a825;
+
+  /* Info (Blue) - Dark */
+  --admonition-info-bg: #0d1a2d;
+  --admonition-info-border: #1976d2;
+  --admonition-info-icon: #1976d2;
+
+  /* Tip (Green) - Dark */
+  --admonition-tip-bg: #0d2d15;
+  --admonition-tip-border: #388e3c;
+  --admonition-tip-icon: #388e3c;
+
+  /* Warning (Orange) - Dark */
+  --admonition-warning-bg: #2d1c0d;
+  --admonition-warning-border: #f57c00;
+  --admonition-warning-icon: #f57c00;
+
+  /* Danger (Red) - Dark */
+  --admonition-danger-bg: #2d0d10;
+  --admonition-danger-border: #d32f2f;
+  --admonition-danger-icon: #d32f2f;
+}
+
+/* ============================================================================
+   🎨 ADDITIONAL UTILITY COLORS
+   ============================================================================ */
+
+:root {
+  /* Success, Warning, Danger states */
+  --ifm-color-success: #388e3c;
+  --ifm-color-warning: #f57c00;
+  --ifm-color-danger: #d32f2f;
+  --ifm-color-info: #1976d2;
+
+  /* Borders and Dividers */
+  --ifm-border-color: #e1e4e8;
+  --ifm-hr-border-color: #e1e4e8;
+  --ifm-table-border-color: #e1e4e8;
+}
+
+[data-theme='dark'] {
+  /* Success, Warning, Danger states - Dark */
+  --ifm-color-success: #4caf50;
+  --ifm-color-warning: #ff9800;
+  --ifm-color-danger: #f44336;
+  --ifm-color-info: #2196f3;
+
+  /* Borders and Dividers - Dark */
+  --ifm-border-color: #30363d;
+  --ifm-hr-border-color: #30363d;
+  --ifm-table-border-color: #30363d;
+}

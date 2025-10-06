@@ -1,0 +1,452 @@
+/**
+ * 🛠️ UTILITIES
+ *
+ * General utilities, helpers, and global improvements
+ *
+ * Features:
+ * - Font smoothing for better text rendering
+ * - Smooth scrolling
+ * - Focus states for accessibility
+ * - Print styles
+ * - Selection colors
+ * - Utility classes
+ */
+
+/* ============================================================================
+   🎯 GLOBAL IMPROVEMENTS
+   ============================================================================ */
+
+/* Font smoothing for better text rendering */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-smoothing: antialiased;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ============================================================================
+   🎨 SELECTION COLORS
+   ============================================================================ */
+
+/* Text selection color */
+::selection {
+  background-color: var(--ifm-color-primary);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: var(--ifm-color-primary);
+  color: #ffffff;
+}
+
+/* Code selection */
+pre::selection,
+pre ::selection,
+code::selection {
+  background-color: var(--ifm-color-primary-dark);
+  color: #ffffff;
+}
+
+/* ============================================================================
+   ♿ ACCESSIBILITY - FOCUS STATES
+   ============================================================================ */
+
+/* Better focus indicators for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Remove default focus styles when not using keyboard */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Specific focus states for interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* ============================================================================
+   🔄 TRANSITIONS & ANIMATIONS
+   ============================================================================ */
+
+/* Smooth transitions for color changes (theme switching) */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* Disable transitions on elements that shouldn't animate */
+code,
+pre,
+.navbar__logo,
+.navbar__toggle {
+  transition: none;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================================
+   🖨️ PRINT STYLES
+   ============================================================================ */
+
+@media print {
+  /* Hide non-content elements when printing */
+  .navbar,
+  .footer,
+  .theme-doc-sidebar-container,
+  .theme-doc-toc-desktop,
+  .pagination-nav,
+  .theme-back-to-top-button {
+    display: none !important;
+  }
+
+  /* Optimize content for printing */
+  .main-wrapper {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  /* Ensure links are visible */
+  a {
+    text-decoration: underline;
+  }
+
+  /* Show URLs after links */
+  a[href]::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  /* Don't show URLs for anchor links */
+  a[href^='#']::after,
+  a[href^='javascript:']::after {
+    content: '';
+  }
+
+  /* Better page breaks */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+  }
+
+  pre,
+  blockquote,
+  img,
+  table {
+    page-break-inside: avoid;
+  }
+
+  /* Optimize colors for printing */
+  body {
+    background: white;
+    color: black;
+  }
+
+  /* Remove shadows and backgrounds */
+  .admonition,
+  pre,
+  code {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}
+
+/* ============================================================================
+   📱 SCROLLBAR STYLING
+   ============================================================================ */
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ifm-background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ifm-color-emphasis-300);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ifm-color-emphasis-400);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ifm-color-emphasis-300) var(--ifm-background-color);
+}
+
+/* ============================================================================
+   🎨 UTILITY CLASSES
+   ============================================================================ */
+
+/* Text alignment */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Text colors */
+.text-primary {
+  color: var(--ifm-color-primary) !important;
+}
+
+.text-success {
+  color: var(--ifm-color-success) !important;
+}
+
+.text-warning {
+  color: var(--ifm-color-warning) !important;
+}
+
+.text-danger {
+  color: var(--ifm-color-danger) !important;
+}
+
+.text-info {
+  color: var(--ifm-color-info) !important;
+}
+
+/* Background colors */
+.bg-primary {
+  background-color: var(--ifm-color-primary) !important;
+  color: #ffffff !important;
+}
+
+.bg-light {
+  background-color: var(--ifm-color-emphasis-100) !important;
+}
+
+.bg-dark {
+  background-color: var(--ifm-color-emphasis-800) !important;
+  color: #ffffff !important;
+}
+
+/* Spacing utilities */
+.mt-0 {
+  margin-top: 0 !important;
+}
+.mt-1 {
+  margin-top: 0.5rem !important;
+}
+.mt-2 {
+  margin-top: 1rem !important;
+}
+.mt-3 {
+  margin-top: 1.5rem !important;
+}
+.mt-4 {
+  margin-top: 2rem !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.mb-1 {
+  margin-bottom: 0.5rem !important;
+}
+.mb-2 {
+  margin-bottom: 1rem !important;
+}
+.mb-3 {
+  margin-bottom: 1.5rem !important;
+}
+.mb-4 {
+  margin-bottom: 2rem !important;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+.p-1 {
+  padding: 0.5rem !important;
+}
+.p-2 {
+  padding: 1rem !important;
+}
+.p-3 {
+  padding: 1.5rem !important;
+}
+.p-4 {
+  padding: 2rem !important;
+}
+
+/* Display utilities */
+.d-none {
+  display: none !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-inline {
+  display: inline !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+/* Flex utilities */
+.justify-center {
+  justify-content: center !important;
+}
+
+.justify-between {
+  justify-content: space-between !important;
+}
+
+.align-center {
+  align-items: center !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.gap-1 {
+  gap: 0.5rem !important;
+}
+.gap-2 {
+  gap: 1rem !important;
+}
+.gap-3 {
+  gap: 1.5rem !important;
+}
+
+/* Border utilities */
+.border-0 {
+  border: none !important;
+}
+
+.rounded {
+  border-radius: 6px !important;
+}
+
+.rounded-full {
+  border-radius: 9999px !important;
+}
+
+/* Shadow utilities */
+.shadow-sm {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.shadow {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ============================================================================
+   🔧 SPECIFIC COMPONENT FIXES
+   ============================================================================ */
+
+/* Improve table responsiveness */
+.table-wrapper {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Better image handling */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Video embed responsiveness */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ============================================================================
+   🌓 DARK MODE SPECIFIC UTILITIES
+   ============================================================================ */
+
+/* Show only in light mode */
+[data-theme='dark'] .light-mode-only {
+  display: none !important;
+}
+
+/* Show only in dark mode */
+[data-theme='light'] .dark-mode-only {
+  display: none !important;
+}
+
+/* Invert images in dark mode (useful for logos) */
+[data-theme='dark'] .invert-dark {
+  filter: invert(1);
+}
