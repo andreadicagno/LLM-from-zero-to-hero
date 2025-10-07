@@ -182,6 +182,539 @@ Se l'output non è soddisfacente, torna allo Step 3 e migliora il template. Non 
 
 ---
 
+## 🎁 Starter Templates Library dal Workshop
+
+> 💡 Questi 5 template sono stati preparati basandoci sui use case più richiesti dai partecipanti nel pre-assessment del workshop.
+> Sono **pronti all'uso**: copia, personalizza con i tuoi dati, salva nella tua library!
+
+**Top Use Cases Identificati** (dal pre-assessment):
+1. ⭐ **Meeting Notes Synthesis** (richiesto da 4/7 partecipanti)
+2. ⭐ **Status Report Automation** (richiesto da 4/7 partecipanti)
+3. ⭐ **Test Case Generation** (richiesto esplicitamente da Functional)
+4. ⭐ **UX Concept Creation** (richiesto da Service Designers)
+5. ⭐ **Document Analysis** (richiesto da 3/7 partecipanti)
+
+**Come Usare Questi Template**:
+1. Scegli template più rilevante per tuo ruolo
+2. Copia template completo
+3. Sostituisci `[PLACEHOLDER]` con tuoi dati
+4. Testa su caso reale
+5. Raffina se necessario
+6. Salva nella tua personal library
+
+:::tip 🚀 Quick Win
+Questi starter templates ti fanno risparmiare ~80% del tempo rispetto a crearli da zero. Personalizzali e avrai 5 prompt professionali pronti in 20 minuti!
+:::
+
+---
+
+### **Template 1: Meeting Notes → Executive Summary** ⭐ Most Requested
+
+**USE CASE**: Trasformare note sparse di meeting in executive summary actionable per stakeholder senior
+**TARGET ROLES**: PMO, Functional, PM (richiesto da 4/7 partecipanti)
+**ESTIMATED TIME SAVED**: ~20 min per meeting (da 30 min scrittura → 10 min review)
+**VERSION**: 1.0 (Workshop Edition)
+
+#### **PROMPT TEMPLATE**
+
+```markdown
+[ROLE]
+Sei un Senior Project Coordinator esperto in executive communication e meeting facilitation.
+
+[ACTION]
+Trasforma le meeting notes non strutturate in executive summary professionale per [STAKEHOLDER_TYPE].
+
+[CONTEXT]
+**Meeting Info**:
+- **Tipo**: [Project Steering / Team Sync / Stakeholder Review / Design Review]
+- **Data**: [GG/MM/AAAA]
+- **Durata**: [N minuti]
+- **Partecipanti**: [Lista ruoli presenti]
+- **Obiettivo meeting**: [Perché convocato]
+
+**Raw Meeting Notes**:
+[PASTE_NOTE_TESTUALI_QUI]
+[Anche disordinate, abbreviazioni OK - LLM strutturerà]
+
+**Audience Summary**:
+- **Destinatari**: [C-level / Project Team / Cliente / Board]
+- **Loro priority**: [Cosa interessa: decisioni? risks? timeline?]
+
+[EXPECTATIONS]
+**Formato**: Executive Summary Document
+
+**Struttura Obbligatoria**:
+
+### 📋 **MEETING OVERVIEW**
+- Meeting: [Tipo]
+- Data: [Data]
+- Partecipanti: [Lista]
+- Duration: [N min]
+
+### 🎯 **KEY DECISIONS TAKEN**
+| Decision | Decided By | Rationale | Impact |
+|----------|-----------|-----------|--------|
+| [Decisione 1] | [Nome/Ruolo] | [Perché] | [Su cosa] |
+| [Decisione 2] | [...] | [...] | [...] |
+
+### ✅ **ACTION ITEMS**
+| Owner | Action | Deadline | Priority | Status |
+|-------|--------|----------|----------|--------|
+| [Nome] | [Cosa fare] | [Data] | [H/M/L] | [New] |
+| [...] | [...] | [...] | [...] | [...] |
+
+### ⚠️ **RISKS & BLOCKERS**
+- [Risk/Blocker 1]: Severity [H/M/L], Owner: [Chi], Mitigation: [Piano]
+
+### ❓ **OPEN QUESTIONS**
+- [Domanda 1] → Resolve by: [Nome], by: [Data]
+
+### ➡️ **NEXT STEPS**
+1. [Azione prioritaria] - [Owner] - [Timeline]
+2. [Next meeting: Data/Obiettivo]
+
+**Tone**: Professionale-conciso, action-oriented, neutral
+**Length**: 400-600 parole
+**Audience**: [Specificato sopra]
+**Output**: Ready per email/Confluence
+```
+
+#### **TIPS & COMMON PITFALLS**
+
+✅ **Tips**:
+- Note disordinate OK: LLM struttura
+- Abbreviazioni OK: LLM espande
+- Verifica decisioni critiche (human-review)
+
+❌ **Pitfalls**:
+- Note troppo scarne → Aggiungi context per topics importanti
+- Action items senza owner → Sempre annotare "Nome will do X"
+
+---
+
+### **Template 2: Documento Funzionale → Test List** ⭐ Explicitly Requested
+
+**USE CASE**: Generare comprehensive test cases da documento funzionale/user story
+**TARGET ROLE**: Functional/BA (richiesto esplicitamente nel pre-assessment)
+**ESTIMATED TIME SAVED**: ~45 min (da 1h scrittura → 15 min review)
+**VERSION**: 1.0
+
+#### **PROMPT TEMPLATE**
+
+```markdown
+[ROLE]
+Sei un Senior QA Engineer e Test Architect con 10 anni esperienza in test strategy enterprise e test automation planning.
+
+[ACTION]
+Genera comprehensive test case list per la funzionalità descritta, coprendo test positivi, negativi, edge cases e security.
+
+[CONTEXT]
+**Documento Funzionale**:
+[PASTE_DOCUMENTO o UPLOAD_FILE]
+
+**System Under Test**:
+- **Applicazione**: [Nome sistema]
+- **Modulo/Feature**: [Area specifica]
+- **Tech Stack**: [Web/Mobile/API]
+- **Integration**: [Sistemi esterni]
+
+**User Story** (se disponibile):
+As a [user type], I want to [action], so that [benefit]
+
+**Acceptance Criteria**:
+- [Criterio 1]
+- [Criterio 2]
+
+[EXPECTATIONS]
+**Formato**: Test Case Table (Excel/JIRA-ready)
+
+| Test ID | Category | Description | Preconditions | Steps | Expected Result | Priority | Type |
+|---------|----------|-------------|---------------|-------|-----------------|----------|------|
+| TC-001 | Functional | [Desc] | [Setup] | [1. Step 1<br/>2. ...] | [Expected] | High | Positive |
+
+**Coverage Requirements**:
+- Positive Tests: Min 40%
+- Negative Tests: Min 30%
+- Boundary/Edge: Min 20%
+- Security: 10%
+
+**Prioritization**:
+- High: Core functionality, security-critical
+- Medium: Important alternate paths
+- Low: Nice-to-have, rarely used
+
+**Deliverable**: Table ready per import in JIRA/Azure DevOps
+```
+
+#### **TIPS**
+
+✅ Upload doc completo per test precisi
+✅ Specifica tech stack (influenza test types)
+⚠️ Security tests: sempre human review con security expert
+
+---
+
+### **Template 3: Requisiti → PowerPoint Outline** ⭐ Explicitly Requested
+
+**USE CASE**: Trasformare requisiti/documenti in outline presentazione PowerPoint
+**TARGET ROLE**: PMO (richiesto esplicitamente nel pre-assessment)
+**ESTIMATED TIME SAVED**: ~30 min (da 1h strutturazione → 30 min creazione slides)
+**VERSION**: 1.0
+
+#### **PROMPT TEMPLATE**
+
+```markdown
+[ROLE]
+Sei un Presentation Designer esperto in executive presentations e stakeholder management, specializzato in trasformare contenuto tecnico in narrative compelling.
+
+[ACTION]
+Crea outline dettagliato per presentazione PowerPoint basato sui documenti forniti, ottimizzato per [AUDIENCE_TYPE] con obiettivo [GOAL].
+
+[CONTEXT]
+**Source Documents**:
+[PASTE_DOCUMENTI o UPLOAD_FILE]
+
+**Presentation Context**:
+- **Audience**: [C-Level / Board / Team / Cliente]
+- **Occasion**: [Steering / Kick-off / Status / Go-NoGo / Budget Approval]
+- **Presenter**: [Tuo ruolo]
+- **Duration**: [10/20/30/45 min] → [N slides target]
+- **Goal**: [Approval / Informare / Decision / Alignment]
+
+**Key Messages** (cosa audience DEVE ricordare):
+1. [Message 1]
+2. [Message 2]
+3. [Message 3]
+
+[EXPECTATIONS]
+**Formato**: PowerPoint Outline slide-by-slide
+
+**Struttura per ogni slide**:
+---
+### **Slide N: [Titolo]**
+**Content**: [Bullet points o descrizione]
+**Visual Suggestion**: [Tipo visual: chart, timeline, icon, etc.]
+**Speaker Notes**: [Talking points 3-5 frasi]
+**Data/Evidence**: [Stat rilevante se disponibile]
+---
+
+**Delivery Guidelines**:
+- Total Slides: ~1 slide per 1.5-2 min speaking
+- Slide Density: Max 5-7 bullet, max 10 parole/bullet
+- Visual-to-Text Ratio: 60% visual / 40% text
+- Flow: Problem → Solution → Evidence → Action
+
+**Tone**: [Appropriate per audience]
+**Output**: Ready per creare slides in PPT/Keynote
+```
+
+#### **TIPS**
+
+💡 Start with "So What?": Ogni slide risponde "perché audience care?"
+💡 Data-driven: Min 3-4 data points throughout
+⚠️ Avoid bloat: Se >15 slides per 20 min, troppo denso
+
+---
+
+### **Template 4: Brainstorming → UX/UI Concept** ⭐
+
+**USE CASE**: Generare multipli concept UX/UI per feature con rationale e tradeoff
+**TARGET ROLES**: Service Design (2 partecipanti richiesto)
+**ESTIMATED TIME SAVED**: ~40 min (da 1.5h brainstorming → 30 min review + sketch)
+**VERSION**: 1.0
+
+#### **PROMPT TEMPLATE**
+
+```markdown
+[ROLE]
+Sei un Senior UX/UI Designer con 10+ anni in design thinking e product design, specializzato in user-centered design e rapid prototyping.
+
+[ACTION]
+Genera [3-5] concept alternativi UX/UI per il problema descritto, con focus su diversità approcci (non varianti minori).
+
+[CONTEXT]
+**Feature/Problema**:
+[DESCRIZIONE_DETTAGLIATA]
+
+**User Persona** (Primary):
+- **Nome**: [Es: "Maria, 35, PM"]
+- **Goals**: [Cosa vuole ottenere]
+- **Pain Points**: [Frustrazioni attuali]
+- **Tech Savviness**: [Novice / Intermediate / Advanced]
+- **Context**: [Desktop/Mobile, quando usa]
+
+**Business Goals**:
+- [Goal 1 es: "Engagement +30%"]
+- [Goal 2]
+
+**Constraints**:
+- **Technical**: [Es: "PWA only, no native app"]
+- **Budget/Time**: [Es: "MVP in 2 mesi"]
+- **Brand**: [Guidelines, tone, style]
+- **Accessibility**: [WCAG 2.1 AA?]
+
+[EXPECTATIONS]
+**Formato**: Concept Document con [N] alternatives
+
+**Per Ogni Concept**:
+
+### **Concept N: [Nome Descrittivo]**
+
+**🎨 Core Idea** (1-2 frasi):
+[Unique value proposition]
+
+**🎯 Key Differentiator**:
+[Cosa rende diverso]
+
+**👤 User Flow** (step-by-step):
+1. [Entry: come arriva]
+2. [Interazione step 1]
+3. [...]
+5. [Outcome]
+
+**🧩 UI Components**:
+- [Component 1: es "Modal with stepper"]
+- [Component 2]
+
+**✅ Pros** / **❌ Cons**:
+- Pro: [Es: "20% faster completion"]
+- Con: [Es: "Higher dev effort"]
+
+**💰 Implementation Effort**:
+- Design: [Low/Med/High - N giorni]
+- Development: [Low/Med/High]
+- Total: [X person-days]
+
+**📸 Visual Description** (text only):
+[Layout, colori, typography, spacing - NO image generation]
+
+---
+
+**Comparison Matrix**:
+| Criteria | Concept 1 | 2 | 3 | 4 | 5 |
+|----------|-----------|---|---|---|---|
+| User Value (1-5) | [...] | | | | |
+| Ease (1-5) | | | | | |
+| Innovation (1-5) | | | | | |
+| Effort (low=1) | | | | | |
+| **TOTAL** | | | | | |
+
+**Recommendation**: Concept [N] for MVP, rationale: [2-3 frasi]
+```
+
+#### **TIPS**
+
+💡 Ask for diverse approaches: "Molto diversi, not just UI variations"
+💡 Include edge cases in flow
+⚠️ Don't over-design: Concepts = exploration, not final
+✅ Hybrid OK: Best solution spesso mix di 2 concepts
+
+---
+
+### **Template 5: Multi-Document Analysis → Insights Report** ⭐
+
+**USE CASE**: Analizzare multipli docs ed estrarre insights actionable consolidati
+**TARGET ROLES**: Functional, PM, Service Design (richiesto da 4 partecipanti)
+**ESTIMATED TIME SAVED**: ~90 min (da 2.5h lettura → 1h review)
+**VERSION**: 1.0
+
+#### **PROMPT TEMPLATE**
+
+```markdown
+[ROLE]
+Sei un Senior Business Analyst e Research Synthesizer con expertise in qualitative/quantitative analysis e insight generation.
+
+[ACTION]
+Analizza i [N] documenti forniti, identifica pattern/trend/insights, genera report consolidato con raccomandazioni actionable.
+
+[CONTEXT]
+**Documenti da Analizzare**:
+[UPLOAD_FILES o PASTE per ciascuno]
+- **Doc 1**: [Nome / Tipo]
+- **Doc 2**: [...]
+- **Doc N**: [...]
+
+**Obiettivo Analisi**:
+[Cosa cerchiamo: es "Pain points utenti", "Gap analysis", "Benchmark competitor", "Risk assessment"]
+
+**Focus Areas** (se specifici):
+- [Area 1]
+- [Area 2]
+
+**Context**:
+- **Project/Initiative**: [Nome]
+- **Stakeholder**: [Chi richiede + loro concerns]
+- **Decision da Supportare**: [Report serve per decidere cosa?]
+
+[EXPECTATIONS]
+**Formato**: Executive Insights Report
+
+**Struttura**:
+
+## **EXECUTIVE SUMMARY** (Max 200 parole)
+**TL;DR**: [3-5 frasi sintesi]
+**Key Takeaways**:
+1. [Insight più importante]
+2. [...]
+3. [...]
+
+## **METHODOLOGY**
+- Documents Analyzed: [N docs, X pagine]
+- Approach: [Qualitative/Quantitative/Comparative]
+- Timeframe: [Periodo dati]
+
+## **KEY FINDINGS** (Prioritized)
+
+### **Finding 1: [Titolo]**
+**Evidence**:
+- [Source: Doc 1, Page 5]: "[Quote]"
+- **Pattern Frequency**: [Es: "8/12 interviews"]
+
+**Insight**: [Cosa significa, perché importa]
+**Impact**: [High / Medium / Low]
+
+[Repeat per Finding 2, 3, ...]
+
+## **PATTERN ANALYSIS**
+**Recurring Themes**:
+1. **Theme 1**: [Observed in Docs X,Y,Z]
+   - Manifestations: [Come appare]
+   - Trend: [Increasing/Stable/Decreasing]
+
+**Outliers**: [Eccezioni ai pattern]
+
+## **COMPARATIVE ANALYSIS** (se applicabile)
+| Dimension | Entity 1 | Entity 2 | Gap |
+|-----------|----------|----------|-----|
+| [Criterio 1] | [...] | [...] | [...] |
+
+## **RISKS & GAPS**
+**Critical Risks**:
+1. **Risk**: [Descrizione]
+   * Likelihood: [H/M/L]
+   * Impact: [H/M/L]
+   * Mitigation: [Action]
+
+**Gaps**: [Missing info/capability]
+
+## **RECOMMENDATIONS** (Prioritized)
+
+### **Immediate Actions** (Next 2 weeks):
+1. **Action**: [Descrizione]
+   * Owner: [Suggested role]
+   * Effort: [Hours/Days]
+   * Expected Outcome: [Benefit]
+
+### **Short-Term** (1-3 months): [...]
+### **Long-Term** (3-12 months): [...]
+
+## **NEXT STEPS**
+- [ ] Review report
+- [ ] Decision meeting: [Date]
+- [ ] Assign actions
+
+**Tone**: Analytical, evidence-based, balanced
+**Length**: 1500-2500 words
+**Deliverable**: Report ready per presentation/circulation
+```
+
+#### **TIPS**
+
+💡 Document naming descrittivi aiutano LLM
+💡 Prioritize recent docs se troppi
+⚠️ Verify critical data: fact-check numeri e date
+✅ Cross-reference: Se finding importante, verifica sia in source
+
+---
+
+## 💡 Come Usare Questi Template Efficacemente
+
+### **Quick Start Workflow**:
+
+1. **Identifica use case**: Quale dei 5 matcha meglio?
+2. **Copy template completo** → Notion/Google Doc/Text editor
+3. **Fill ALL placeholders**:
+   - Cerca `[MAIUSCOLO_PLACEHOLDER]`
+   - No placeholder vuoti (scrivi "N/A" se non applicabile)
+4. **Test first time**: Prima volta, testa su case non-critico
+5. **Refine**: Output non perfetto? → Tweaka → Ritesta
+6. **Save personalizzato**: Dopo 2-3 usi, salva custom version
+
+### **Template Maintenance**:
+
+**Versioning** (raccomandato):
+```markdown
+## Template: [Name]
+**Version**: 1.0 → 1.1 → 2.0
+**Changelog**:
+- v1.0 (08/10/2025): Initial da workshop
+- v1.1 (15/10/2025): Added [X] placeholder
+- v2.0 (05/11/2025): Restructure format
+```
+
+**Quando aggiornare**:
+- ✅ Output non soddisfa consistently → Tweaka Expectations
+- ✅ Nuovi use case → Aggiungi Variation
+- ✅ Team feedback → Integrate
+- ❌ Over-engineering: Funziona → STOP tweaking
+
+---
+
+## 🎯 Template Selection Decision Tree
+
+```
+Hai meeting notes da strutturare?
+├─ SÌ → Template 1: Meeting Notes → Executive Summary
+└─ NO → ↓
+
+Hai doc funzionale → test cases?
+├─ SÌ → Template 2: Test List Generation
+└─ NO → ↓
+
+Crei presentazione da documenti?
+├─ SÌ → Template 3: PowerPoint Outline
+└─ NO → ↓
+
+Brainstorm concept UX/UI?
+├─ SÌ → Template 4: UX/UI Concept
+└─ NO → ↓
+
+Multipli documenti da analizzare?
+├─ SÌ → Template 5: Multi-Document Analysis
+└─ NO → Vedi [Template Ideas per Ruolo](#-template-ideas-per-ruolo)
+```
+
+---
+
+## 📊 Expected ROI da Template Library
+
+**Time Savings** (basato su pre-assessment + case studies):
+- Template 1 (Meeting Notes): ~20 min/meeting × 4/week = **80 min/week**
+- Template 2 (Test List): ~45 min/doc × 2/week = **90 min/week**
+- Template 3 (PPT Outline): ~30 min/presentation × 1/week = **30 min/week**
+- Template 4 (UX Concepts): ~40 min/brainstorm × 0.5/week = **20 min/week**
+- Template 5 (Doc Analysis): ~90 min/analysis × 0.5/week = **45 min/week**
+
+**Total Potenziale**: **~265 min/week = 4.4 hours/week**
+
+**Annualized**: 4.4h/week × 48 settimane = **211 hours/year = 26 giorni lavorativi** 🤯
+
+**Quality Improvement**:
+- Consistency: Da 40% → 90% utilizzabile first-time
+- Completeness: Da 60% → 95% coverage requisiti
+- Professionalism: Da "good enough" → production-ready
+
+:::tip 🚀 Success Metric
+Workshop è successo se **80%+ partecipanti usano almeno 1 template entro 7 giorni** post-workshop.
+Track con follow-up survey venerdì 11/10!
+:::
+
+---
+
+🎉 **Questi template sono il tuo "Starter Pack"! Ora procedi con esempio dettagliato qui sotto, poi segui la [Step-by-Step Guide](#-step-by-step-guide) per creare TUOI template personalizzati!**
+
+---
+
 ## 💡 Esempio Completo: Weekly Status Report Generator (PM)
 
 Questo è un template completo pronto all'uso come reference.
