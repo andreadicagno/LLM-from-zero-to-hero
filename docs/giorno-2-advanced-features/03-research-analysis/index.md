@@ -22,4 +22,4 @@ Questo modulo sarà disponibile a breve!
 
 ---
 
-**⬅️** [Modulo 2](../02-content-generation) | **➡️** [Modulo 4](../04-integration-automation)
+**⬅️** [Modulo 2](../content-generation) | **➡️** [Modulo 4](../integration-automation)

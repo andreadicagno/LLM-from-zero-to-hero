@@ -15,4 +15,4 @@ Questo esercizio sarà disponibile a breve!
 
 ---
 
-**⬅️** [Context Optimization](./context-optimization) | **➡️ Prossimo modulo:** [Content Generation](/giorno-2-advanced-features/02-content-generation)
+**⬅️** [Context Optimization](./context-optimization) | **➡️ Prossimo modulo:** [Content Generation](/giorno-2-advanced-features/content-generation)

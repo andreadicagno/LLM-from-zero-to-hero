@@ -22,4 +22,4 @@ Questo modulo sarà disponibile a breve!
 
 ---
 
-**⬅️** [Modulo 1](../01-workspace-context) | **➡️** [Modulo 3](../03-research-analysis)
+**⬅️** [Modulo 1](../workspace-context) | **➡️** [Modulo 3](../research-analysis)

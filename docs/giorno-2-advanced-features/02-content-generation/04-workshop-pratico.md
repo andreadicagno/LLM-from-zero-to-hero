@@ -15,4 +15,4 @@ Questo esercizio sarà disponibile a breve!
 
 ---
 
-**⬅️** [Content Generation](./content-generation) | **➡️ Prossimo modulo:** [Research & Analysis](/giorno-2-advanced-features/03-research-analysis)
+**⬅️** [Content Generation](./content-generation) | **➡️ Prossimo modulo:** [Research & Analysis](/giorno-2-advanced-features/research-analysis)

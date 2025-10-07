@@ -33,7 +33,7 @@ Imparerai **principi universali** applicabili a qualsiasi piattaforma.
 
 Workspace riutilizzabili, custom instructions, knowledge base management.
 
-[Vai al Modulo 1 →](./01-workspace-context)
+[Vai al Modulo 1 →](./workspace-context)
 
 ---
 
@@ -42,7 +42,7 @@ Workspace riutilizzabili, custom instructions, knowledge base management.
 
 Outputs interattivi, structured data, documenti professionali.
 
-[Vai al Modulo 2 →](./02-content-generation)
+[Vai al Modulo 2 →](./content-generation)
 
 ---
 
@@ -51,7 +51,7 @@ Outputs interattivi, structured data, documenti professionali.
 
 Web search, multi-document analysis, fact-checking, deep research.
 
-[Vai al Modulo 3 →](./03-research-analysis)
+[Vai al Modulo 3 →](./research-analysis)
 
 ---
 
@@ -60,7 +60,7 @@ Web search, multi-document analysis, fact-checking, deep research.
 
 API basics, plugins/extensions, workflow design AI-augmented.
 
-[Vai al Modulo 4 →](./04-integration-automation)
+[Vai al Modulo 4 →](./integration-automation)
 
 ---
 

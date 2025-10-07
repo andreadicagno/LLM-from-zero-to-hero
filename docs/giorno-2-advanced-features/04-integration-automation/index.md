@@ -21,4 +21,4 @@ Questo modulo sarà disponibile a breve!
 
 ---
 
-**⬅️** [Modulo 3](../03-research-analysis) | **➡️** [Giorno 3](/giorno-3-claude-code)
+**⬅️** [Modulo 3](../research-analysis) | **➡️** [Giorno 3](/giorno-3-claude-code)

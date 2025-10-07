@@ -634,8 +634,8 @@ Ora hai:
 - [Debugging](../prompt-engineering-teoria/debugging) - Ottimizzare template che non funzionano
 
 **Espandi Competenze**:
-- [Claude Projects](../../giorno-2-advanced-features/projects-output-styles/claude-projects) - Salva template in Projects
-- [Output Styles](../../giorno-2-advanced-features/projects-output-styles/output-styles) - Template formato output
+- [Giorno 2: Workspace & Context](/giorno-2-advanced-features/workspace-context) - Workspace persistenti per salvare template
+- [Giorno 2: Content Generation](/giorno-2-advanced-features/content-generation) - Structured outputs e format consistency
 
 ---
 

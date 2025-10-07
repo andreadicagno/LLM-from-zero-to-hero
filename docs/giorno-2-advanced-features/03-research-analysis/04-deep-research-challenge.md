@@ -15,4 +15,4 @@ Questo esercizio sarà disponibile a breve!
 
 ---
 
-**⬅️** [Verification Strategies](./verification-strategies) | **➡️ Prossimo modulo:** [Integration & Automation](/giorno-2-advanced-features/04-integration-automation)
+**⬅️** [Verification Strategies](./verification-strategies) | **➡️ Prossimo modulo:** [Integration & Automation](/giorno-2-advanced-features/integration-automation)
