@@ -1,21 +1,21 @@
 # LLM from 0 to Hero 🦸🏻‍♂️
 
-> **Workshop educativo completo su LLM e Claude per professionisti non-tecnici**
+> **Workshop educativo completo su LLM per professionisti non-tecnici**
 
-Un corso hands-on in 3 giorni che trasforma professionisti PM, PMO, Service Design e Funzionali in esperti di LLM e AI tools, con focus pratico su Claude (Chat, Projects, Artifacts, Code).
+Un corso hands-on in 3 giorni che trasforma professionisti PM, PMO, Service Design e Funzionali in esperti di LLM e AI tools, con approccio provider-agnostic (Claude, ChatGPT, Gemini) e focus su applicazioni pratiche.
 
 ---
 
 ## 📊 Stato Progetto
 
-**Progresso Totale**: 60% Completo
+**Progresso Totale**: 65% Completo
 
 - ✅ **Giorno 1 - LLM Foundations & Prompt Engineering**: 100% Completo (~8,700 righe, 20 file)
-- 🚧 **Giorno 2 - Claude Advanced Features**: In Pianificazione
+- 🏗️ **Giorno 2 - Advanced LLM Features (Provider-Agnostic)**: Struttura Completa (19 placeholder, outline dettagliato)
 - 🚧 **Giorno 3 - Claude Code**: In Pianificazione
 - ✅ **Sezione Risorse**: Completa (Glossario, FAQ, Link Utili)
 
-**Ultima Sessione**: 2025-10-06 | **Prossima Milestone**: Sviluppo Giorno 2
+**Ultima Sessione**: 2025-10-07 | **Prossima Milestone**: Sviluppo contenuti Giorno 2
 
 ---
 
@@ -36,9 +36,10 @@ Un corso hands-on in 3 giorni che trasforma professionisti PM, PMO, Service Desi
 ### Cosa Impareranno
 - Fondamenti LLM (token, context window, multimodalità)
 - Prompt Engineering avanzato (RACE, Chain-of-Thought, Few-Shot)
-- Claude Projects & Custom Instructions
-- Artifacts professionali
-- Claude Code per documentazione e research
+- Workspace persistenti & context management (Claude/ChatGPT/Gemini)
+- Content generation avanzato (Artifacts/Canvas/multimodal outputs)
+- Research & analysis professionale (web search, multi-doc, verification)
+- Integration concepts (APIs, plugins/extensions, workflow automation)
 - Template e workflow riutilizzabili
 
 ---
@@ -114,7 +115,7 @@ LLM-from-zero-to-hero/
 │   │   ├── 02-prompt-engineering-teoria/  # ✅ RACE, CoT, Few-Shot, Meta-Prompting
 │   │   └── 03-esercizi-pratici/       # ✅ 2 esercizi hands-on
 │   │
-│   ├── giorno-2-claude-features/      # 🚧 Projects, Output Styles, Artifacts
+│   ├── giorno-2-advanced-features/    # 🏗️ Workspace, Content Gen, Research, Integration
 │   ├── giorno-3-claude-code/          # 🚧 Documentation, Research, Progetto Finale
 │   │
 │   └── risorse/              # ✅ Glossario, FAQ, Link Utili, Template
@@ -322,6 +323,6 @@ Il **Giorno 1** (~8,700 righe) è il reference per qualità:
 
 ---
 
-**🎯 Obiettivo**: Creare un workshop educativo eccellente che trasformi professionisti non-tecnici in power users di Claude e LLM.
+**🎯 Obiettivo**: Creare un workshop educativo eccellente che trasformi professionisti non-tecnici in power users di LLM moderni (provider-agnostic).
 
-**📈 Progress**: 60% completo | **🎉 Next Milestone**: Giorno 2 - Claude Advanced Features
+**📈 Progress**: 65% completo | **🎉 Next Milestone**: Sviluppo contenuti Giorno 2 - Advanced LLM Features

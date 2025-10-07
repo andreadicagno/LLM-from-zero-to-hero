@@ -4,13 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Docusaurus-based educational workshop site titled "LLM from 0 to Hero 🦸🏻‍♂️" - a comprehensive 3-day Italian-language course teaching non-technical professionals (PM, PMO, Service Design, Functional roles) how to master Claude and LLMs.
+This is a Docusaurus-based educational workshop site titled "LLM from 0 to Hero 🦸🏻‍♂️" - a comprehensive 3-day Italian-language course teaching non-technical professionals (PM, PMO, Service Design, Functional roles) how to master LLMs with a provider-agnostic approach.
 
 **Workshop Structure**:
-- **Day 1**: LLM Foundations & Prompt Engineering (✅ Complete)
-- **Day 2**: Claude Advanced Features (placeholder)
+- **Day 1**: LLM Foundations & Prompt Engineering (✅ Complete - 8,700 lines)
+- **Day 2**: Advanced LLM Features - Provider-Agnostic (🏗️ Structure complete - 19 placeholders)
 - **Day 3**: Claude Code for non-developers (placeholder)
-- **Resources**: Glossary, FAQ, templates, useful links
+- **Resources**: Glossary, FAQ, templates, useful links (✅ Complete)
 
 **Target Audience**: 8 participants, non-STEM backgrounds, basic ChatGPT experience
 **Workshop Dates**: 3 Wednesdays (Oct 8, 15, 22, 2025), 10:00-15:00

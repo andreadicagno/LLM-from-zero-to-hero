@@ -26,8 +26,8 @@ Il corso si sviluppa in **3 mercoledì** (08/10, 15/10, 22/10/2025) dalle 10:00 
 ### Giorno 1: LLM Foundations & Prompt Engineering
 Comprenderai come funzionano davvero gli LLM e imparerai le tecniche fondamentali di prompt engineering (RACE, Chain-of-Thought, Few-Shot Learning).
 
-### Giorno 2: Claude Advanced Features
-Scoprirai le funzionalità avanzate di Claude: Projects, Output Styles, Artifacts, Deep Research e molto altro.
+### Giorno 2: Advanced LLM Features (Provider-Agnostic)
+Scoprirai funzionalità avanzate comuni a tutti gli LLM moderni: workspace persistenti, content generation, research professionale e integration concepts - con comparazioni tra Claude, ChatGPT e Gemini.
 
 ### Giorno 3: Claude Code per Non-Sviluppatori
 Userai Claude Code per creare documentazione, analizzare repository e molto altro - senza scrivere codice!
@@ -36,9 +36,9 @@ Userai Claude Code per creare documentazione, analizzare repository e molto altr
 
 Al termine del workshop avrai:
 - ✅ 3+ template prompt riutilizzabili
-- ✅ 1 Claude Project configurato
-- ✅ 1 Output Style personalizzato
-- ✅ Competenze pratiche immediatamente applicabili
+- ✅ 1 workspace LLM configurato (sul tuo provider preferito)
+- ✅ 3+ contenuti professionali generati
+- ✅ Competenze pratiche immediatamente applicabili su qualsiasi LLM
 
 ## 🔔 Resta Aggiornato
 

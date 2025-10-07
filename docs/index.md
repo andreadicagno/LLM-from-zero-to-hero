@@ -29,7 +29,9 @@ Al termine del workshop sarai in grado di:
 
 - ✅ **Comprendere** come funzionano gli LLM (senza tecnicismi)
 - ✅ **Scrivere prompt efficaci** usando framework comprovati (RACE, Chain-of-Thought)
-- ✅ **Padroneggiare Claude** Projects, Output Styles, Artifacts, Deep Research
+- ✅ **Padroneggiare funzionalità avanzate** LLM (Claude, ChatGPT, Gemini) con approccio comparativo
+- ✅ **Creare workspace persistenti** e gestire contesto efficacemente
+- ✅ **Generare contenuti professionali** (documenti, diagrammi, structured data)
 - ✅ **Usare Claude Code** per documentazione e analysis (no coding richiesto)
 - ✅ **Creare template riutilizzabili** per task ricorrenti
 - ✅ **Risparmiare 5-10 ore/settimana** automatizzando task ripetitivi
@@ -49,15 +51,15 @@ Al termine del workshop sarai in grado di:
 
 ---
 
-### 🚀 Giorno 2: Claude Advanced Features
+### 🚀 Giorno 2: Advanced LLM Features (Provider-Agnostic)
 **Mercoledì 15/10/2025 | 10:00-15:00**
 
-- 📁 Claude Projects & Custom Instructions
-- 🎨 Output Styles personalizzati
-- ✨ Artifacts per contenuti interattivi
-- 🔍 Deep Research & File Processing
+- 🔧 **Workspace Persistenti & Context Management** (Claude/ChatGPT/Gemini comparison)
+- 🎨 **Content Generation Avanzato** (Artifacts/Canvas/Multimodal outputs)
+- 🔍 **Research & Analysis Professionale** (web search, multi-doc, verification)
+- ⚙️ **Integration & Automation Concepts** (APIs, plugins, workflow design)
 
-**Deliverable**: 1 Claude Project configurato + 1 Output Style custom + 1 Artifact professionale
+**Deliverable**: 1 workspace configurato + 3 contenuti avanzati + 1 deep research completata
 
 ---
 
@@ -83,7 +85,7 @@ Al termine del workshop sarai in grado di:
 
 ### Dopo il Workshop
 - 📚 15+ template prompt pronti all'uso
-- 🔧 Claude Projects configurati
+- 🔧 Workspace LLM configurati (sul tuo provider preferito)
 - 📄 Documentazione completa e consultabile
 - 🌐 Accesso permanente a questo sito
 
@@ -97,7 +99,7 @@ Al termine del workshop sarai in grado di:
 4. **Sperimenta**: Prova le tecniche sui tuoi task reali.
 
 :::tip 💡 Consiglio per il Successo
-Non limitarti a leggere. Apri Claude in parallelo e **prova ogni tecnica** mentre studi. L'apprendimento pratico è 10x più efficace!
+Non limitarti a leggere. Apri il tuo LLM preferito (Claude, ChatGPT, Gemini) in parallelo e **prova ogni tecnica** mentre studi. L'apprendimento pratico è 10x più efficace!
 :::
 
 ---
