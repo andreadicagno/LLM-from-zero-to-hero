@@ -725,7 +725,7 @@ Validate output matches schema exactly.
 Applica tutto ciò che hai imparato con esercizi hands-on guidati per il tuo ruolo.
 
 **Opzione 2: Prepara Day 2**
-👉 **[Preview Day 2: Claude Features →](/giorno-2-claude-features)**
+👉 **[Preview Day 2: Claude Features →](/giorno-2-advanced-features)**
 
 Scopri come Claude Projects, Output Styles, e Artifacts amplificano i pattern che hai appreso oggi.
 

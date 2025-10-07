@@ -122,7 +122,7 @@ const config: Config = {
             },
             {
               label: 'Giorno 2: Claude Features',
-              to: '/giorno-2-claude-features',
+              to: '/giorno-2-advanced-features',
             },
             {
               label: 'Giorno 3: Claude Code',
@@ -168,7 +168,7 @@ const config: Config = {
             },
             {
               label: 'Giorno 2: Claude Features',
-              to: '/giorno-2-claude-features',
+              to: '/giorno-2-advanced-features',
             },
             {
               label: 'Giorno 3: Claude Code',

@@ -121,7 +121,7 @@ Claude Code è potentissimo per sviluppatori, ma è anche incredibilmente utile 
 :::warning ⚠️ Importante
 Il Giorno 3 richiede completamento di:
 - **[Giorno 1](/giorno-1-foundations)**: Prompt Engineering foundations
-- **[Giorno 2](/giorno-2-claude-features)**: Claude advanced features
+- **[Giorno 2](/giorno-2-advanced-features)**: Claude advanced features
 
 Inoltre:
 - Laptop con permessi admin (per installare Claude Code)
@@ -228,7 +228,7 @@ Integrerai tutto il workshop in un progetto reale:
 ## 🚀 Preparati per il Giorno 3
 
 ### Prima del Giorno 3
-1. ✅ Completa [Giorno 1](/giorno-1-foundations) e [Giorno 2](/giorno-2-claude-features)
+1. ✅ Completa [Giorno 1](/giorno-1-foundations) e [Giorno 2](/giorno-2-advanced-features)
 2. ✅ Verifica permessi admin su tuo laptop
 3. ✅ Libera 2GB spazio disco
 4. ✅ Pensa a 1-2 use case reali dove potresti usare Claude Code
@@ -278,4 +278,4 @@ Iscriviti alle notifiche per essere avvisato quando i contenuti del Giorno 3 sar
 
 ---
 
-**⬅️ Torna al** [Giorno 2](/giorno-2-claude-features) | **📚 Esplora** [Risorse](/risorse)
+**⬅️ Torna al** [Giorno 2](/giorno-2-advanced-features) | **📚 Esplora** [Risorse](/risorse)

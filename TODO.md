@@ -68,9 +68,27 @@ Trasformare il sito Docusaurus demo in un corso completo per workshop in 3 giorn
   - [x] esercizio-2-template.md (659 righe)
   - [x] Build test SUCCESS ✅
 
-### Fase 4: Sviluppo Contenuti Giorno 2
-- [ ] Modulo 1: Projects & Output Styles
-- [ ] Modulo 2: Artifacts & Search
+### Fase 4: Sviluppo Contenuti Giorno 2 (Provider-Agnostic)
+- [ ] Modulo 1: Workspace Persistenti & Context Management
+  - [ ] 01-workspace-concepts.md (Workspace Patterns Universali)
+  - [ ] 02-custom-instructions.md (System Prompts Efficaci)
+  - [ ] 03-knowledge-base.md (Document Management Strategies)
+  - [ ] 04-context-optimization.md (Advanced Context Management)
+  - [ ] 05-hands-on-workspace.md (Workshop Pratico)
+- [ ] Modulo 2: Generazione Contenuti Avanzati
+  - [ ] 01-interactive-outputs.md (Contenuti Modificabili - Artifacts/Canvas/Gemini)
+  - [ ] 02-structured-outputs.md (JSON, XML, Format Consistency)
+  - [ ] 03-content-generation.md (Documenti, Presentazioni, Diagrammi)
+  - [ ] 04-workshop-pratico.md (Challenge Deliverable Professionale)
+- [ ] Modulo 3: Research & Analysis Professionale
+  - [ ] 01-web-search-llm.md (Ricerca e Verifica Online)
+  - [ ] 02-multi-document-analysis.md (Analisi Comparativa Documenti)
+  - [ ] 03-verification-strategies.md (Fact-Checking e Quality Assurance)
+  - [ ] 04-deep-research-challenge.md (Challenge Research Completa)
+- [ ] Modulo 4: Integrazione & Automazione (Concepts)
+  - [ ] 01-api-automation-basics.md (APIs per Non-Sviluppatori)
+  - [ ] 02-plugins-extensions.md (Ecosistemi Estensibilità)
+  - [ ] 03-workflow-design.md (Workshop Workflow AI-Augmented)
 
 ### Fase 5: Sviluppo Contenuti Giorno 3
 - [ ] Modulo 1: Introduzione Claude Code
@@ -866,5 +884,50 @@ cp .workshop-plan/templates/module-template.md docs/[path]/nuovo-modulo.md
 - Zero errori critici
 
 **Stato**: Ricerca globale implementata e funzionante. Repository pronto per workshop 08/10/2025.
+
+---
+
+### Sessione 11 - 2025-10-07 🚧 IN CORSO
+**Focus**: Ristrutturazione Giorno 2 Provider-Agnostic
+
+**Task Completati**:
+- [x] Aggiornamento `.workshop-plan/content-outline.md` con nuovo outline Giorno 2
+  - [x] 4 moduli completamente nuovi (Workspace, Content Generation, Research, Integration)
+  - [x] 16 lezioni dettagliate con learning objectives, esempi, esercizi
+  - [x] ~2,700 righe di outline provider-agnostic
+- [x] Aggiornamento `TODO.md` con nuova roadmap Giorno 2
+- [ ] Rinomina directory `giorno-2-claude-features` → `giorno-2-advanced-features`
+- [ ] Ristrutturazione subdirectories (4 moduli nuovi)
+- [ ] Creazione 19 file markdown con placeholder
+- [ ] Aggiornamento `sidebars.ts` con nuova struttura
+- [ ] Test build finale
+
+**Deliverables Sessione 11** (previsti):
+- ✅ Documentazione planning aggiornata (content-outline.md, TODO.md)
+- ⏳ Struttura directory completa provider-agnostic
+- ⏳ 19 file placeholder pronti per sviluppo contenuti
+- ⏳ Navigazione funzionante
+- ⏳ Build SUCCESS
+
+**Nuova Struttura Giorno 2**:
+```
+giorno-2-advanced-features/
+├── index.md (provider-agnostic overview)
+├── 01-workspace-context/ (5 lezioni)
+├── 02-content-generation/ (4 lezioni)
+├── 03-research-analysis/ (4 lezioni)
+└── 04-integration-automation/ (3 lezioni)
+
+Totale: 19 file, ~6,200 righe stimate
+```
+
+**Metriche**:
+- 1 file documentazione aggiornato (content-outline.md: +2,700 righe)
+- 1 file roadmap aggiornato (TODO.md)
+- 19 file markdown da creare con placeholder
+- 1 file configurazione da aggiornare (sidebars.ts)
+- Approccio: Comparative learning (Claude vs ChatGPT vs Gemini)
+
+**Stato**: Documentazione completata. Proseguendo con ristrutturazione directory e file.
 
 ---

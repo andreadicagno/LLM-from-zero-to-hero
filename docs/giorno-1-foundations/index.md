@@ -169,7 +169,7 @@ Dopo il Giorno 1:
 3. **Documenta**: Crea una prompt library personale
 4. **Prepara Giorno 2**: Pensa a progetti/workflow da ottimizzare con Claude Projects
 
-➡️ [Continua con Giorno 2: Claude Advanced Features](/giorno-2-claude-features) (Mercoledì 15/10/2025)
+➡️ [Continua con Giorno 2: Claude Advanced Features](/giorno-2-advanced-features) (Mercoledì 15/10/2025)
 
 ---
 
