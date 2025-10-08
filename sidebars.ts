@@ -26,6 +26,7 @@ const sidebars: SidebarsConfig = {
             'giorno-1-foundations/llm-foundations/contesto',
             'giorno-1-foundations/llm-foundations/multimodalita',
             'giorno-1-foundations/llm-foundations/concetti-chiave',
+            'giorno-1-foundations/llm-foundations/verifica-comprensione',
           ],
         },
         {
